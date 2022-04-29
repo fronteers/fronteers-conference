@@ -1,0 +1,11 @@
+---
+permalink: "{{ page.fileSlug }}/index.html"
+---
+{% extends "_includes/default.njk" %}
+
+{% block content %}
+  <article class="prose m-auto">
+    {{ content | safe }}
+  </article>
+
+{% endblock %}

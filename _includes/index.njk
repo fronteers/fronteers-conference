@@ -1,0 +1,14 @@
+---
+permalink: "index.html"
+---
+{% extends "_includes/default.njk" %}
+
+{% block content %}
+  <div class="md:flex justify-start items-stretch">
+    <div class="flex-1 md:w-1/2 m-auto mb-4 md:mt-0 prose text-white">
+
+      {{ content | safe }}
+
+    </div>
+  </div>
+{% endblock %}

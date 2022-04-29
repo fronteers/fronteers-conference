@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .change {
+        color: white;
+    }
+}
+
+html {
+    @apply bg-ci_darkgrey;
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+
+* {
+    scrollbar-color: #7f7f7f rgba(0, 0, 0, 0.2); /* thumb and track color */
+    scrollbar-width: thin;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    accent-color: #F2C7AE;
+}
+
+*::-webkit-scrollbar {
+    width: 7.5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #7f7f7f;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.prose {
+    @apply p-8;
+    @apply mb-12;
+}
+
+.prose img[src$=".jpg"],
+.prose img[src$=".jpeg"] {
+    display: block;
+    max-width: none;
+    width: calc(100% + 4rem);
+    margin-left: -2rem;
+    margin-right: -2rem;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6,
+.prose p,
+.prose ul,
+.prose ol,
+.prose li,
+.prose b,
+.prose strong,
+.prose i,
+.prose em,
+.prose a {
+    @apply leading-snug;
+    @apply text-black;
+}
+
+a:not(#specificity) {
+    font-weight: inherit;
+}
+
+html:not(#specificity),
+body:not(#specificity) {
+    height: auto;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .clarke {
+    font-family: 'Clarke', 'Arial', 'Helvetica', sans-serif;
+}
+
+.prose a,
+a:hover,
+a:focus {
+    @apply underline;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+}
+
+.navigation {
+    flex-gap: 0.5rem;
+    gap: 0.5rem;
+}
+
+[aria-current="page"] {
+    @apply underline;
+}
+
+summary {
+    cursor: pointer;
+}
+
+.bg-pixel-shadow {
+    box-shadow: -6px -6px 0 #000;
+}
+
+.text-pixel-shadow {
+    text-shadow: -0.05em -0.05em 0 #000, -0.05em -0.05em 0 #CDC6AA, -0.05em -0.05em 0 #F2C7AE, -0.05em -0.05em 0 #F299A0, -0.05em -0.05em 0 #F24B78;
+}
+
+.text-pixel-shadow a:hover,
+.text-pixel-shadow a:focus {
+    text-shadow: -0.05em -0.05em 0 #000, -0.1em -0.1em 0 #CDC6AA, -0.15em -0.15em 0 #F2C7AE, -0.2em -0.2em 0 #F299A0, -0.25em -0.25em 0 #F24B78;
+    transition-property: text-shadow;
+    transition-duration: 300ms;
+}
+

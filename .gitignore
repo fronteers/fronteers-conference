@@ -1,0 +1,9 @@
+_site/*
+!_site/.gitkeep
+!_site/_headers
+!_site/_redirects
+!_site/favicon.ico
+_tmp/
+.DS_Store
+.idea
+node_modules/
