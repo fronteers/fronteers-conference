@@ -1,0 +1,483 @@
+@font-face {
+    font-family: 'Clarke';
+    src: url('assets/fonts/clarke-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Clarke';
+    src: url('assets/fonts/clarke-medium.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Clarke';
+    src: url('assets/fonts/clarke-light.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+:root {
+    --color-chicago: #575756;
+    --color-mandy: #e84667;
+    --color-wewak: #f19599;
+    --color-apricot-peach: #fad0b1;
+    --color-chino: #cdc6aa;
+    --color-acapulco: #83ae9b;
+}
+
+.screenreader-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    background: var(--color-chicago);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Navigation */
+
+nav {
+    width: 6rem;
+    margin: 0 5rem 0 3rem;
+}
+nav p {
+    display: none;
+}
+nav ul {
+    margin-top: 4rem;
+}
+nav ul li {
+    font-family: 'Clarke';
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    list-style-type: none;
+    line-height: 105%;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1pt;
+
+    position: relative;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li a.selected::before {
+    content: '';
+    display: block;
+    width: 2rem;
+
+    position: absolute;
+    top: 0.3rem;
+    left: 0;
+    margin-left: -3rem;
+    height: 4px;
+
+    background: var(--color-acapulco);
+    box-shadow: -4px 4px 0px var(--color-chino), -8px 8px 0px var(--color-apricot-peach), -12px 12px 0px var(--color-wewak), -16px 16px 0px var(--color-mandy);
+
+}
+
+
+
+/* Main layout */
+
+main {
+    flex: 1;
+    max-width: 42rem;
+    margin: 0 20px;
+}
+main > header h1 img {
+    margin: 0 40px 0 0;
+    max-width: 32rem;
+}
+main > header {
+    margin-bottom: 4rem;
+}
+
+
+
+/* Generic intro block */
+
+section.intro {
+    margin: 2rem 0 3rem;
+    padding-right: 6rem;
+}
+section.intro * {
+    display: inline;
+    font-family: 'Clarke';
+    font-weight: normal;
+    font-size: 2.3rem;
+    color: #fff;
+}
+section.intro h2 {
+    color: var(--color-apricot-peach);
+}
+
+
+
+/* Generic text block */
+
+section.block {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    overflow: hidden;
+}
+section.block > div {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+
+}
+section.block > div > img {
+    width: 100%;
+}
+section.block > div > div {
+    padding: 3rem 3rem;
+}
+section.block > div > div a {
+    text-decoration: none;
+    color: var(--color-mandy);
+    border-bottom: 2px solid var(--color-mandy);
+}
+section.block > div > div a:hover {
+    background: var(--color-mandy);
+    box-shadow: 0px 0px 0px 4px var(--color-mandy);
+    color: #fff;
+}
+
+section.block > div > div p {
+    font-size: 1.05rem;
+    line-height: 150%;
+    margin-bottom: 1rem;
+}
+section.block > div > div ul {
+    font-size: 1.05rem;
+    line-height: 140%;
+    margin-bottom: 1rem;
+}
+section.block > div > div ul li {
+    list-style-type: square;
+}
+section.block > div > div h3 {
+    text-transform: uppercase;
+    font-family: 'Clarke';
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 100%;
+    margin-bottom: 1rem;
+}
+section.block > div > div h4 {
+    text-transform: uppercase;
+    font-family: 'Clarke';
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 100%;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+
+
+/* TL;DR block for homepage */
+
+section.tldr {
+    text-transform: uppercase;
+    font-family: 'Clarke';
+    font-weight: bold;
+    font-size: 4.5rem;
+    line-height: 100%;
+    margin: 2rem 0;
+    color: var(--color-chino);
+}
+section.tldr * {
+    display: inline;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+/* Promo for selling tickets on the homepage, used inside a generic block */
+
+section.block > div > div.promo {
+    font-family: 'Clarke';
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+
+    background-color:var(--color-acapulco);
+    padding: 1.5rem;
+}
+section.block > div > div.promo h3 {
+    font-size: 2.2rem;
+    line-height: 100%;
+    margin: 0;
+}
+section.block > div > div.promo h3 span {
+    color: #fff;
+}
+section.block > div > div.promo p {
+    margin: 0.5rem 0 0;
+    font-size: 1.6rem;
+    line-height: 100%;
+}
+
+
+
+/* Speaker specific styles, overwrites a generic block */
+
+section.speaker > div > div > h3 {
+    color: var(--color-chicago);
+}
+section.speaker > div > div > h4 {
+    color: var(--color-mandy);   
+}
+section.speaker > div > div > h4 ~ p {
+    font-size: 0.95rem;
+}
+
+section.speaker > div > div > img {
+    width: 180px;
+    float: right;
+    position: relative;
+    margin-bottom: 2rem;
+    right: -3rem;
+}
+
+    /* When column is too small to float the image */
+
+    @media (min-width: 40rem) and (max-width: 50rem) {
+        section.speaker > div > div > img {
+            float: none;
+            margin: 0.5rem 0 1rem;
+            right: auto;
+        }
+    }
+    @media (max-width: 30rem) {
+        section.speaker > div > div > img {
+            float: none;
+            margin: 0.5rem 0 1rem;
+            right: auto;
+        }
+    }
+
+
+
+/* Ticket specific table */
+
+section.tickets table {
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+section.tickets table th,
+section.tickets table td {
+    border-collapse: collapse;
+    padding: 0.3rem 0.5rem;
+}    
+section.tickets table th {
+    text-align: left;
+    font-weight: normal;
+}
+section.tickets table td.price {
+    font-family: 'Clarke';
+    font-weight: bold;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    border-left: 4px solid #fff;
+    white-space: nowrap;
+}
+
+section.tickets table tr:nth-child(5n+1) {
+    background: var(--color-acapulco);
+}
+section.tickets table tr:nth-child(5n+2) {
+    background: var(--color-chino);
+}
+section.tickets table tr:nth-child(5n+3) {
+    background: var(--color-apricot-peach);
+}
+section.tickets table tr:nth-child(5n+4) {
+    background: var(--color-wewak);
+}
+section.tickets table tr:nth-child(5n+5) {
+    background: var(--color-mandy);
+}
+section.tickets a.buy {
+    border: none;
+    font-family: 'Clarke';
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: var(--color-chicago);
+}
+section.tickets a.buy:hover {
+    border-bottom: 2px solid var(--color-chicago);
+    color: var(--color-chicago);
+    box-shadow: none;
+    background: none;
+}
+section.tickets a.arrow::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-left: 6px;
+    margin-right: 12px;
+    background: var(--color-acapulco);
+    box-shadow: 6px -6px 0px var(--color-wewak), 0px -12px 0px var(--color-apricot-peach);
+}
+
+
+/* Footer */    
+
+footer {
+    margin: 6rem 0;
+}
+
+
+
+/* Rainbow shadows */
+
+.right .rainbow {
+    box-shadow: 4px 4px 0px var(--color-acapulco), 8px 8px 0px var(--color-chino), 12px 12px 0px var(--color-apricot-peach), 16px 16px 0px var(--color-wewak), 20px 20px 0px var(--color-mandy);
+    margin-right: 20px;
+}
+.left .rainbow {
+    box-shadow: -4px 4px 0px var(--color-acapulco), -8px 8px 0px var(--color-chino), -12px 12px 0px var(--color-apricot-peach), -16px 16px 0px var(--color-wewak), -20px 20px 0px var(--color-mandy);
+    margin-left: 20px;
+}
+.bottom .rainbow {
+    box-shadow: 4px 4px 0px var(--color-acapulco), 8px 8px 0px var(--color-chino), 12px 12px 0px var(--color-apricot-peach), 16px 16px 0px var(--color-wewak), 20px 20px 0px var(--color-mandy);
+    margin-bottom: 20px;
+}
+.top .rainbow {
+    box-shadow: 4px -4px 0px var(--color-acapulco), 8px -8px 0px var(--color-chino), 12px -12px 0px var(--color-apricot-peach), 16px -16px 0px var(--color-wewak), 20px -20px 0px var(--color-mandy);
+    margin-top: 20px;
+}
+
+/* Stagger blocks */
+
+.block.right {
+    margin-right: 40px;
+}
+.block.left {
+    margin-left: 40px;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 40rem) {
+    html {
+        font-size: 15px;
+    }
+    body {
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+
+    nav {
+        margin: 0 min(1rem, 3rem);
+        width: auto;
+        margin-bottom: 3rem;
+    }
+    nav ul {
+        display: none;
+    }
+
+    nav p {
+        display: block;
+
+        font-family: 'Clarke';
+        font-weight: bold;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    nav p a {
+        display: flex;
+        align-items: center;
+
+        color: #fff;
+        text-decoration: none;
+    }
+    nav p a::after {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin-left: 6px;
+        background: var(--color-acapulco);
+        box-shadow: 6px 6px 0px var(--color-apricot-peach), 12px 0px 0px var(--color-wewak);
+    }
+
+    .menu nav ul {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        background: var(--color-chicago) url(assets/images/f.svg) center 0rem no-repeat;
+        background-size: 3rem;
+    
+        padding: 9rem 2rem 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu nav p {
+        display: none;
+    }
+
+    main > header {
+        margin-bottom: 3rem;
+    }
+
+
+    .block.right {
+        margin-left: -20px;
+        margin-right: 20px;
+    }
+    .block.left {
+        margin-right: -20px;
+        margin-left: 20px;
+    }
+    
+}
