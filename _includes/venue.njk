@@ -1,0 +1,57 @@
+---
+permalink: "{{ page.fileSlug }}/index.html"
+---
+{% extends "_includes/default.njk" %}
+
+{% block content %}
+  <section class="intro">
+    <h2 class="screenreader-only">
+      Venue
+    </h2>
+
+    <p>
+      A new location in a new city. This year we will see each other in
+      the Pathé Utrecht Leidsche Rijn theatre.
+    </p>
+  </section>
+
+  <section class="block right">
+    <div class="rainbow">
+      <img src="{{ '/img/venue.jpeg' | url }}" alt="">
+
+      <div>
+        <h3>Conference</h3>
+        <p>
+          Pathé Utrecht Leidsche Rijn<br>
+          Berlijnplein 100<br>
+          3541 CM Utrecht
+        </p>
+        <p>
+          The theatre is close to the train station Utrecht Leidsche Rijn with direct connections to
+          Utrecht Central Station, Den Haag and Rotterdam. If you are travelling from other locations,
+          it is recommended to change trains in Utrecht Centraal which is just 1 stop away and only a
+          4 minute train ride.
+        </p>
+        <p>
+          If you want to travel by car, there are parking spaces around the theatre and several
+          large parking garages close by.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block left">
+    <div class="rainbow">
+      <img src="{{ '/img/party.jpeg' | url }}" alt="">
+
+      <div>
+        <h3>After party</h3>
+        <p>
+          The after party will be held in the same location on the top floor of the theatre.
+          Weather permitting we will enjoy a few drinks on the rooftop and see some amazing views
+          of the city.
+        </p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

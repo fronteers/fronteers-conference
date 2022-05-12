@@ -1,14 +1,71 @@
----
-permalink: "index.html"
----
 {% extends "_includes/default.njk" %}
 
 {% block content %}
-  <div class="md:flex justify-start items-stretch">
-    <div class="flex-1 md:w-1/2 m-auto mb-4 md:mt-0 prose text-white">
+  <section class="intro">
+    <h2>
+      Fronteers Conference is back!
+    </h2>
+    <p>
+      Join us September 9th, 2022, at the Pathé Leidsche Rijn in Utrecht for 6 speakers on one single day.
+    </p>
+  </section>
 
-      {{ content | safe }}
+  <section class="block bottom">
+    <div class="rainbow">
+      <img src="{{ '/img/crowd.jpeg' | url }}" alt="">
 
+      <div class="promo">
+        <h3>Tickets available for just <span>€ 175</span></h3>
+        <p>Fronteers members get a €25 discount!</p>
+      </div>
+
+      <div>
+        <h3 class="screenreader-only">About Fronteers Conference</h3>
+        <p>
+          Fronteers Conference is one of Europe’s premiere conferences on front-end web development and used to be organised in Amsterdam yearly since 2008. That is until 2020 happened.
+        </p>
+        <p>
+          This year marks its reboot, albeit with a little different concept: this year will be shorter and smaller, and we will gather at another venue.
+        </p>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section class="tldr">
+    <p style="color: var(--color-mandy);"><abbr title="In summary">TL;DR</abbr></p>
+    <ul>
+      <li style="color: var(--color-chino);">ONE DAY</li>
+      <li style="color: var(--color-wewak);">SIX SPEAKERS</li>
+      <li style="color: var(--color-apricot-peach);">NEW LOCATION</li>
+      <li style="color: var(--color-acapulco);">SAME GREAT COMMUNITY</li>
+    </ul>
+  </section>
+
+  <section class="block right">
+    <div class="rainbow">
+      <div>
+        <h3>Corona</h3>
+        <p>
+          Fronteers Conference will be held in an indoor theatre and will honor local legal requirements
+          regarding registration, social distancing, masking, testing and number of attendees. Weather permitting,
+          the afterparty will be held in the outdoors on the rooftop of the theatre.
+        </p>
+        <p>
+          Right now there are no legal restrictions, but that could change. We will update you on the rules once they become clear.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block left">
+    <div class="rainbow">
+      <div>
+        <h3>Code of conduct</h3>
+        <p>
+          To Fronteers Conference, and to our parent, the Fronteers association, it is of vital importance that everyone at our events feels welcome and safe. We are quite proud of the wonderful front-end community in and around the Netherlands, and we're actively enforcing a code of conduct to make sure that all attendees, speakers and volunteers know that we're there for them if there's anything amiss.
+          By attending our events, you agree to adhere to the Fronteers Conference Code of Conduct.
+        </p>
+      </div>
+    </div>
+  </section>
 {% endblock %}

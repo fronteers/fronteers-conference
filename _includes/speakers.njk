@@ -1,0 +1,69 @@
+---
+permalink: "{{ page.fileSlug }}/index.html"
+---
+{% extends "_includes/default.njk" %}
+
+{% block content %}
+  <section class="intro">
+    <h2 class="screenreader-only">
+      Speakers
+    </h2>
+
+    <p>
+      We have a spectacular line-up of 6 speakers you. These are the people who'll be stimulating your mind with thought-provoking talks.
+    </p>
+  </section>
+
+  <section class="block right speaker">
+    <div class="rainbow">
+      <div>
+        <h3>The CSS Cascade, a deep dive</h3>
+        <p>
+          CSS is short for Cascading Style Sheets. But what exactly is this Cascade, and how does it work? What are Origins? What happens when we use an !important somewhere? How do you calculate Specificity? And oh, where do those new Cascade Layers you might have heard of fit in?
+        </p>
+        <p>
+          In this insightful talk, we’ll take a look under the hood of browsers, and detail how they determine which CSS declarations to apply and which not.
+        </p>
+
+        <h4>Bramus Van Damme</h4>
+
+        <img src="{{ '/img/speaker-bramus-van-damme.jpg' | url }}" alt="">
+
+        <p>
+          Bramus Van Damme is a web developer from Belgium. From the moment he discovered view-source at the age of 14 (way back in 1997), he fell in love with the web and has been tinkering with it ever since.
+        </p>
+        <p>
+          As a Chrome Developer Relations Engineer at Google, he spreads the word on CSS, UI, and DevTools. Before joining Google, Bramus worked as a freelance developer in various front- and backend roles. For seven years he also was a College Lecturer Web & Mobile, educating undergrad students all about HTML, CSS, and JavaScript — in that order.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block left speaker">
+    <div class="rainbow">
+      <div>
+        <h3>10 Things You Didn't Know About HTTP/3</h3>
+        <p>
+          By now you've probably heard about the new HTTP/3 and QUIC protocols and how they are supposed to make your sites faster and more secure.
+        </p>
+        <p>
+          However, you probably don't know yet how some of these advanced features like 0-RTT data, connection migration and head-of-line-blocking removal actually work in practice. Nor why Google Chrome splits the QUIC handshake in dozens of small pieces, which it then re-orders randomly for transmission.
+        </p>
+        <p>
+          So if you're interested in the lower level details of these new protocols, or just want to know why you'll probably have to configure the new "HTTPS" record in your DNS soon, come to this talk and find out!
+        </p>
+
+        <h4>Robin Marx</h4>
+
+        <img src="{{ '/img/speaker-robin-marx.jpg' | url }}" alt="">
+
+        <p>
+          Robin Marx is a web performance researcher at KU Leuven, Belgium. He’s the author of various papers on HTTP/2, HTTP/3 and QUIC and has been a contributor in the IETF QUIC working group for multiple years.
+        </p>
+        <p>
+          He focuses on creating tools for the QUIC and HTTP/3 protocols that help others debug their behavior and performance. He often talks about web performance at international conferences, making the complex situations more insightful to the wider public. On the weekends, he likes to hit other people with longswords.
+        </p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

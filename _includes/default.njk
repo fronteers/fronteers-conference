@@ -1,93 +1,80 @@
 <!DOCTYPE html>
 <html lang="en" class="bg-cidarkgrey text-white">
-  <head>
-    <title>{{ title }} | Fronteers Conference 2022</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, viewport-fit=cover">
-    <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/clarke-regular.woff2' | url }}">
-    <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/clarke-medium.woff2' | url }}">
-    <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/clarke-light.woff2' | url }}">
-    <link rel="preload" as="style" href="{{ '/style.css' | url }}?v={% version %}">
-    <style>
-        @font-face {
-            font-family: 'Clarke';
-            src: url('{{ '/fonts/clarke-regular.woff2' | url }}') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Clarke';
-            src: url('{{ '/fonts/clarke-medium.woff2' | url }}') format('woff2');
-            font-weight: bold;
-            font-style: normal;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Clarke';
-            src: url('{{ '/fonts/clarke-light.woff2' | url }}') format('woff2');
-            font-weight: 200;
-            font-style: normal;
-            font-display: swap;
-        }
-    </style>
-    <link rel="stylesheet" href="{{ '/style.css' | url }}?v={% version %}">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@FronteersConf">
-    <meta name="twitter:creator" content="@FronteersConf">
-    {% if title %}
-      <meta name="og:title" content="{{ title }}">
-      <meta name="twitter:title" content="{{ title }}">
-    {% endif %}
-    {% if description %}
-      <meta name="description" content="{{ description }}">
-      <meta name="og:description" content="{{ description }}">
-      <meta name="twitter:description" content="{{ description }}">
-    {% endif %}
-    <meta name="og:image" content="{{ '/img/social-media.png' | url }}?v={% version %}">
-    <meta name="twitter:image" content="{{ '/img/social-media.png' | url }}?v={% version %}">
-    <link rel="icon" href="{{ '/favicon.ico' | url }}">
-    {% block head %}{% endblock %}
-  </head>
-  <body>
-    <header class="block bg-ci_darkgrey">
-      <div class="max-w-2xl m-auto px-8 py-4">
-        <a href="/" class="block">
-          {% include './../img/hero.svg' %}
-          <h1 class="sr-only">Fronteers Conference, 9 September 2022, Utrecht</h1>
-        </a>
-      </div>
-    </header>
+<head>
+  <title>{{ title }} | Fronteers Conference 2022</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/clarke-regular.woff2' | url }}">
+  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/clarke-medium.woff2' | url }}">
+  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/clarke-light.woff2' | url }}">
+  <link rel="preload" as="style" href="{{ '/css/style.css' | url }}?v={% version %}">
+  <style>
+    @font-face {
+      font-family: 'Clarke';
+      src: url('{{ '/fonts/clarke-regular.woff2' | url }}') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
 
-    <nav class="sticky z-10 top-0 bottom-0 block text-2xl md:text-3xl bg-ci_green text-white uppercase font-clarke bg-pixel-shadow text-pixel-shadow">
-      <ul class="navigation flex flex-wrap justify-evenly md:justify-between max-w-2xl m-auto px-8 py-4">
-        {% for post in collections.pages %}
-          {% if post.url == '/' %}
-            <li class="block py-0 md:py-1 text-center"><a href="{{ post.url }}"{% if page.url == post.url %} aria-current="page"{% endif %}>{{ post.data.navigation }}</a></li>
-          {% endif %}
-        {% endfor %}
-        {% for post in collections.pages|sort(attribute='data.navigation') %}
-          {% if post.url != '/' and post.data.navigation %}
-            <li class="block py-0 md:py-1 text-center"><a href="{{ post.url }}"{% if page.url == post.url %} aria-current="page"{% endif %}>{{ post.data.navigation }}</a></li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </nav>
+    @font-face {
+      font-family: 'Clarke';
+      src: url('{{ '/fonts/clarke-medium.woff2' | url }}') format('woff2');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
 
-    <main role="main" class="block max-w-2xl m-auto mt-8 mb-8 bg-white text-black bg-pixel-shadow">
-      {% block fullwidthcontent %}
-        <div class="max-w-2xl m-auto">
-          {% block content %}
-            {{ content | safe }}
-          {% endblock %}
-        </div>
-      {% endblock %}
-    </main>
+    @font-face {
+      font-family: 'Clarke';
+      src: url('{{ '/fonts/clarke-light.woff2' | url }}') format('woff2');
+      font-weight: 200;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}?v={% version %}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@FronteersConf">
+  <meta name="twitter:creator" content="@FronteersConf">
+  {% if title %}
+    <meta name="og:title" content="{{ title }}">
+    <meta name="twitter:title" content="{{ title }}">
+  {% endif %}
+  {% if description %}
+    <meta name="description" content="{{ description }}">
+    <meta name="og:description" content="{{ description }}">
+    <meta name="twitter:description" content="{{ description }}">
+  {% endif %}
+  <meta name="og:image" content="{{ '/img/social-media.png' | url }}?v={% version %}">
+  <meta name="twitter:image" content="{{ '/img/social-media.png' | url }}?v={% version %}">
+  <link rel="icon" href="{{ '/favicon.ico' | url }}">
+  {% block head %}{% endblock %}
+</head>
+<body>
+<nav>
+  <p><a href="#" onclick="document.body.classList.add('menu'); return false;">Menu</a></p>
+  <ul>
+    {% for post in collections.pages %}
+        <li><a href="{{ post.url }}"{% if page.url == post.url %} aria-current="page"{% endif %}>{{ post.data.navigation }}</a></li>
+      {% if post.url == '/' %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
 
-    <footer class="text-center">
-      <div class="m-auto w-10">
-        {% include './../img/f-badge.svg' %}
-      </div>
-    </footer>
-  </body>
+<main>
+  <header>
+    <h1>
+      <img src="{{ '/img/hero.svg' | url }}" alt="Fronteers Conference, 9 September 2022, Utrecht">
+    </h1>
+  </header>
+
+  {% block content %}
+    {{ content | safe }}
+  {% endblock %}
+
+</main>
+</body>
 </html>
