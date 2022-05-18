@@ -1,2 +1,9 @@
 [build]
   command = "npm run build"
+
+[[redirects]]
+  from = "/shop"
+  to = "https://apps.ticketmatic.com/shop"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
