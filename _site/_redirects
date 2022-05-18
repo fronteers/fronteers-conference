@@ -1,1 +1,1 @@
-/api/*  https://apps.ticketmatic.com/shop/:splat  200
+/shop/*  https://apps.ticketmatic.com/shop/:splat  200
