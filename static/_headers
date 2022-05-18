@@ -3,6 +3,7 @@
   Cache-Control: public
   Cache-Control: max-age=365000000
   Cache-Control: immutable
+  Access-Control-Allow-Origin: *
 
 # Cache images for a week
 /img/*
