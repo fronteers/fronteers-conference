@@ -1,14 +1,1 @@
-http://schulboycott.de/* https://wir-zaehlen.com/:splat 301!
-https://schulboycott.de/* https://wir-zaehlen.com/:splat 301!
-http://www.schulboycott.de/* https://wir-zaehlen.com/:splat 301!
-https://www.schulboycott.de/* https://wir-zaehlen.com/:splat 301!
-http://schul-streik.de/* https://wir-zaehlen.com/:splat 301!
-https://schul-streik.de/* https://wir-zaehlen.com/:splat 301!
-http://www.schul-streik.de/* https://wir-zaehlen.com/:splat 301!
-https://www.schul-streik.de/* https://wir-zaehlen.com/:splat 301!
-http://kinder-zaehlen.de/* https://wir-zaehlen.com/:splat 301!
-https://kinder-zaehlen.de/* https://wir-zaehlen.com/:splat 301!
-http://www.kinder-zaehlen.de/* https://wir-zaehlen.com/:splat 301!
-https://www.kinder-zaehlen.de/* https://wir-zaehlen.com/:splat 301!
-http://www.wir-zaehlen.com/* https://wir-zaehlen.com/:splat 301!
-https://www.wir-zaehlen.com/* https://wir-zaehlen.com/:splat 301!
+/api/*  https://apps.ticketmatic.com/shop/:splat  200
