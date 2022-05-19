@@ -22,9 +22,8 @@
   padding: 0;
 }
 
-
 html {
-  background: var(--color-chicago) url(../img/noise.png);
+  background: var(--color-chicago) url(../img/noise.png) top left repeat;
 }
 
 body {
@@ -355,27 +354,6 @@ section.tickets table td.price {
   border-left: 4px solid #fff;
   white-space: nowrap;
 }
-/* 
-section.tickets table tr:nth-child(5n+1) {
-  background: var(--color-acapulco);
-}
-
-section.tickets table tr:nth-child(5n+2) {
-  background: var(--color-chino);
-}
-
-section.tickets table tr:nth-child(5n+3) {
-  background: var(--color-apricot-peach);
-}
-
-section.tickets table tr:nth-child(5n+4) {
-  background: var(--color-wewak);
-}
-
-section.tickets table tr:nth-child(5n+5) {
-  background: var(--color-mandy);
-} */
-
 section.tickets .prices {
   background: var(--color-chino);
   text-align: center;
@@ -524,7 +502,8 @@ footer {
   nav {
     margin: 0 min(1rem, 3rem);
     width: auto;
-    margin-bottom: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
   }
 
   nav ul {
@@ -536,19 +515,23 @@ footer {
 
     font-family: 'Clarke', Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 1.8rem;
+    font-size: 1.5em;
     text-transform: uppercase;
+    text-align: center;
     color: #fff;
   }
 
   nav p a {
-    display: flex;
-    align-items: center;
-
+    display: inline-block;
+    padding: 1rem;
+    margin-left: -12px;
     color: #fff;
+    background: #000;
     text-decoration: none;
-  }
 
+    box-shadow: 4px -4px 0 #fff, 8px -8px 0 #fff, 12px -12px 0 #fff, 16px -16px 0 #fff, 20px -20px 0 #fff;
+  }
+/* 
   nav p a::after {
     content: '';
     display: inline-block;
@@ -557,7 +540,7 @@ footer {
     margin-left: 6px;
     background: var(--color-acapulco);
     box-shadow: 6px 6px 0 var(--color-apricot-peach), 12px 0 0 var(--color-wewak);
-  }
+  } */
 
   .menu nav ul {
     position: absolute;
@@ -566,7 +549,8 @@ footer {
     left: 0;
     right: 0;
 
-    background: var(--color-chicago) url(../img/f.svg) center 0 no-repeat;
+    background: url(../img/f.svg) center 0 no-repeat;
+
     background-size: 3rem;
 
     padding: 9rem 2rem 0;
@@ -577,6 +561,9 @@ footer {
   }
 
   .menu nav p {
+    display: none;
+  }
+  .menu main {
     display: none;
   }
 
