@@ -36,6 +36,11 @@
   }
   
   
+  html body main article .eventinfo .mini .pic {
+    image-rendering: pixelated;
+  }
+  
+  
   /* Improve border of fields */
   
   html body main form .formblock > .right input:focus {
