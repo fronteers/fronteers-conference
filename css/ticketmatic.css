@@ -8,8 +8,11 @@
   }
   
   
+  body {
+    background: var(--color-chicago) url(/img/noise.png) !important;
+  }
   
-  
+
   #sitelogo {
     display: none;
   }
@@ -33,13 +36,21 @@
   
   html body header {
       box-shadow: none !important;
+      background-color: transparent !important;
   }
   
+  html body main {
+    background-color: transparent !important;
+  }
   
   html body main article .eventinfo .mini .pic {
     image-rendering: pixelated;
   }
   
+  html body footer {
+    background-color: transparent !important;
+  }
+
   
   /* Improve border of fields */
   
@@ -53,8 +64,14 @@
   
   
   
+  
   /* Improve background of voucher field */
   
+  html body main .listcontents form {
+    background: var(--color-chino);
+    margin-bottom: 3rem;
+  }
+
   html body main .listcontents form .formblock > .right input {
       background: #fff;
       border: 2px solid #fff
@@ -67,6 +84,10 @@
   
   /* Adjust buttons below */
   
+  html body main section .optionbar {
+      margin-top: 3rem !important;
+  }
+
   .optionbar a.button[disabled], 
   .optionbar button[disabled] {
       opacity: 1;
