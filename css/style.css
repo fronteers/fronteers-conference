@@ -529,16 +529,6 @@ footer {
 
     box-shadow: 4px -4px 0 #fff, 8px -8px 0 #fff, 12px -12px 0 #fff, 16px -16px 0 #fff, 20px -20px 0 #fff;
   }
-/* 
-  nav p a::after {
-    content: '';
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    margin-left: 6px;
-    background: var(--color-acapulco);
-    box-shadow: 6px 6px 0 var(--color-apricot-peach), 12px 0 0 var(--color-wewak);
-  } */
 
   .menu nav ul {
     position: absolute;
