@@ -570,3 +570,14 @@ footer {
   }
 
 }
+
+
+
+
+
+.breakout nav {
+  display: none;
+}
+.breakout main {
+  display: none;
+}
