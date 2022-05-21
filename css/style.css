@@ -418,13 +418,11 @@ label {
 }
 
 input, textarea { 
-  font-family: inherit;
-  font-size: 1.4rem;
-  color: white;
+  font-size: 1rem;
   flex: 1;
   background-color: #f6f6f6; 
   border: 2px solid #aaa;
-  padding-left: .5rem;
+  padding: 0.7rem;
 }
 
 textarea {
