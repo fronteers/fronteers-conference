@@ -46,15 +46,18 @@ nav {
   margin: 0 5rem 0 3rem;
 }
 
-nav p {
-  display: none;
+nav h1 {
+  position: absolute;
+  left: -10000px;
 }
 
-nav ul {
+
+nav ul.primary {
   margin-top: 4rem;
+  margin-bottom: 6rem;
 }
 
-nav ul li {
+nav ul.primary li {
   font-family: 'Clarke', Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 1.8rem;
@@ -67,12 +70,12 @@ nav ul li {
   position: relative;
 }
 
-nav ul li a {
+nav ul.primary li a {
   color: #fff;
   text-decoration: none;
 }
 
-nav ul li a[aria-current]::before {
+nav ul.primary li a[aria-current]::before {
   content: '';
   display: block;
   width: 2rem;
@@ -87,6 +90,38 @@ nav ul li a[aria-current]::before {
   box-shadow: -4px 4px 0 var(--color-chino), -8px 8px 0 var(--color-apricot-peach), -12px 12px 0 var(--color-wewak), -16px 16px 0 var(--color-mandy);
 
 }
+
+
+nav h2 {
+  font-family: 'Clarke', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: var(--color-apricot-peach);
+
+  margin-top: 2rem;
+  margin-right: -3rem;
+}
+
+nav ul.secondary {
+  margin-right: -3rem;
+}
+
+nav ul.secondary li {
+  list-style-type: none;
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+}
+
+nav ul.secondary li a {
+  color: #fff;
+  text-decoration: none;
+}
+nav ul.secondary li a:hover,
+nav ul.secondary li a:active {
+  text-decoration: underline;
+}
+
 
 
 /* Main layout */
@@ -508,7 +543,12 @@ footer {
     display: none;
   }
 
-  nav p {
+  nav h2 {
+    display: none;
+  }
+
+  nav h1 {
+    position: static;
     display: block;
 
     font-family: 'Clarke', Arial, Helvetica, sans-serif;
@@ -519,7 +559,7 @@ footer {
     color: #fff;
   }
 
-  nav p a {
+  nav h1 a {
     display: inline-block;
     padding: 1rem;
     margin-left: -12px;
@@ -530,26 +570,33 @@ footer {
     box-shadow: 4px -4px 0 #fff, 8px -8px 0 #fff, 12px -12px 0 #fff, 16px -16px 0 #fff, 20px -20px 0 #fff;
   }
 
-  .menu nav ul {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
+  .menu nav {
     background: url(../img/f.svg) center 0 no-repeat;
-
     background-size: 3rem;
-
-    padding: 9rem 2rem 0;
-
+  
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
-  .menu nav p {
+  .menu nav h1 {
     display: none;
+  }
+  .menu nav ul.primary {
+    padding: 6rem 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+  }
+
+  .menu nav h2 {
+    display: block;
+    margin-right: 0;
+  }
+  .menu nav ul.secondary {
+    display: block;
+    margin-right: 0;
   }
   .menu main {
     display: none;
@@ -568,5 +615,4 @@ footer {
     margin-right: -20px;
     margin-left: 20px;
   }
-
 }
