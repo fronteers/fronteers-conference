@@ -55,6 +55,16 @@ function runBreakout() {
     document.addEventListener("keydown", keyDownHandler, false);
     document.addEventListener("keyup", keyUpHandler, false);
     document.addEventListener("mousemove", mouseMoveHandler, false);
+    window.addEventListener("resize",  resizeHandler, false);
+
+
+    function resizeHandler(e) {
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+
+        brickWidth = Math.floor((canvas.width - ((brickRowCount + 1) * brickPadding)) / brickRowCount);
+        brickOffsetLeft = Math.floor((canvas.width + brickPadding - (brickRowCount * (brickWidth + brickPadding))) / 2);
+    }
 
     function keyDownHandler(e) {
         if (e.key == "Right" || e.key == "ArrowRight") {
