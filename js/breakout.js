@@ -7,7 +7,7 @@ let breakoutRunning = false;
 
 document.addEventListener('keyup', (e) => {
     if (e.target === document.body && e.key === '.') {
-        document.body.classList.add('breakout');
+        document.body.innerHTML = '';
         
         if (!breakoutRunning) {
             breakoutRunning = true
