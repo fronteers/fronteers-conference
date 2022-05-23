@@ -570,6 +570,15 @@ footer {
     box-shadow: 4px -4px 0 #fff, 8px -8px 0 #fff, 12px -12px 0 #fff, 16px -16px 0 #fff, 20px -20px 0 #fff;
   }
 
+
+  main > header h1 {
+    text-align: center;
+  }
+  main > header h1 img {
+    margin-right: 0;
+  }
+
+
   .menu nav {
     background: url(../img/f.svg) center 0 no-repeat;
     background-size: 3rem;
