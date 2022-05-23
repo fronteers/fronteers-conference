@@ -591,6 +591,13 @@ footer {
   }
 
 
+  section.intro {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+  }
+
+
   .menu nav {
     background: url(../img/f.svg) center 0 no-repeat;
     background-size: 3rem;
