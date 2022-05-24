@@ -54,39 +54,6 @@
   {% block head %}{% endblock %}
 </head>
 <body>
-<nav>
-  <h1><a href="#" onclick="document.body.classList.add('menu'); return false;">Menu</a></h1>
-  <ul class='primary'>
-    {% for post in collections.pages %}
-        <li><a href="{{ post.url }}"{% if page.url == post.url %} aria-current="page"{% endif %}>{{ post.data.navigation }}</a></li>
-      {% if post.url == '/' %}
-      {% endif %}
-    {% endfor %}
-  </ul>
-
-
-  <h2>Elsewhere</h2>
-
-  <ul class='secondary'>
-    <li><a href='https://twitter.com/FronteersConf'>Twitter</a>
-    <li><a href='https://vimeo.com/fronteers/videos'>Vimeo</a>
-  </ul>
-
-  <h2>Previous years</h2>
-
-  <ul class='secondary'>
-    <li><a href='https://fronteers.nl/congres/2019'>2019</a>
-    <li><a href='https://fronteers.nl/congres/2018'>2018</a>
-    <li><a href='https://fronteers.nl/congres/2017'>2017</a>
-  </ul>
-
-  <h2>Fronteers</h2>
-
-  <ul class='secondary'>
-    <li><a href='https://fronteers.nl/about'>About Fronteers</a>
-    <li><a href='https://fronteers.nl/'>Homepage (NL)</a>
-  </ul>
-</nav>
 
 <main>
   <header>
