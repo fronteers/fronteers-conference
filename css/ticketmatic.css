@@ -12,7 +12,7 @@
     background: var(--color-chicago) url(/img/noise.png) !important;
   }
   
-  
+
 
   /* Hide things we do not use */
 
@@ -83,6 +83,13 @@
     box-shadow: 0px 0px 0px 3px var(--color-chicago) inset, 0px 0px 0px 0.35rem var(--color-chicago) inset !important;
   }
 
+
+
+  /* Hide coupon code in payment screen */
+
+  html body main .listcontents.couponlist {
+    display: none;
+  }
 
   
   /* Improve background of voucher field */
