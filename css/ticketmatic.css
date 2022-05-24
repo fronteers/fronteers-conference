@@ -63,7 +63,13 @@
   }
   
   
-  
+  /* Improve radio button */
+
+  html body main form .formblock > .left input[type=radio]:not(old):checked::before {
+    box-shadow: 0px 0px 0px 3px var(--color-chicago) inset, 0px 0px 0px 0.35rem var(--color-chicago) inset !important;
+  }
+
+
   
   /* Improve background of voucher field */
   
