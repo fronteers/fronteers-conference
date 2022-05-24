@@ -1,0 +1,116 @@
+---
+permalink: "{{ page.fileSlug }}/index.html"
+---
+{% extends "_includes/default.njk" %}
+
+{% block content %}
+  <section class="intro">
+    <h2 class="screenreader-only">
+      Speakers
+    </h2>
+
+    <p>
+      We have a spectacular line-up of 6 speakers you. These are the people who'll be stimulating your mind with thought-provoking talks.
+    </p>
+  </section>
+
+  <section class="block right speaker">
+    <div class="rainbow">
+      <a name="bramus-van-damme"></a>
+
+      <div>
+        <h3>The CSS Cascade, a deep dive</h3>
+        <p>
+          CSS is short for Cascading Style Sheets. But what exactly is this Cascade, and how does it work? What are Origins? What happens when we use an !important somewhere? How do you calculate Specificity? And oh, where do those new Cascade Layers you might have heard of fit in?
+        </p>
+        <p>
+          In this insightful talk, we’ll take a look under the hood of browsers, and detail how they determine which CSS declarations to apply and which not.
+        </p>
+
+        <h4>Bramus Van Damme</h4>
+
+        <img src="{{ '/img/speaker-bramus-van-damme.png' | url }}" alt="">
+
+        <p>
+          Bramus Van Damme is a web developer from Belgium. From the moment he discovered view-source at the age of 14 (way back in 1997), he fell in love with the web and has been tinkering with it ever since.
+        </p>
+        <p>
+          As a Chrome Developer Relations Engineer at Google, he spreads the word on CSS, UI, and DevTools. Before joining Google, Bramus worked as a freelance developer in various front- and backend roles. For seven years he also was a College Lecturer Web & Mobile, educating undergrad students all about HTML, CSS, and JavaScript — in that order.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block left speaker">
+    <div class="rainbow">
+      <a name="robin-marx"></a>
+
+      <div>
+        <h3>10 Things You Didn't Know About HTTP/3</h3>
+        <p>
+          By now you've probably heard about the new HTTP/3 and QUIC protocols and how they are supposed to make your sites faster and more secure.
+        </p>
+        <p>
+          However, you probably don't know yet how some of these advanced features like 0-RTT data, connection migration and head-of-line-blocking removal actually work in practice. Nor why Google Chrome splits the QUIC handshake in dozens of small pieces, which it then re-orders randomly for transmission.
+        </p>
+        <p>
+          So if you're interested in the lower level details of these new protocols, or just want to know why you'll probably have to configure the new "HTTPS" record in your DNS soon, come to this talk and find out!
+        </p>
+
+        <h4>Robin Marx</h4>
+
+        <img src="{{ '/img/speaker-robin-marx.png' | url }}" alt="">
+
+        <p>
+          Robin Marx is a web performance researcher at KU Leuven, Belgium. He’s the author of various papers on HTTP/2, HTTP/3 and QUIC and has been a contributor in the IETF QUIC working group for multiple years.
+        </p>
+        <p>
+          He focuses on creating tools for the QUIC and HTTP/3 protocols that help others debug their behavior and performance. He often talks about web performance at international conferences, making the complex situations more insightful to the wider public. On the weekends, he likes to hit other people with longswords.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block right speaker">
+    <div class="rainbow">
+      <a name="maud-nalpas"></a>
+
+      <div>
+        <h3>
+          Debugging web privacy (TBD)
+        </h3>
+        <p>A tour of a few best practices for privacy on the web.</p>
+        <h4>Maud Nalpas</h4>
+        <img src="{{'/img/speaker-maud-nalpas.png'}}" alt="">
+        
+        <p>
+          Maud is a developer relations engineer at Chrome for web security and privacy. Before joining Google, Maud was a full-stack developer leaning towards frontend development. She knows first-hand that the concepts needed to build private and secure websites can feel puzzling and obscure⏤and she's on a mission to change just that.
+        </p>
+        <p>
+          Maud lives in Berlin and enjoys windsurfing, baking cookies, and playing the guitar off-key.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block left speaker">
+    <div class="rainbow">
+      <a name="manuel-matuzovic"></a>
+
+      <div>
+        <h3>
+          Lost in Translation
+        </h3>
+        <p>A frontend developer’s job is to look at a design, interpret it, and translate it to HTML and CSS. Unfortunately, information often gets lost in translation because we rely too much on visual aspects of a design, rather than its semantic meaning.</p>
+        <p>In his talk, Manuel Matuzović uncovers the invisible patterns we should recognise in a design, and how they affect accessibility.</p>
+        <h4>Manuel Matuzović</h4>
+        <img src="{{'/img/speaker-manuel-matuzovic.png'}}" alt="">
+        
+        <p>
+          Manuel Matuzović is a frontend developer who's passionate about HTML and CSS. He works for the City of Vienna where he builds accessible frontends and he’s an auditor, teacher and consultant. He writes about accessibility, HTML, and CSS on his personal blog <a href='https://matuzo.at'>matuzo.at</a> and <a href='https://htmhell.dev'>htmhell.dev</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

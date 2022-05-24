@@ -1,0 +1,98 @@
+---
+permalink: "{{ page.fileSlug }}/index.html"
+---
+{% extends "_includes/default.njk" %}
+
+{% block content %}
+  <section class="intro">
+    <h2 class="screenreader-only">
+      Tickets
+    </h2>
+
+    <p>
+      Get your ticket today, there are only a limited number of seats.
+    </p>
+  </section>
+
+  <section class="block tickets right">
+    <div class="rainbow">
+      <div>
+        <p>
+          Tickets are available in our <a href="/shop/fronteers/shop/addtickets/460185357012">ticket shop</a>. Grab them today, because
+          there are only a limited number of seats available. 
+        </p>
+      </div>
+      <div class="prices">
+        <table>
+          <tr>
+            <th><strong>Regular ticket</strong></th>
+            <td class="price">€&nbsp;250</td>
+          </tr>
+          <tr>
+            <th><strong>Ticket with member discount</strong></th>
+            <td class="price">€&nbsp;210</td>
+          </tr>
+        </table>
+        <p>
+          <a class='buy' href="/shop/fronteers/shop/addtickets/460185357012">Get your tickets now!</a>
+        </p>
+        <p class="taxes">
+          Ticket prices are excluding VAT.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block left">
+    <div class="rainbow">
+      <div>
+        <h3>Member discount</h3>
+        <p>
+          Members of the Fronteers association are entitled to a discount. Members who want to purchase a discounted ticket must already be a member when ticket sales are first announced and will receive a voucher code by email. If you order tickets for multiple people at once, you will need to collect voucher codes from those of you who are members and use all their codes in the ordering process.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block right">
+    <a name="terms-and-conditions"></a>
+    <div class="rainbow">
+      <div>
+        <h3>Terms and conditions</h3>
+        <p>
+          By purchasing a ticket for the Fronteers Conference, you accept these terms and conditions in full.
+        </p>
+
+        <h4>Pricing and payment</h4>
+        <p>
+          All ticket prices are in euro and exclude Dutch VAT, unless explicitly mentioned otherwise. Tickets must be paid in full before the conference starts. All ticket sales are final and non-refundable.
+        </p>
+
+        <h4>Conference tickets</h4>
+        <p>
+          A ticket to Fronteers Conference grants entrance the conference and includes catered lunch, drinks and snacks during breaks.
+        </p>
+
+        <h4>Transfer of tickets</h4>
+        <p>
+          Conference tickets may be transferred. Please use the contact form to request a transfer by mentioning the old name and the new name you want on the ticket. Tickets with member discounts may only be transferred to other Fronteers members. Please be aware that after we send the badges to the printer we cannot make changes anymore.
+        </p>
+
+        <h4>Unofficial promotions</h4>
+        <p>
+          It is expressly forbidden to use tickets as a prize in or a part of promotions, sweepstakes or other promotions, without explicit permission from the Fronteers organisation. Any tickets found to be traded or acquired in breach of these conditions will be made void without restitution.
+        </p>
+
+        <h4>Speakers and schedule</h4>
+        <p>
+          The schedule of speakers for the conference is published in advance of the event, but may change at any time.
+        </p>
+
+        <h4>Cancellation</h4>
+        <p>
+          In the unlikely event of a complete cancellation of the conference, all tickets will be refunded.
+        </p>
+      </div>
+    </div>
+  </section>
+{% endblock %}
