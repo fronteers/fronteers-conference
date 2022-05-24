@@ -12,6 +12,9 @@
     background: var(--color-chicago) url(/img/noise.png) !important;
   }
   
+  
+
+  /* Hide things we do not use */
 
   #sitelogo {
     display: none;
@@ -24,15 +27,14 @@
   #navBack {
     display: none;
   }
-  
-  
+   
   [data-cy="tickettype-availability"] {
     display: none;
   }
   
   
   
-  /* Make header non-sticky */
+  /* Adjust header */
   
   html body header {
       box-shadow: none !important;
@@ -50,6 +52,18 @@
   html body footer {
     background-color: transparent !important;
   }
+
+
+  /* Improve header size */
+
+  html body main article .productlist .listheader .titlebar .title {
+    font-size: 2rem !important;
+  }
+
+  html body main form .formblock h3 {
+    text-transform: uppercase;
+  }
+
 
   
   /* Improve border of fields */
