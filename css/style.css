@@ -298,6 +298,22 @@ section.block > div > div.promo p.taxes {
   margin-bottom: 0;
 }
 
+section.block > div > div.promo span.soon {
+  display: inline-block;
+
+  font-family: 'Clarke', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  background: #fff;
+  color: #000;
+  padding: 1rem;
+  margin-top: 36px;
+  box-shadow: -4px -4px 0 var(--color-chino), -8px -8px 0 var(--color-chino), -12px -12px 0 var(--color-chino), -16px -16px 0 var(--color-chino), -20px -20px 0 var(--color-chino);
+}
+
 section.block > div > div.promo a.buy {
   display: inline-block;
 
@@ -408,6 +424,21 @@ section.tickets .prices {
 section.tickets .taxes {
   font-size: 0.85rem;
   margin-bottom: -1rem;
+}
+section.tickets span.soon {
+  font-family: 'Clarke', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  background: #fff;
+  color: #000;
+  padding: 1rem;
+  margin-top: 32px;
+  box-shadow: 4px -4px 0 var(--color-acapulco), 8px -8px 0 var(--color-acapulco), 12px -12px 0 var(--color-acapulco), 16px -16px 0 var(--color-acapulco), 20px -20px 0 var(--color-acapulco);
 }
 section.tickets a.buy {
   font-family: 'Clarke', Arial, Helvetica, sans-serif;
