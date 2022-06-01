@@ -3,21 +3,11 @@
 <head>
   <title>{{ title }} | Fronteers Conference 2022</title>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/clarke-regular.woff2' | url }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
   <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/clarke-medium.woff2' | url }}">
-  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/clarke-light.woff2' | url }}">
   <link rel="preload" as="style" href="{{ '/css/style.css' | url }}?v={% version %}">
   <style>
-    @font-face {
-      font-family: 'Clarke';
-      src: url('{{ '/fonts/clarke-regular.woff2' | url }}') format('woff2');
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
-
+    
     @font-face {
       font-family: 'Clarke';
       src: url('{{ '/fonts/clarke-medium.woff2' | url }}') format('woff2');
@@ -26,13 +16,6 @@
       font-display: swap;
     }
 
-    @font-face {
-      font-family: 'Clarke';
-      src: url('{{ '/fonts/clarke-light.woff2' | url }}') format('woff2');
-      font-weight: 200;
-      font-style: normal;
-      font-display: swap;
-    }
   </style>
   <link rel="stylesheet" href="{{ '/css/style.css' | url }}?v={% version %}">
   <meta name="twitter:card" content="summary_large_image">
