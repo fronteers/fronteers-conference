@@ -413,7 +413,7 @@ section.tickets table td.price {
   font-size: 2.8rem;
   text-transform: uppercase;
   text-align: right;
-  color: #fff;
+  color: var(--color-chicago);
   border-left: 4px solid #fff;
   white-space: nowrap;
 }
@@ -508,6 +508,7 @@ textarea {
 }
 
 button {
+  cursor: pointer;
   background-color: var(--color-mandy);
   font-family: inherit;
   color: white;
@@ -522,7 +523,7 @@ button {
 
 button:hover,
 button:focus {
-  background-color: var(--color-wewak);
+  background-color: var(--color-chicago);
 }
 
 /* Footer */
