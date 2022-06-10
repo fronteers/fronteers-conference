@@ -630,7 +630,7 @@ footer {
   }
 
 
-  .menu nav {
+  body:target nav {
     background: url(../img/f.svg) center 0 no-repeat;
     background-size: 3rem;
   
@@ -638,10 +638,10 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-  .menu nav h1 {
+  body:target nav h1 {
     display: none;
   }
-  .menu nav ul.primary {
+  body:target nav ul.primary {
     padding: 6rem 2rem 0;
     display: flex;
     flex-direction: column;
@@ -650,15 +650,15 @@ footer {
 
   }
 
-  .menu nav h2 {
+  body:target nav h2 {
     display: block;
     margin-right: 0;
   }
-  .menu nav ul.secondary {
+  body:target nav ul.secondary {
     display: block;
     margin-right: 0;
   }
-  .menu main {
+  body:target main {
     display: none;
   }
 
