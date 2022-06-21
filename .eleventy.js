@@ -31,6 +31,12 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromISO(dateIso).setLocale('en-US').toLocaleString(DateTime.DATE_FULL)
   });
 
+  eleventyConfig.addCollection('pages', collection => {
+    return collection
+      .getFilteredByGlob('./_input/*.md')
+      .sort((a, b) => parseInt(a.fileSlug, 10) > parseInt(b.fileSlug,10) ? 1 : -1);
+  });
+
   return {
     dir: {
       input: './_input',

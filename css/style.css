@@ -463,6 +463,46 @@ section.tickets a.buy:hover {
 }
 
 
+/* Schedule */
+
+table.schedule {
+  border-spacing: 0;
+}
+
+table.schedule tr:nth-child(2n) {
+  background-color: #eee;
+}
+
+table.schedule tr td {
+  padding: 0.6rem 1rem;
+  vertical-align: top;
+}
+table.schedule tr td:first-child {
+  text-align: right;
+}
+
+table.schedule tr td h3 {
+  font-family: 'Clarke', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+  margin-top: -0.3rem;
+}
+table.schedule tr td a {
+  display: inline-block;
+  color: var(--color-mandy);
+  text-decoration: none;
+}
+table.schedule tr td a:hover {
+  color: #fff;
+  background: var(--color-mandy);
+  outline: 3px solid var(--color-mandy);
+}
+table.schedule tr td h3 + p {
+  font-size: 0.9rem;
+}
+
 /* Form */
 
 form {
