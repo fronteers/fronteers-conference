@@ -503,6 +503,16 @@ table.schedule tr td h3 + p {
   font-size: 0.9rem;
 }
 
+table.schedule tr td .decorated-link {
+  text-decoration: underline;
+  color: #000
+}
+
+table.schedule tr td .decorated-link:hover,
+table.schedule tr td .decorated-link:focus {
+  text-decoration: none;
+}
+
 /* Form */
 
 form {
