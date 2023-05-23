@@ -1,10 +1,18 @@
 :root {
+    /* TODO: remove unused colors from old design  */
     --color-chicago: #575756;
     --color-mandy: #e84667;
     --color-wewak: #f19599;
     --color-apricot-peach: #fad0b1;
     --color-chino: #cdc6aa;
     --color-acapulco: #83ae9b;
+    /* Colors from new design */
+    --color-primary: #ffce2e;
+    --color-accent-1: #fe796a;
+    --color-accent-2: #b7b7fc;
+    --color-accent-3: #646ee0;
+    --color-white: #ffffff;
+    --color-black: #000000;
 }
 
 .screenreader-only {
