@@ -1,43 +1,42 @@
 ---
 permalink: "{{ page.fileSlug }}/index.html"
 ---
+
 {% extends "_includes/default.njk" %}
-
 {% block content %}
-<section class="intro">
-    <h2 class="screenreader-only">
-      Contact
-    </h2>
-
-    <p>
-      If you have any questions about Fronteers Conference, tickets or payments, please use the contact form below, or send an email to <a href="mailto:conference@fronteers.nl">conference@fronteers.nl</a>
-    </p>
-</section>
-<section class="block left">
-    <div class="rainbow">
-        <form name="contact" method="POST" data-netlify="true">
-            <p class="form-row">
-                <label for="name">Name</label>
-                <input id="name" type="text" name="name" />
-            </p>
-            <p class="form-row">
-                <label for="email">Email</label>
-                <input id="email" type="email" name="email" />
-            </p>
-            <p class="form-row">
-                <label for="phone">Phone number</label>
-                <input id="phone" type="text" name="phonenumber"/>
-            </p>
-            <p class="form-row">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6"></textarea>
-            </p>
-            <p class="form-row">
-                <button class="rainbow-button" type="submit">Send message</button>
-            </p>
-        </form>
-
-    </div>
-
-</section>
+    <section class="intro">
+        <h2 class="screenreader-only">
+            Contact
+        </h2>
+        <p>
+            If you have any questions about Fronteers Conference, tickets or payments, please use the contact form below, or send an
+            email to
+            <a href="mailto:conference@fronteers.nl">conference@fronteers.nl</a>
+        </p>
+    </section>
+    <section class="block left">
+        <div class="rainbow">
+            <form name="contact" method="POST" data-netlify="true">
+                <p class="form-row">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" name="name"/>
+                </p>
+                <p class="form-row">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email"/>
+                </p>
+                <p class="form-row">
+                    <label for="phone">Phone number</label>
+                    <input id="phone" type="text" name="phonenumber"/>
+                </p>
+                <p class="form-row">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6"></textarea>
+                </p>
+                <p class="form-row">
+                    <button class="rainbow-button" type="submit">Send message</button>
+                </p>
+            </form>
+        </div>
+    </section>
 {% endblock %}

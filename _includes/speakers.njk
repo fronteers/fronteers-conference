@@ -1,210 +1,222 @@
 ---
 permalink: "{{ page.fileSlug }}/index.html"
 ---
-{% extends "_includes/default.njk" %}
 
+{% extends "_includes/default.njk" %}
 {% block content %}
   <section class="intro">
     <h2 class="screenreader-only">
       Speakers
     </h2>
-
     <p>
-      We have a spectacular line-up of 6 speakers for you. These are the people who'll be stimulating your mind with thought-provoking talks.
+      We have a spectacular line-up of 6 speakers for you. These are the people who'll be stimulating your mind with
+      thought-provoking talks.
     </p>
   </section>
-
   <section class="block right speaker">
     <div class="rainbow">
       <a name="bramus-van-damme"></a>
-
       <div>
         <h3>CSS in 2022 (and beyond)</h3>
         <p>
           Things have been going hard for CSS the past few years, and there's a bunch of new and exciting stuff on its way.
         </p>
         <p>
-          With this talk you'll be up to speed on some very nice recent additions, and will get a glimpse of a lot of the features that will be landing across all browsers by the end of this year.
+          With this talk you'll be up to speed on some very nice recent additions, and will get a glimpse of a lot of the features
+          that will be landing across all browsers by the end of this year.
         </p>
-
         <h4>Bramus Van Damme</h4>
-
         <img src="{{ '/img/speaker-bramus-van-damme.png' | url }}" alt="">
-
-        <p>
-          Bramus Van Damme is a web developer from Belgium. From the moment he discovered view-source at the age of 14 (way back in 1997), he fell in love with the web and has been tinkering with it ever since.
-        </p>
-        <p>
-          As a Chrome Developer Relations Engineer at Google, he spreads the word on CSS, UI, and DevTools. Before joining Google, Bramus worked as a freelance developer in various front- and backend roles. For seven years he also was a College Lecturer Web & Mobile, educating undergrad students all about HTML, CSS, and JavaScript — in that order.
-        </p>
-
-        <p>
-          Watch Bramus' talk <a href="https://vimeo.com/768733716" aria-label="Watch Bramus' talk on Vimeo">on Vimeo</a>
-        </p>
+          <p>
+            Bramus Van Damme is a web developer from Belgium. From the moment he discovered view-source at the age of 14 (way back
+            in 1997), he fell in love with the web and has been tinkering with it ever since.
+          </p>
+          <p>
+            As a Chrome Developer Relations Engineer at Google, he spreads the word on CSS, UI, and DevTools. Before joining Google,
+            Bramus worked as a freelance developer in various front- and backend roles. For seven years he also was a College
+            Lecturer Web & Mobile, educating undergrad students all about HTML, CSS, and JavaScript — in that order.
+          </p>
+          <p>
+            Watch Bramus' talk
+            <a href="https://vimeo.com/768733716" aria-label="Watch Bramus' talk on Vimeo">on Vimeo</a>
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="block left speaker">
-    <div class="rainbow">
-      <a name="robin-marx"></a>
-
-      <div>
-        <h3>Web Protocols for Frontend Developers</h3>
-        <p>
-          HTTP/3 is here, and it promises major performance benefits! Most of these we get for free, with just the flip of a switch. Some however allow or even require tweaking by (frontend) developers for optimal performance.
-        </p>
-        <p>
-          In this talk, we'll look at the high-level options you as a developer have to steer HTTP/2 and 3 behaviour, and how those actually work internally. We'll consider preloading, lazy loading and priority hints. We take a critical look at keeping your core HTML/CSS smaller than 14KB in the 0-RTT era. And we'll also discuss the new hotness of 103 Early Hints, aka "Server Push Killer".
-        </p>
-        <p>
-          Combining networking 101, protocol history, and especially practical tips, you'll learn what's happening under the hood and how to tune it yourself.
-        </p>
-
-        <h4>Robin Marx</h4>
-
-        <img src="{{ '/img/speaker-robin-marx.png' | url }}" alt="">
-
-        <p>
-          Robin Marx is a Web Performance Architect at Akamai. He’s the author of various papers on HTTP/2, HTTP/3 and QUIC and has been a contributor in the IETF QUIC working group for multiple years.
-        </p>
-        <p>
-          He focuses on creating tools for the QUIC and HTTP/3 protocols that help others debug their behavior and performance. He often talks about web performance at international conferences, making the complex situations more insightful to the wider public. On the weekends, he likes to hit other people with longswords.
-        </p>
-
-        <p>
-          Watch Robin's talk <a href="https://vimeo.com/768728308" aria-label="Watch Robin's talk on Vimeo">on Vimeo</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="block right speaker">
-    <div class="rainbow">
-      <a name="maud-nalpas"></a>
-
-      <div>
-        <h3>
-          Debugging web privacy
-        </h3>
-        <p>
-          Checkout flows that ask for too much data, cookie notices that hurt site performance, maddening location permission requests… 
-          Privacy decisions don't only have an impact on user trust: they also determine the user experience! 
-          In her talk, Maud will walk you through concrete tips and code examples you can use today to improve the privacy of your users⏤while delivering a great user experience.
-        </p>
-        <h4>Maud Nalpas</h4>
-        <img src="{{'/img/speaker-maud-nalpas.png'}}" alt="">
-        
-        <p>
-          Maud is a developer relations engineer at Chrome for web security and privacy. Before joining Google, Maud was a full-stack developer leaning towards frontend development. She knows first-hand that the concepts needed to build private and secure websites can feel puzzling and obscure⏤and she's on a mission to change just that.
-        </p>
-        <p>
-          Maud lives in Berlin and enjoys windsurfing, baking cookies, and playing the guitar off-key.
-        </p>
-        <p>
-          Watch Maud's talk <a href="https://vimeo.com/768753225" aria-label="Watch Maud's talk on Vimeo">on Vimeo</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="block left speaker">
-    <div class="rainbow">
-      <a name="marie-van-driessche"></a>
-
-      <div>
-        <h3>
-          Beyond the persona
-        </h3>
-        <p>Designers tend to take the average user and design solutions of that average persona by using design and empathy. But to design products and services that are truly inclusive we have to go beyond empathy and asking questions.</p>
-        <p>In my talk I'll explain why Design Thinking doesn't work and you'll learn how to transform your design process to be really inclusive.</p>
-        <h4>Marie van Driessche</h4>
-        <img src="{{'/img/speaker-marie-van-driessche.png'}}" alt="">
-        
-        <p>
-          As an user experience designer and teacher, Marie van Driessche (Amsterdam) is fascinated by the way people interact with digital products and each other. Her focus is to design proper, meaningful and inclusive solutions. Currently she works as an user experience designer with a focus on accessibility at Unc Inc. Marie also teaches UX / UI design at Amsterdam University of Applied Sciences.
-        </p>
-        <p>
-          Besides all the above, she loves to kitesurf, gardening and reading cookbooks in bed before falling asleep.
-        </p>
-
-        <p>
-          Watch Marie's talk <a href="https://vimeo.com/768715583" aria-label="Watch Marie's talk on Vimeo">on Vimeo</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="block right speaker">
-    <div class="rainbow">
-      <a name="ulrike-rausch"></a>
-
-      <div>
-        <h3>
-          Unlock the Fun!
-        </h3>
-        <p>Creating outstanding typographic designs is not just about choosing the right font. It’s about using all the super powers that font technology offers you today.</p>
-        <p>In her talk, Ulrike will reveal some playful type experiments that show evidence: type is not just for reading but it’s fun and entertaining, too.</p>
-        <p>You will learn how to tap the full potential of a font, which will enable you to create stunning designs, leaving your clients with a smile.</p>
-        <h4>Ulrike Rausch</h4>
-        <img src="{{'/img/speaker-ulrike-rausch.png'}}" alt="">
-        
-        <p>
-          In 2009 Berlin-based type designer Ulrike Rausch founded her own type foundry called LiebeFonts, providing high-quality typefaces with a charming personality and obsessive attention to detail. Her growing portfolio of handwriting fonts has been used in publications, advertisements, and websites all around the world. She also creates custom typefaces for clients.
-        </p>
-        <p>
-          When Ulrike is not busy with her next font release, she enjoys teaching at art schools and giving type design workshops in her studio.
-        </p>
-        <p> 
-          Together with letterer and writer Chris Campe, she wrote the book “Making Fonts!”, a comprehensive guide to type design and font production.
-        </p>
-
-        <p>
-          Watch Ulrike's talk <a href="https://vimeo.com/768721455" aria-label="Watch Ulrike's talk on Vimeo">on Vimeo</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="block left speaker">
-    <div class="rainbow">
-      <a name="manuel-matuzovic"></a>
-
-      <div>
-        <h3>
-          Lost in Translation
-        </h3>
-        <p>A frontend developer’s job is to look at a design, interpret it, and translate it to HTML and CSS. Unfortunately, information often gets lost in translation because we rely too much on visual aspects of a design, rather than its semantic meaning.</p>
-        <p>In his talk, Manuel Matuzović uncovers the invisible patterns we should recognise in a design, and how they affect accessibility.</p>
-        <h4>Manuel Matuzović</h4>
-        <img src="{{'/img/speaker-manuel-matuzovic.png'}}" alt="">
-        
-        <p>
-          Manuel Matuzović is a frontend developer who's passionate about HTML and CSS. He works for the City of Vienna where he builds accessible frontends and he’s an auditor, teacher and consultant. He writes about accessibility, HTML, and CSS on his personal blog <a href='https://matuzo.at'>matuzo.at</a> and <a href='https://htmhell.dev'>htmhell.dev</a>.
-        </p>
-
-        <p>
-          Watch Manuel's talk <a href="https://vimeo.com/768755205" aria-label="Watch Manuel's talk on Vimeo">on Vimeo</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-    
-  <section class="block right speaker">
-    <div class="rainbow">
-      <a name="floor-drees"></a>
-
-      <div>
-        <p>And finally, our amazing MC:</p>
-        <h4>Floor Drees</h4>
-        <img src="{{'/img/speaker-floor-drees.png'}}" alt="">
-        
-        <p>
-          Floor is a Staff Developer Advocate at Aiven, a DBaaS company. Ex Grafana Labs and ex Microsoft, despite not being able to read an analogue clock. Runs a number of conferences and meetups, like the monthly contributing.today panels on open source topics. Your go-to source for dinosaur facts.
-        </p>
-      </div>
-    </div>
-  </section>
-
-{% endblock %}
+    </section>
+    <section class="block left speaker">
+      <div class="rainbow">
+        <a name="robin-marx"></a>
+        <div>
+          <h3>Web Protocols for Frontend Developers</h3>
+          <p>
+            HTTP/3 is here, and it promises major performance benefits! Most of these we get for free, with just the flip of a
+            switch. Some however allow or even require tweaking by (frontend) developers for optimal performance.
+          </p>
+          <p>
+            In this talk, we'll look at the high-level options you as a developer have to steer HTTP/2 and 3 behaviour, and how
+            those actually work internally. We'll consider preloading, lazy loading and priority hints. We take a critical look at
+            keeping your core HTML/CSS smaller than 14KB in the 0-RTT era. And we'll also discuss the new hotness of 103 Early
+            Hints, aka "Server Push Killer".
+          </p>
+          <p>
+            Combining networking 101, protocol history, and especially practical tips, you'll learn what's happening under the hood
+            and how to tune it yourself.
+          </p>
+          <h4>Robin Marx</h4>
+          <img src="{{ '/img/speaker-robin-marx.png' | url }}" alt="">
+            <p>
+              Robin Marx is a Web Performance Architect at Akamai. He’s the author of various papers on HTTP/2, HTTP/3 and QUIC and
+              has been a contributor in the IETF QUIC working group for multiple years.
+            </p>
+            <p>
+              He focuses on creating tools for the QUIC and HTTP/3 protocols that help others debug their behavior and performance. He
+              often talks about web performance at international conferences, making the complex situations more insightful to the
+              wider public. On the weekends, he likes to hit other people with longswords.
+            </p>
+            <p>
+              Watch Robin's talk
+              <a href="https://vimeo.com/768728308" aria-label="Watch Robin's talk on Vimeo">on Vimeo</a>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="block right speaker">
+        <div class="rainbow">
+          <a name="maud-nalpas"></a>
+          <div>
+            <h3>
+              Debugging web privacy
+            </h3>
+            <p>
+              Checkout flows that ask for too much data, cookie notices that hurt site performance, maddening location permission
+              requests… Privacy decisions don't only have an impact on user trust: they also determine the user experience! In her
+              talk, Maud will walk you through concrete tips and code examples you can use today to improve the privacy of your
+              users⏤while delivering a great user experience.
+            </p>
+            <h4>Maud Nalpas</h4>
+            <img src="{{ '/img/speaker-maud-nalpas.png' }}" alt="">
+              <p>
+                Maud is a developer relations engineer at Chrome for web security and privacy. Before joining Google, Maud was a
+                full-stack developer leaning towards frontend development. She knows first-hand that the concepts needed to build
+                private and secure websites can feel puzzling and obscure⏤and she's on a mission to change just that.
+              </p>
+              <p>
+                Maud lives in Berlin and enjoys windsurfing, baking cookies, and playing the guitar off-key.
+              </p>
+              <p>
+                Watch Maud's talk
+                <a href="https://vimeo.com/768753225" aria-label="Watch Maud's talk on Vimeo">on Vimeo</a>
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="block left speaker">
+          <div class="rainbow">
+            <a name="marie-van-driessche"></a>
+            <div>
+              <h3>
+                Beyond the persona
+              </h3>
+              <p>Designers tend to take the average user and design solutions of that average persona by using design and empathy. But
+                to design products and services that are truly inclusive we have to go beyond empathy and asking questions.</p>
+              <p>In my talk I'll explain why Design Thinking doesn't work and you'll learn how to transform your design process to be
+                really inclusive.</p>
+              <h4>Marie van Driessche</h4>
+              <img src="{{ '/img/speaker-marie-van-driessche.png' }}" alt="">
+                <p>
+                  As an user experience designer and teacher, Marie van Driessche (Amsterdam) is fascinated by the way people interact
+                  with digital products and each other. Her focus is to design proper, meaningful and inclusive solutions. Currently she
+                  works as an user experience designer with a focus on accessibility at Unc Inc. Marie also teaches UX / UI design at
+                  Amsterdam University of Applied Sciences.
+                </p>
+                <p>
+                  Besides all the above, she loves to kitesurf, gardening and reading cookbooks in bed before falling asleep.
+                </p>
+                <p>
+                  Watch Marie's talk
+                  <a href="https://vimeo.com/768715583" aria-label="Watch Marie's talk on Vimeo">on Vimeo</a>
+                </p>
+              </div>
+            </div>
+          </section>
+          <section class="block right speaker">
+            <div class="rainbow">
+              <a name="ulrike-rausch"></a>
+              <div>
+                <h3>
+                  Unlock the Fun!
+                </h3>
+                <p>Creating outstanding typographic designs is not just about choosing the right font. It’s about using all the super
+                  powers that font technology offers you today.</p>
+                <p>In her talk, Ulrike will reveal some playful type experiments that show evidence: type is not just for reading but
+                  it’s fun and entertaining, too.</p>
+                <p>You will learn how to tap the full potential of a font, which will enable you to create stunning designs, leaving
+                  your clients with a smile.</p>
+                <h4>Ulrike Rausch</h4>
+                <img src="{{ '/img/speaker-ulrike-rausch.png' }}" alt="">
+                  <p>
+                    In 2009 Berlin-based type designer Ulrike Rausch founded her own type foundry called LiebeFonts, providing high-quality
+                    typefaces with a charming personality and obsessive attention to detail. Her growing portfolio of handwriting fonts has
+                    been used in publications, advertisements, and websites all around the world. She also creates custom typefaces for
+                    clients.
+                  </p>
+                  <p>
+                    When Ulrike is not busy with her next font release, she enjoys teaching at art schools and giving type design workshops
+                    in her studio.
+                  </p>
+                  <p>
+                    Together with letterer and writer Chris Campe, she wrote the book “Making Fonts!”, a comprehensive guide to type design
+                    and font production.
+                  </p>
+                  <p>
+                    Watch Ulrike's talk
+                    <a href="https://vimeo.com/768721455" aria-label="Watch Ulrike's talk on Vimeo">on Vimeo</a>
+                  </p>
+                </div>
+              </div>
+            </section>
+            <section class="block left speaker">
+              <div class="rainbow">
+                <a name="manuel-matuzovic"></a>
+                <div>
+                  <h3>
+                    Lost in Translation
+                  </h3>
+                  <p>A frontend developer’s job is to look at a design, interpret it, and translate it to HTML and CSS. Unfortunately,
+                    information often gets lost in translation because we rely too much on visual aspects of a design, rather than its
+                    semantic meaning.</p>
+                  <p>In his talk, Manuel Matuzović uncovers the invisible patterns we should recognise in a design, and how they affect
+                    accessibility.</p>
+                  <h4>Manuel Matuzović</h4>
+                  <img src="{{ '/img/speaker-manuel-matuzovic.png' }}" alt="">
+                    <p>
+                      Manuel Matuzović is a frontend developer who's passionate about HTML and CSS. He works for the City of Vienna where he
+                      builds accessible frontends and he’s an auditor, teacher and consultant. He writes about accessibility, HTML, and CSS on
+                      his personal blog
+                      <a href='https://matuzo.at'>matuzo.at</a>
+                      and
+                      <a href='https://htmhell.dev'>htmhell.dev</a>.
+                    </p>
+                    <p>
+                      Watch Manuel's talk
+                      <a href="https://vimeo.com/768755205" aria-label="Watch Manuel's talk on Vimeo">on Vimeo</a>
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <section class="block right speaker">
+                <div class="rainbow">
+                  <a name="floor-drees"></a>
+                  <div>
+                    <p>And finally, our amazing MC:</p>
+                    <h4>Floor Drees</h4>
+                    <img src="{{ '/img/speaker-floor-drees.png' }}" alt="">
+                      <p>
+                        Floor is a Staff Developer Advocate at Aiven, a DBaaS company. Ex Grafana Labs and ex Microsoft, despite not being able
+                        to read an analogue clock. Runs a number of conferences and meetups, like the monthly contributing.today panels on open
+                        source topics. Your go-to source for dinosaur facts.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              {% endblock %}
