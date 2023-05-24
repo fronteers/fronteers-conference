@@ -8,7 +8,7 @@
 }
 
 body {
-    background: var(--color-chicago) url(/img/noise.png) !important;
+    background: var(--color-chicago) !important;
 }
 
 /* Hide things we do not use */

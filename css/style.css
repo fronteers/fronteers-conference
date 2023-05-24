@@ -30,7 +30,7 @@
 }
 
 html {
-    background: var(--color-chicago) url(../img/noise.png) top left repeat;
+    background: var(--color-chicago);
 }
 
 body {
@@ -40,8 +40,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.pixelated {
-    image-rendering: pixelated;
+.header-wrapper {
+    background-color: var(--color-black);
+}
+
+.header-wrapper h1 {
+    text-align: center;
+    padding-bottom: 16px;
 }
 
 /* Navigation */
@@ -127,12 +132,6 @@ nav ul.secondary li a:active {
 }
 
 /* Main layout */
-
-main {
-    flex: 1;
-    max-width: 42rem;
-    margin: 0 20px;
-}
 
 main > header h1 img {
     margin: 0 40px 0 0;
