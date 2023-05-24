@@ -42,57 +42,23 @@
     <script src="/js/breakout.js?v={% version %}" defer></script>
     {% block head %}{% endblock %}
   </head>
-  <body id="show-menu">
+  <body>
     <main>
       <header class="header-wrapper">
         <h1>
           <img src="{{ '/img/fronteers-yellow.svg' | url }}" alt="Fronteers Conference, September 21 - 22 2023, Utrecht">
         </h1>
+        <nav class="site-nav-wrapper">
+          <ul class="site-nav">
+            {% for post in collections.pages %}
+              <li>
+                <a href="{{ post.url }}" {% if page.url == post.url %} aria-current="page" {% endif %}>{{ post.data.navigation }}</a>
+              </li>
+              {% if post.url == '/' %}{% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
       </header>
-      <nav>
-        <h1>
-          <a href="#show-menu">Menu</a>
-        </h1>
-        <ul class='primary'>
-          {% for post in collections.pages %}
-            <li>
-              <a href="{{ post.url }}" {% if page.url == post.url %} aria-current="page" {% endif %}>{{ post.data.navigation }}</a>
-            </li>
-            {% if post.url == '/' %}{% endif %}
-          {% endfor %}
-        </ul>
-        <h2>Elsewhere</h2>
-        <ul class='secondary'>
-          <li>
-            <a href='https://twitter.com/FronteersConf'>Twitter</a>
-          </li>
-          <li>
-            <a href='https://vimeo.com/fronteers/videos'>Vimeo</a>
-          </li>
-        </ul>
-        <h2>Previous years</h2>
-        {# TODO  #}
-        {# <ul class='secondary'>
-                  <li>
-                    <a href='https://fronteers.nl/congres/2019'>2019</a>
-                  </li>
-                  <li>
-                    <a href='https://fronteers.nl/congres/2018'>2018</a>
-                  </li>
-                  <li>
-                    <a href='https://fronteers.nl/congres/2017'>2017</a>
-                  </li>
-                </ul>
-                <h2>Fronteers</h2>
-                <ul class='secondary'>
-                  <li>
-                    <a href='https://fronteers.nl/about'>About Fronteers</a>
-                  </li>
-                  <li>
-                    <a href='https://fronteers.nl/'>Homepage (NL)</a>
-                  </li>
-                </ul> #}
-      </nav>
       {% block content %}
         {{ content | safe }}
       {% endblock %}
