@@ -1,16 +1,16 @@
 {
-  "engines": {
-    "npm": ">=6.0.0",
-    "node": ">=14.0.0"
-  },
-  "scripts": {
-    "start": "eleventy --serve --watch",
-    "build": "cross-env ELEVENTY_PRODUCTION=true eleventy && cross-env NODE_ENV=production"
-  },
-  "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "alpinejs": "^2.8.0",
-    "cross-env": "^7.0.3"
-  },
-  "dependencies": {}
+    "engines": {
+        "npm": ">=6.0.0",
+        "node": ">=14.0.0"
+    },
+    "scripts": {
+        "start": "eleventy --serve --watch",
+        "build": "cross-env ELEVENTY_PRODUCTION=true eleventy && cross-env NODE_ENV=production"
+    },
+    "devDependencies": {
+        "@11ty/eleventy": "^0.12.1",
+        "alpinejs": "^2.8.0",
+        "cross-env": "^7.0.3"
+    },
+    "dependencies": {}
 }
