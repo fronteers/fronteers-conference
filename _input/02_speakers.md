@@ -2,8 +2,7 @@
 tags: pages
 layout: speakers.njk
 title: Our Speakers
-description: 
+description:
 navigation: Speakers
 permalink: "speakers.html"
 ---
-

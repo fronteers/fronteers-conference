@@ -1,25 +1,24 @@
 @font-face {
-    font-family: 'Clarke';
-    src: url('assets/fonts/clarke-regular.woff2') format('woff2');
+    font-family: "Clarke";
+    src: url("assets/fonts/clarke-regular.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
-    font-family: 'Clarke';
-    src: url('assets/fonts/clarke-medium.woff2') format('woff2');
+    font-family: "Clarke";
+    src: url("assets/fonts/clarke-medium.woff2") format("woff2");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
-    font-family: 'Clarke';
-    src: url('assets/fonts/clarke-light.woff2') format('woff2');
+    font-family: "Clarke";
+    src: url("assets/fonts/clarke-light.woff2") format("woff2");
     font-weight: 200;
     font-style: normal;
     font-display: swap;
 }
-
 
 :root {
     --color-chicago: #575756;
@@ -39,12 +38,10 @@
     overflow: hidden;
 }
 
-
 * {
     margin: 0;
     padding: 0;
 }
-
 
 html {
     background: var(--color-chicago);
@@ -57,7 +54,6 @@ body {
 
     font-family: Arial, Helvetica, sans-serif;
 }
-
 
 /* Navigation */
 
@@ -72,7 +68,7 @@ nav ul {
     margin-top: 4rem;
 }
 nav ul li {
-    font-family: 'Clarke';
+    font-family: "Clarke";
     font-weight: bold;
     font-size: 1.8rem;
     text-transform: uppercase;
@@ -88,7 +84,7 @@ nav ul li a {
     text-decoration: none;
 }
 nav ul li a.selected::before {
-    content: '';
+    content: "";
     display: block;
     width: 2rem;
 
@@ -99,11 +95,10 @@ nav ul li a.selected::before {
     height: 4px;
 
     background: var(--color-acapulco);
-    box-shadow: -4px 4px 0px var(--color-chino), -8px 8px 0px var(--color-apricot-peach), -12px 12px 0px var(--color-wewak), -16px 16px 0px var(--color-mandy);
-
+    box-shadow: -4px 4px 0px var(--color-chino),
+        -8px 8px 0px var(--color-apricot-peach),
+        -12px 12px 0px var(--color-wewak), -16px 16px 0px var(--color-mandy);
 }
-
-
 
 /* Main layout */
 
@@ -120,8 +115,6 @@ main > header {
     margin-bottom: 4rem;
 }
 
-
-
 /* Generic intro block */
 
 section.intro {
@@ -130,7 +123,7 @@ section.intro {
 }
 section.intro * {
     display: inline;
-    font-family: 'Clarke';
+    font-family: "Clarke";
     font-weight: normal;
     font-size: 2.3rem;
     color: #fff;
@@ -138,8 +131,6 @@ section.intro * {
 section.intro h2 {
     color: var(--color-apricot-peach);
 }
-
-
 
 /* Generic text block */
 
@@ -152,7 +143,6 @@ section.block > div {
     display: flex;
     flex-direction: column;
     background: #fff;
-
 }
 section.block > div > img {
     width: 100%;
@@ -186,7 +176,7 @@ section.block > div > div ul li {
 }
 section.block > div > div h3 {
     text-transform: uppercase;
-    font-family: 'Clarke';
+    font-family: "Clarke";
     font-weight: bold;
     font-size: 2.5rem;
     line-height: 100%;
@@ -194,7 +184,7 @@ section.block > div > div h3 {
 }
 section.block > div > div h4 {
     text-transform: uppercase;
-    font-family: 'Clarke';
+    font-family: "Clarke";
     font-weight: bold;
     font-size: 1.8rem;
     line-height: 100%;
@@ -202,13 +192,11 @@ section.block > div > div h4 {
     margin-bottom: 1rem;
 }
 
-
-
 /* TL;DR block for homepage */
 
 section.tldr {
     text-transform: uppercase;
-    font-family: 'Clarke';
+    font-family: "Clarke";
     font-weight: bold;
     font-size: 4.5rem;
     line-height: 100%;
@@ -221,16 +209,15 @@ section.tldr * {
     text-decoration: none;
 }
 
-
 /* Promo for selling tickets on the homepage, used inside a generic block */
 
 section.block > div > div.promo {
-    font-family: 'Clarke';
+    font-family: "Clarke";
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
 
-    background-color:var(--color-acapulco);
+    background-color: var(--color-acapulco);
     padding: 1.5rem;
 }
 section.block > div > div.promo h3 {
@@ -247,15 +234,13 @@ section.block > div > div.promo p {
     line-height: 100%;
 }
 
-
-
 /* Speaker specific styles, overwrites a generic block */
 
 section.speaker > div > div > h3 {
     color: var(--color-chicago);
 }
 section.speaker > div > div > h4 {
-    color: var(--color-mandy);   
+    color: var(--color-mandy);
 }
 section.speaker > div > div > h4 ~ p {
     font-size: 0.95rem;
@@ -269,24 +254,22 @@ section.speaker > div > div > img {
     right: -3rem;
 }
 
-    /* When column is too small to float the image */
+/* When column is too small to float the image */
 
-    @media (min-width: 40rem) and (max-width: 50rem) {
-        section.speaker > div > div > img {
-            float: none;
-            margin: 0.5rem 0 1rem;
-            right: auto;
-        }
+@media (min-width: 40rem) and (max-width: 50rem) {
+    section.speaker > div > div > img {
+        float: none;
+        margin: 0.5rem 0 1rem;
+        right: auto;
     }
-    @media (max-width: 30rem) {
-        section.speaker > div > div > img {
-            float: none;
-            margin: 0.5rem 0 1rem;
-            right: auto;
-        }
+}
+@media (max-width: 30rem) {
+    section.speaker > div > div > img {
+        float: none;
+        margin: 0.5rem 0 1rem;
+        right: auto;
     }
-
-
+}
 
 /* Ticket specific table */
 
@@ -300,13 +283,13 @@ section.tickets table th,
 section.tickets table td {
     border-collapse: collapse;
     padding: 0.3rem 0.5rem;
-}    
+}
 section.tickets table th {
     text-align: left;
     font-weight: normal;
 }
 section.tickets table td.price {
-    font-family: 'Clarke';
+    font-family: "Clarke";
     font-weight: bold;
     font-size: 2.4rem;
     text-transform: uppercase;
@@ -316,24 +299,24 @@ section.tickets table td.price {
     white-space: nowrap;
 }
 
-section.tickets table tr:nth-child(5n+1) {
+section.tickets table tr:nth-child(5n + 1) {
     background: var(--color-acapulco);
 }
-section.tickets table tr:nth-child(5n+2) {
+section.tickets table tr:nth-child(5n + 2) {
     background: var(--color-chino);
 }
-section.tickets table tr:nth-child(5n+3) {
+section.tickets table tr:nth-child(5n + 3) {
     background: var(--color-apricot-peach);
 }
-section.tickets table tr:nth-child(5n+4) {
+section.tickets table tr:nth-child(5n + 4) {
     background: var(--color-wewak);
 }
-section.tickets table tr:nth-child(5n+5) {
+section.tickets table tr:nth-child(5n + 5) {
     background: var(--color-mandy);
 }
 section.tickets a.buy {
     border: none;
-    font-family: 'Clarke';
+    font-family: "Clarke";
     font-weight: bold;
     font-size: 1.6rem;
     text-transform: uppercase;
@@ -346,41 +329,49 @@ section.tickets a.buy:hover {
     background: none;
 }
 section.tickets a.arrow::after {
-    content: '';
+    content: "";
     display: inline-block;
     width: 6px;
     height: 6px;
     margin-left: 6px;
     margin-right: 12px;
     background: var(--color-acapulco);
-    box-shadow: 6px -6px 0px var(--color-wewak), 0px -12px 0px var(--color-apricot-peach);
+    box-shadow: 6px -6px 0px var(--color-wewak),
+        0px -12px 0px var(--color-apricot-peach);
 }
 
-
-/* Footer */    
+/* Footer */
 
 footer {
     margin: 6rem 0;
 }
 
-
-
 /* Rainbow shadows */
 
 .right .rainbow {
-    box-shadow: 4px 4px 0px var(--color-acapulco), 8px 8px 0px var(--color-chino), 12px 12px 0px var(--color-apricot-peach), 16px 16px 0px var(--color-wewak), 20px 20px 0px var(--color-mandy);
+    box-shadow: 4px 4px 0px var(--color-acapulco),
+        8px 8px 0px var(--color-chino), 12px 12px 0px var(--color-apricot-peach),
+        16px 16px 0px var(--color-wewak), 20px 20px 0px var(--color-mandy);
     margin-right: 20px;
 }
 .left .rainbow {
-    box-shadow: -4px 4px 0px var(--color-acapulco), -8px 8px 0px var(--color-chino), -12px 12px 0px var(--color-apricot-peach), -16px 16px 0px var(--color-wewak), -20px 20px 0px var(--color-mandy);
+    box-shadow: -4px 4px 0px var(--color-acapulco),
+        -8px 8px 0px var(--color-chino),
+        -12px 12px 0px var(--color-apricot-peach),
+        -16px 16px 0px var(--color-wewak), -20px 20px 0px var(--color-mandy);
     margin-left: 20px;
 }
 .bottom .rainbow {
-    box-shadow: 4px 4px 0px var(--color-acapulco), 8px 8px 0px var(--color-chino), 12px 12px 0px var(--color-apricot-peach), 16px 16px 0px var(--color-wewak), 20px 20px 0px var(--color-mandy);
+    box-shadow: 4px 4px 0px var(--color-acapulco),
+        8px 8px 0px var(--color-chino), 12px 12px 0px var(--color-apricot-peach),
+        16px 16px 0px var(--color-wewak), 20px 20px 0px var(--color-mandy);
     margin-bottom: 20px;
 }
 .top .rainbow {
-    box-shadow: 4px -4px 0px var(--color-acapulco), 8px -8px 0px var(--color-chino), 12px -12px 0px var(--color-apricot-peach), 16px -16px 0px var(--color-wewak), 20px -20px 0px var(--color-mandy);
+    box-shadow: 4px -4px 0px var(--color-acapulco),
+        8px -8px 0px var(--color-chino),
+        12px -12px 0px var(--color-apricot-peach),
+        16px -16px 0px var(--color-wewak), 20px -20px 0px var(--color-mandy);
     margin-top: 20px;
 }
 
@@ -392,14 +383,6 @@ footer {
 .block.left {
     margin-left: 40px;
 }
-
-
-
-
-
-
-
-
 
 @media (max-width: 40rem) {
     html {
@@ -422,7 +405,7 @@ footer {
     nav p {
         display: block;
 
-        font-family: 'Clarke';
+        font-family: "Clarke";
         font-weight: bold;
         font-size: 1.8rem;
         text-transform: uppercase;
@@ -436,13 +419,14 @@ footer {
         text-decoration: none;
     }
     nav p a::after {
-        content: '';
+        content: "";
         display: inline-block;
         width: 6px;
         height: 6px;
         margin-left: 6px;
         background: var(--color-acapulco);
-        box-shadow: 6px 6px 0px var(--color-apricot-peach), 12px 0px 0px var(--color-wewak);
+        box-shadow: 6px 6px 0px var(--color-apricot-peach),
+            12px 0px 0px var(--color-wewak);
     }
 
     .menu nav ul {
@@ -453,9 +437,10 @@ footer {
         left: 0;
         right: 0;
 
-        background: var(--color-chicago) url(assets/images/f.svg) center 0rem no-repeat;
+        background: var(--color-chicago) url(assets/images/f.svg) center 0rem
+            no-repeat;
         background-size: 3rem;
-    
+
         padding: 9rem 2rem 0;
 
         display: flex;
@@ -470,7 +455,6 @@ footer {
         margin-bottom: 3rem;
     }
 
-
     .block.right {
         margin-left: -20px;
         margin-right: 20px;
@@ -479,5 +463,4 @@ footer {
         margin-right: -20px;
         margin-left: 20px;
     }
-    
 }

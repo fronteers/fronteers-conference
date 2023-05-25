@@ -1,533 +1,481 @@
 :root {
-  --color-chicago: #575756;
-  --color-mandy: #e84667;
-  --color-wewak: #f19599;
-  --color-apricot-peach: #fad0b1;
-  --color-chino: #cdc6aa;
-  --color-acapulco: #83ae9b;
+    /* TODO: remove unused colors from old design  */
+    --color-chicago: #575756;
+    --color-mandy: #e84667;
+    --color-wewak: #f19599;
+    --color-apricot-peach: #fad0b1;
+    --color-chino: #cdc6aa;
+    --color-acapulco: #83ae9b;
+    /* Colors from new design */
+    --color-primary: #ffce2e;
+    --color-accent-1: #fe796a;
+    --color-accent-2: #b7b7fc;
+    --color-accent-3: #646ee0;
+    --color-white: #ffffff;
+    --color-black: #000000;
 }
 
 .screenreader-only {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
-
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-  background: var(--color-chicago) url(../img/noise.png) top left repeat;
+    background: var(--color-chicago);
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  padding-top: 5rem;
+    display: flex;
+    justify-content: center;
 
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.pixelated {
-  image-rendering: pixelated;
+.header-wrapper {
+    background-color: var(--color-black);
 }
 
+.header-wrapper h1 {
+    text-align: center;
+    padding-bottom: 16px;
+}
 
 /* Navigation */
 
-nav {
-  width: 6rem;
-  margin: 0 5rem 0 3rem;
+.site-nav-wrapper {
+    display: grid;
+    place-items: center;
 }
 
-nav h1 {
-  position: absolute;
-  left: -10000px;
+.site-nav {
+    padding-left: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 25px;
+}
+.site-nav li {
+    list-style: none;
+}
+.site-nav li a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+.site-nav li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
-
-nav ul.primary {
-  margin-top: 4rem;
-  margin-bottom: 6rem;
+.site-nav li a[aria-current="page"] {
+    color: var(--color-accent-3);
 }
-
-nav ul.primary li {
-  font-family: 'Clarke', Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  list-style-type: none;
-  line-height: 105%;
-  margin-bottom: 1.5rem;
-  letter-spacing: 1pt;
-
-  position: relative;
-}
-
-nav ul.primary li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-nav ul.primary li a[aria-current]::before {
-  content: '';
-  display: block;
-  width: 2rem;
-
-  position: absolute;
-  top: 0.3rem;
-  left: 0;
-  margin-left: -3rem;
-  height: 4px;
-
-  background: var(--color-acapulco);
-  box-shadow: -4px 4px 0 var(--color-chino), -8px 8px 0 var(--color-apricot-peach), -12px 12px 0 var(--color-wewak), -16px 16px 0 var(--color-mandy);
-
-}
-
-
-nav h2 {
-  font-family: 'Clarke', Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  color: var(--color-apricot-peach);
-
-  margin-top: 2rem;
-  margin-right: -3rem;
-}
-
-nav ul.secondary {
-  margin-right: -3rem;
-}
-
-nav ul.secondary li {
-  list-style-type: none;
-  margin-top: 0.3rem;
-  font-size: 0.9rem;
-}
-
-nav ul.secondary li a {
-  color: #fff;
-  text-decoration: none;
-}
-nav ul.secondary li a:hover,
-nav ul.secondary li a:active {
-  text-decoration: underline;
-}
-
-
 
 /* Main layout */
 
-main {
-  flex: 1;
-  max-width: 42rem;
-  margin: 0 20px;
-}
-
 main > header h1 img {
-  margin: 0 40px 0 0;
-  max-width: 32rem;
+    margin: 0 40px 0 0;
+    max-width: 32rem;
 }
 
 main > header {
-  margin-bottom: 4rem;
+    margin-bottom: 4rem;
 }
-
 
 /* Generic intro block */
 
 section.intro {
-  margin: 2rem 0 3rem;
-  padding-right: 6rem;
+    margin: 2rem 0 3rem;
+    padding-right: 6rem;
 }
 
 section.intro * {
-  display: inline;
-  font-family: 'Clarke', Arial, Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 2.3rem;
-  color: #fff;
+    display: inline;
+    font-family: "Clarke", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 2.3rem;
+    color: #fff;
 }
 
 section.intro h2 {
-  color: var(--color-apricot-peach);
+    color: var(--color-apricot-peach);
 }
-
 
 /* Generic text block */
 
 section.block {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-  overflow: hidden;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    overflow: hidden;
 }
 
 section.block > div {
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-
+    display: flex;
+    flex-direction: column;
+    background: #fff;
 }
 
 section.block > div > img {
-  width: 100%;
+    width: 100%;
 }
 
 section.block > div > div {
-  padding: 3rem 3rem;
+    padding: 3rem 3rem;
 }
 
 section.block > div > div a {
-  text-decoration: none;
-  color: var(--color-mandy);
-  border-bottom: 2px solid var(--color-mandy);
+    text-decoration: none;
+    color: var(--color-mandy);
+    border-bottom: 2px solid var(--color-mandy);
 }
 
 section.block > div > div a:hover {
-  background: var(--color-mandy);
-  box-shadow: 0 0 0 4px var(--color-mandy);
-  color: #fff;
+    background: var(--color-mandy);
+    box-shadow: 0 0 0 4px var(--color-mandy);
+    color: #fff;
 }
 
 section.block > div > div p {
-  font-size: 1.05rem;
-  line-height: 150%;
-  margin-bottom: 1rem;
+    font-size: 1.05rem;
+    line-height: 150%;
+    margin-bottom: 1rem;
 }
 
 section.block > div > div ul {
-  font-size: 1.05rem;
-  line-height: 140%;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 140%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 section.block > div > div ul li {
-  list-style-type: square;
-  margin-bottom: 0.5rem;
+    list-style-type: square;
+    margin-bottom: 0.5rem;
 }
 
 section.block > div > div h3 {
-  text-transform: uppercase;
-  font-family: 'Clarke', Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 2.2rem;
-  line-height: 100%;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
+    text-transform: uppercase;
+    font-family: "Clarke", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2.2rem;
+    line-height: 100%;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
 }
 section.block > div > div h3:first-child {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 section.block > div > div h4 {
-  text-transform: uppercase;
-  font-family: 'Clarke', Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 1.8rem;
-  line-height: 100%;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-family: "Clarke", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 100%;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
 }
-
 
 /* TL;DR block for homepage */
 
 section.tldr {
-  text-transform: uppercase;
-  font-family: 'Clarke', Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 4.5rem;
-  line-height: 100%;
-  margin: 2rem 0;
-  color: var(--color-chino);
+    text-transform: uppercase;
+    font-family: "Clarke", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 4.5rem;
+    line-height: 100%;
+    margin: 2rem 0;
+    color: var(--color-chino);
 }
 
 section.tldr * {
-  display: inline;
-  list-style-type: none;
-  text-decoration: none;
+    display: inline;
+    list-style-type: none;
+    text-decoration: none;
 }
-
 
 /* Promo for selling tickets on the homepage, used inside a generic block */
 
 section.block > div > div.promo {
-  text-align: center;
-  background-color: var(--color-acapulco);
-  padding: 1.5rem;
+    text-align: center;
+    background-color: var(--color-acapulco);
+    padding: 1.5rem;
 }
 
 section.block > div > div.promo h3 {
-  font-family: 'Clarke', Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
+    font-family: "Clarke", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
 
-  font-size: 2.2rem;
-  line-height: 100%;
-  margin: 0;
+    font-size: 2.2rem;
+    line-height: 100%;
+    margin: 0;
 }
 
 section.block > div > div.promo h3 span {
-  color: #fff;
+    color: #fff;
 }
 
 section.block > div > div.promo p.discount {
-  font-family: 'Clarke', Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
+    font-family: "Clarke", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
 
-  margin: 0.5rem 0 0;
-  font-size: 1.6rem;
-  line-height: 100%;
+    margin: 0.5rem 0 0;
+    font-size: 1.6rem;
+    line-height: 100%;
 }
 
 section.block > div > div.promo p.discount span {
-  color: #fff;
+    color: #fff;
 }
 section.block > div > div.promo p.taxes {
-  font-size: 0.85rem;
-  margin-bottom: 0;
+    font-size: 0.85rem;
+    margin-bottom: 0;
 }
 
 section.block > div > div.promo span.soon {
-  display: inline-block;
+    display: inline-block;
 
-  font-family: 'Clarke', Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: none;
-  background: #fff;
-  color: #000;
-  padding: 1rem;
-  margin-top: 36px;
-  box-shadow: -4px -4px 0 var(--color-chino), -8px -8px 0 var(--color-chino), -12px -12px 0 var(--color-chino), -16px -16px 0 var(--color-chino), -20px -20px 0 var(--color-chino);
+    font-family: "Clarke", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    background: #fff;
+    color: #000;
+    padding: 1rem;
+    margin-top: 36px;
+    box-shadow: -4px -4px 0 var(--color-chino), -8px -8px 0 var(--color-chino),
+        -12px -12px 0 var(--color-chino), -16px -16px 0 var(--color-chino),
+        -20px -20px 0 var(--color-chino);
 }
 
 section.block > div > div.promo a.buy {
-  display: inline-block;
+    display: inline-block;
 
-  font-family: 'Clarke', Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: none;
-  background: var(--color-chino);
-  color: #000;
-  padding: 1rem;
-  margin-top: 36px;
-  box-shadow: 4px -4px 0 #fff, 8px -8px 0 #fff, 12px -12px 0 #fff, 16px -16px 0 #fff, 20px -20px 0 #fff;
+    font-family: "Clarke", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    background: var(--color-chino);
+    color: #000;
+    padding: 1rem;
+    margin-top: 36px;
+    box-shadow: 4px -4px 0 #fff, 8px -8px 0 #fff, 12px -12px 0 #fff,
+        16px -16px 0 #fff, 20px -20px 0 #fff;
 }
 section.block > div > div.promo a.buy:hover {
-  background: var(--color-apricot-peach);
+    background: var(--color-apricot-peach);
 }
 
 /* Speaker specific styles, overwrites a generic block */
 
 section.speaker > div > div > h3 {
-  color: var(--color-chicago);
+    color: var(--color-chicago);
 }
 
 section.speaker > div > div > h4 {
-  color: var(--color-mandy);
+    color: var(--color-mandy);
 }
 
 section.speaker > div > div > h4 ~ p {
-  font-size: 0.95rem;
+    font-size: 0.95rem;
 }
 
 section.speaker > div > div > img {
-  width: 180px;
-  float: right;
-  position: relative;
-  margin-bottom: 2rem;
-  right: -3rem;
+    width: 180px;
+    float: right;
+    position: relative;
+    margin-bottom: 2rem;
+    right: -3rem;
 
-  image-rendering: pixelated;
+    image-rendering: pixelated;
 }
 
 /* When column is too small to float the image */
 
 @media (min-width: 40rem) and (max-width: 50rem) {
-  section.speaker > div > div > img {
-    float: none;
-    margin: 0.5rem 0 1rem;
-    right: auto;
-  }
+    section.speaker > div > div > img {
+        float: none;
+        margin: 0.5rem 0 1rem;
+        right: auto;
+    }
 }
 
 @media (max-width: 30rem) {
-  section.speaker > div > div > img {
-    float: none;
-    margin: 0.5rem 0 1rem;
-    right: auto;
-  }
+    section.speaker > div > div > img {
+        float: none;
+        margin: 0.5rem 0 1rem;
+        right: auto;
+    }
 }
-
 
 /* Ticket specific table */
 
 section.tickets table {
-  width: 100%;
-  border: none;
-  border-collapse: collapse;
-  margin-bottom: 2rem;
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
 }
 
 section.tickets table th,
 section.tickets table td {
-  border-collapse: collapse;
-  padding: 0.3rem 0.5rem;
+    border-collapse: collapse;
+    padding: 0.3rem 0.5rem;
 }
 
 section.tickets table th {
-  text-align: left;
-  font-weight: normal;
+    text-align: left;
+    font-weight: normal;
 }
 
 section.tickets table tr td,
-section.tickets table tr th  {
-  border-bottom: 4px solid #fff;
-
+section.tickets table tr th {
+    border-bottom: 4px solid #fff;
 }
 section.tickets table tr:last-child td,
-section.tickets table tr:last-child th  {
-  border-bottom: none;
-
+section.tickets table tr:last-child th {
+    border-bottom: none;
 }
 
 section.tickets table td.price {
-  font-family: 'Clarke', Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 2.8rem;
-  text-transform: uppercase;
-  text-align: right;
-  color: var(--color-chicago);
-  border-left: 4px solid #fff;
-  white-space: nowrap;
+    font-family: "Clarke", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    text-align: right;
+    color: var(--color-chicago);
+    border-left: 4px solid #fff;
+    white-space: nowrap;
 }
 section.tickets .prices {
-  background: var(--color-chino);
-  text-align: center;
+    background: var(--color-chino);
+    text-align: center;
 }
 section.tickets .taxes {
-  font-size: 0.85rem;
-  margin-bottom: -1rem;
+    font-size: 0.85rem;
+    margin-bottom: -1rem;
 }
 section.tickets span.soon {
-  font-family: 'Clarke', Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-transform: uppercase;
+    font-family: "Clarke", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-transform: uppercase;
 
-  display: inline-block;
-  text-decoration: none;
-  border: none;
-  background: #fff;
-  color: #000;
-  padding: 1rem;
-  margin-top: 32px;
-  box-shadow: 4px -4px 0 var(--color-acapulco), 8px -8px 0 var(--color-acapulco), 12px -12px 0 var(--color-acapulco), 16px -16px 0 var(--color-acapulco), 20px -20px 0 var(--color-acapulco);
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    background: #fff;
+    color: #000;
+    padding: 1rem;
+    margin-top: 32px;
+    box-shadow: 4px -4px 0 var(--color-acapulco),
+        8px -8px 0 var(--color-acapulco), 12px -12px 0 var(--color-acapulco),
+        16px -16px 0 var(--color-acapulco), 20px -20px 0 var(--color-acapulco);
 }
 section.tickets a.buy {
-  font-family: 'Clarke', Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-transform: uppercase;
+    font-family: "Clarke", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-transform: uppercase;
 
-  display: inline-block;
-  text-decoration: none;
-  border: none;
-  background: var(--color-acapulco);
-  color: #000;
-  padding: 1rem;
-  margin-top: 32px;
-  box-shadow: 4px -4px 0 #fff, 8px -8px 0 #fff, 12px -12px 0 #fff, 16px -16px 0 #fff, 20px -20px 0 #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    background: var(--color-acapulco);
+    color: #000;
+    padding: 1rem;
+    margin-top: 32px;
+    box-shadow: 4px -4px 0 #fff, 8px -8px 0 #fff, 12px -12px 0 #fff,
+        16px -16px 0 #fff, 20px -20px 0 #fff;
 }
 section.tickets a.buy:hover {
-  color: #000;
-  background: var(--color-apricot-peach);
-  box-shadow: 4px -4px 0 #fff, 8px -8px 0 #fff, 12px -12px 0 #fff, 16px -16px 0 #fff, 20px -20px 0 #fff;
-  border: none;
+    color: #000;
+    background: var(--color-apricot-peach);
+    box-shadow: 4px -4px 0 #fff, 8px -8px 0 #fff, 12px -12px 0 #fff,
+        16px -16px 0 #fff, 20px -20px 0 #fff;
+    border: none;
 }
-
 
 /* Schedule */
 
 table.schedule {
-  border-spacing: 0;
+    border-spacing: 0;
 }
 
 table.schedule tr:nth-child(2n) {
-  background-color: #eee;
+    background-color: #eee;
 }
 
 table.schedule tr td {
-  padding: 0.6rem 1rem;
-  vertical-align: top;
+    padding: 0.6rem 1rem;
+    vertical-align: top;
 }
 table.schedule tr td:first-child {
-  text-align: right;
+    text-align: right;
 }
 
 table.schedule tr td h3 {
-  font-family: 'Clarke', Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  margin-bottom: 0.3rem;
-  margin-top: -0.3rem;
+    font-family: "Clarke", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+    margin-top: -0.3rem;
 }
 table.schedule tr td a {
-  display: inline-block;
-  color: var(--color-mandy);
-  text-decoration: none;
+    display: inline-block;
+    color: var(--color-mandy);
+    text-decoration: none;
 }
 table.schedule tr td a:hover {
-  color: #fff;
-  background: var(--color-mandy);
-  outline: 3px solid var(--color-mandy);
+    color: #fff;
+    background: var(--color-mandy);
+    outline: 3px solid var(--color-mandy);
 }
 table.schedule tr td h3 + p {
-  font-size: 0.9rem;
+    font-size: 0.9rem;
 }
 
 table.schedule tr td .decorated-link {
-  text-decoration: underline;
-  color: #000
+    text-decoration: underline;
+    color: #000;
 }
 
 table.schedule tr td .decorated-link:hover,
 table.schedule tr td .decorated-link:focus {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 /* Form */
 
 form {
-  font-family: 'Clarke', Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 1.8rem;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+    font-family: "Clarke", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.8rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .form-row {
-  display: flex;
-  gap: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 
 .form-row:last-child {
@@ -538,191 +486,195 @@ form {
 }
 
 .form-row > *:not(button) {
-  flex: 1;
+    flex: 1;
 }
 
 label {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
-input, textarea { 
-  font-size: 1rem;
-  flex: 1;
-  background-color: #f6f6f6; 
-  border: 2px solid #aaa;
-  padding: 0.7rem;
+input,
+textarea {
+    font-size: 1rem;
+    flex: 1;
+    background-color: #f6f6f6;
+    border: 2px solid #aaa;
+    padding: 0.7rem;
 }
 
 textarea {
-  padding-top: .5rem;
+    padding-top: 0.5rem;
 }
 
 button {
-  cursor: pointer;
-  background-color: var(--color-mandy);
-  font-family: inherit;
-  color: white;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  padding: 1rem;
-  border: 0;
-  margin: 20px 0 0 auto;
+    cursor: pointer;
+    background-color: var(--color-mandy);
+    font-family: inherit;
+    color: white;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    padding: 1rem;
+    border: 0;
+    margin: 20px 0 0 auto;
 
-  box-shadow: -4px -4px 0 #fff, -8px -8px 0 #fff, -12px -12px 0 #fff, -16px -16px 0 #fff, -20px -20px 0 #fff;
+    box-shadow: -4px -4px 0 #fff, -8px -8px 0 #fff, -12px -12px 0 #fff,
+        -16px -16px 0 #fff, -20px -20px 0 #fff;
 }
 
 button:hover,
 button:focus {
-  background-color: var(--color-chicago);
+    background-color: var(--color-chicago);
 }
 
 /* Footer */
 
 footer {
-  margin: 6rem 0;
+    margin: 6rem 0;
 }
-
 
 /* Rainbow shadows */
 
 .right .rainbow {
-  box-shadow: 4px 4px 0 var(--color-acapulco), 8px 8px 0 var(--color-chino), 12px 12px 0 var(--color-apricot-peach), 16px 16px 0 var(--color-wewak), 20px 20px 0 var(--color-mandy);
-  margin-right: 20px;
+    box-shadow: 4px 4px 0 var(--color-acapulco), 8px 8px 0 var(--color-chino),
+        12px 12px 0 var(--color-apricot-peach), 16px 16px 0 var(--color-wewak),
+        20px 20px 0 var(--color-mandy);
+    margin-right: 20px;
 }
 
 .left .rainbow {
-  box-shadow: -4px 4px 0 var(--color-acapulco), -8px 8px 0 var(--color-chino), -12px 12px 0 var(--color-apricot-peach), -16px 16px 0 var(--color-wewak), -20px 20px 0 var(--color-mandy);
-  margin-left: 20px;
+    box-shadow: -4px 4px 0 var(--color-acapulco), -8px 8px 0 var(--color-chino),
+        -12px 12px 0 var(--color-apricot-peach), -16px 16px 0 var(--color-wewak),
+        -20px 20px 0 var(--color-mandy);
+    margin-left: 20px;
 }
 
 .bottom .rainbow {
-  box-shadow: 4px 4px 0 var(--color-acapulco), 8px 8px 0 var(--color-chino), 12px 12px 0 var(--color-apricot-peach), 16px 16px 0 var(--color-wewak), 20px 20px 0 var(--color-mandy);
-  margin-bottom: 20px;
+    box-shadow: 4px 4px 0 var(--color-acapulco), 8px 8px 0 var(--color-chino),
+        12px 12px 0 var(--color-apricot-peach), 16px 16px 0 var(--color-wewak),
+        20px 20px 0 var(--color-mandy);
+    margin-bottom: 20px;
 }
 
 .top .rainbow {
-  box-shadow: 4px -4px 0 var(--color-acapulco), 8px -8px 0 var(--color-chino), 12px -12px 0 var(--color-apricot-peach), 16px -16px 0 var(--color-wewak), 20px -20px 0 var(--color-mandy);
-  margin-top: 20px;
+    box-shadow: 4px -4px 0 var(--color-acapulco), 8px -8px 0 var(--color-chino),
+        12px -12px 0 var(--color-apricot-peach), 16px -16px 0 var(--color-wewak),
+        20px -20px 0 var(--color-mandy);
+    margin-top: 20px;
 }
 
 /* Stagger blocks */
 
 .block.right {
-  margin-right: 40px;
+    margin-right: 40px;
 }
 
 .block.left {
-  margin-left: 40px;
+    margin-left: 40px;
 }
 
-
 @media (max-width: 40rem) {
-  html {
-    font-size: 15px;
-  }
+    html {
+        font-size: 15px;
+    }
 
-  body {
-    flex-direction: column;
-    padding-top: 1rem;
-  }
+    body {
+        flex-direction: column;
+        padding-top: 1rem;
+    }
 
-  nav {
-    margin: 0 min(1rem, 3rem);
-    width: auto;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-  }
+    nav {
+        margin: 0 min(1rem, 3rem);
+        width: auto;
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+    }
 
-  nav ul {
-    display: none;
-  }
+    nav ul {
+        display: none;
+    }
 
-  nav h2 {
-    display: none;
-  }
+    nav h2 {
+        display: none;
+    }
 
-  nav h1 {
-    position: static;
-    display: block;
+    nav h1 {
+        position: static;
+        display: block;
 
-    font-family: 'Clarke', Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    text-align: center;
-    color: #fff;
-  }
+        font-family: "Clarke", Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+    }
 
-  nav h1 a {
-    display: inline-block;
-    padding: 1rem;
-    margin-left: -12px;
-    color: #fff;
-    background: #000;
-    text-decoration: none;
+    nav h1 a {
+        display: inline-block;
+        padding: 1rem;
+        margin-left: -12px;
+        color: #fff;
+        background: #000;
+        text-decoration: none;
 
-    box-shadow: 4px -4px 0 #fff, 8px -8px 0 #fff, 12px -12px 0 #fff, 16px -16px 0 #fff, 20px -20px 0 #fff;
-  }
+        box-shadow: 4px -4px 0 #fff, 8px -8px 0 #fff, 12px -12px 0 #fff,
+            16px -16px 0 #fff, 20px -20px 0 #fff;
+    }
 
+    main > header h1 {
+        text-align: center;
+    }
+    main > header h1 img {
+        margin-right: 0;
+    }
 
-  main > header h1 {
-    text-align: center;
-  }
-  main > header h1 img {
-    margin-right: 0;
-  }
+    section.intro {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: center;
+    }
 
+    body:target nav {
+        background: url(../img/f.svg) center 0 no-repeat;
+        background-size: 3rem;
 
-  section.intro {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    text-align: center;
-  }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    body:target nav h1 {
+        display: none;
+    }
+    body:target nav ul.primary {
+        padding: 6rem 2rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
+    body:target nav h2 {
+        display: block;
+        margin-right: 0;
+    }
+    body:target nav ul.secondary {
+        display: block;
+        margin-right: 0;
+    }
+    body:target main {
+        display: none;
+    }
 
-  body:target nav {
-    background: url(../img/f.svg) center 0 no-repeat;
-    background-size: 3rem;
-  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  body:target nav h1 {
-    display: none;
-  }
-  body:target nav ul.primary {
-    padding: 6rem 2rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    main > header {
+        margin-bottom: 3rem;
+    }
 
+    .block.right {
+        margin-left: -20px;
+        margin-right: 20px;
+    }
 
-  }
-
-  body:target nav h2 {
-    display: block;
-    margin-right: 0;
-  }
-  body:target nav ul.secondary {
-    display: block;
-    margin-right: 0;
-  }
-  body:target main {
-    display: none;
-  }
-
-  main > header {
-    margin-bottom: 3rem;
-  }
-
-  .block.right {
-    margin-left: -20px;
-    margin-right: 20px;
-  }
-
-  .block.left {
-    margin-right: -20px;
-    margin-left: 20px;
-  }
+    .block.left {
+        margin-right: -20px;
+        margin-left: 20px;
+    }
 }
