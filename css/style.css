@@ -29,10 +29,6 @@
     padding: 0;
 }
 
-html {
-    background: var(--color-chicago);
-}
-
 body {
     display: flex;
     justify-content: center;
@@ -80,15 +76,23 @@ body {
     color: var(--color-accent-3);
 }
 
+/* Hero */
+
+.hero {
+    background-image: url("/img/header-background.svg");
+    min-height: 403px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: -1px;
+    max-width: 1024px;
+    margin-inline: auto;
+}
+
 /* Main layout */
 
 main > header h1 img {
     margin: 0 40px 0 0;
     max-width: 32rem;
-}
-
-main > header {
-    margin-bottom: 4rem;
 }
 
 /* Generic intro block */
@@ -116,12 +120,6 @@ section.block {
     margin-top: 4rem;
     margin-bottom: 4rem;
     overflow: hidden;
-}
-
-section.block > div {
-    display: flex;
-    flex-direction: column;
-    background: #fff;
 }
 
 section.block > div > img {
@@ -532,36 +530,6 @@ footer {
     margin: 6rem 0;
 }
 
-/* Rainbow shadows */
-
-.right .rainbow {
-    box-shadow: 4px 4px 0 var(--color-acapulco), 8px 8px 0 var(--color-chino),
-        12px 12px 0 var(--color-apricot-peach), 16px 16px 0 var(--color-wewak),
-        20px 20px 0 var(--color-mandy);
-    margin-right: 20px;
-}
-
-.left .rainbow {
-    box-shadow: -4px 4px 0 var(--color-acapulco), -8px 8px 0 var(--color-chino),
-        -12px 12px 0 var(--color-apricot-peach), -16px 16px 0 var(--color-wewak),
-        -20px 20px 0 var(--color-mandy);
-    margin-left: 20px;
-}
-
-.bottom .rainbow {
-    box-shadow: 4px 4px 0 var(--color-acapulco), 8px 8px 0 var(--color-chino),
-        12px 12px 0 var(--color-apricot-peach), 16px 16px 0 var(--color-wewak),
-        20px 20px 0 var(--color-mandy);
-    margin-bottom: 20px;
-}
-
-.top .rainbow {
-    box-shadow: 4px -4px 0 var(--color-acapulco), 8px -8px 0 var(--color-chino),
-        12px -12px 0 var(--color-apricot-peach), 16px -16px 0 var(--color-wewak),
-        20px -20px 0 var(--color-mandy);
-    margin-top: 20px;
-}
-
 /* Stagger blocks */
 
 .block.right {
@@ -662,10 +630,6 @@ footer {
     }
     body:target main {
         display: none;
-    }
-
-    main > header {
-        margin-bottom: 3rem;
     }
 
     .block.right {
