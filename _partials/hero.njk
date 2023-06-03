@@ -1,0 +1,7 @@
+<picture class="hero full-width">
+  <img src="{{ src | url }}"
+       {% if srcset is defined %}srcset="{{ srcset }}"{% endif %}
+       {% if sizes is defined %}size="{{ sizes }}"{% endif %}
+       alt=""
+       class="hero__image">
+</picture>

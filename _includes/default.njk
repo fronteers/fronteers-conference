@@ -1,67 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>{{ title }} | Fronteers Conference 2022</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-    <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/clarke-regular.woff2' | url }}">
-    <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/clarke-medium.woff2' | url }}">
-    <link rel="preload" as="style" href="{{ '/css/style.css' | url }}?v={% version %}">
-    <style>
-      @font-face {
-        font-family: 'Clarke';
-        src: url('{{ '/fonts/clarke-regular.woff2' | url }}') format('woff2');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'Clarke';
-        src: url('{{ '/fonts/clarke-medium.woff2' | url }}') format('woff2');
-        font-weight: bold;
-        font-style: normal;
-        font-display: swap;
-      }
-    </style>
-    <link rel="stylesheet" href="{{ '/css/style.css' | url }}?v={% version %}">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@FronteersConf">
-    <meta name="twitter:creator" content="@FronteersConf">
-    {% if title %}
-      <meta name="og:title" content="{{ title }}">
-      <meta name="twitter:title" content="{{ title }}">
-    {% endif %}
-    {% if description %}
-      <meta name="description" content="{{ description }}">
-      <meta name="og:description" content="{{ description }}">
-      <meta name="twitter:description" content="{{ description }}">
-    {% endif %}
-    <meta name="og:image" content="{{ '/img/social-media.png' | url }}?v={% version %}">
-    <meta name="twitter:image" content="{{ '/img/social-media.png' | url }}?v={% version %}">
-    <link rel="icon" href="{{ '/favicon.ico' | url }}">
-    <script src="/js/breakout.js?v={% version %}" defer></script>
-    {% block head %}{% endblock %}
-  </head>
-  <body>
-    <main>
-      <header class="header-wrapper">
-        <h1>
-          <img src="{{ '/img/fronteers-yellow.svg' | url }}" alt="Fronteers Conference, September 21 - 22 2023, Utrecht">
-        </h1>
-        <nav class="site-nav-wrapper">
-          <ul class="site-nav">
-            {% for post in collections.pages %}
-              <li>
-                <a href="{{ post.url }}" {% if page.url == post.url %} aria-current="page" {% endif %}>{{ post.data.navigation }}</a>
-              </li>
-              {% if post.url == '/' %}{% endif %}
-            {% endfor %}
-          </ul>
-        </nav>
-      </header>
-      {% block content %}
-        {{ content | safe }}
-      {% endblock %}
-    </main>
-  </body>
+<head>
+  <title>{{ title }} | Fronteers Conference 2023</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Fabrik-Regular.woff2' | url }}">
+  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Fabrik-Bold.woff2' | url }}">
+  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Roboto-Regular.woff2' | url }}">
+  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Roboto-Bold.woff2' | url }}">
+  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Roboto-Italic.woff2' | url }}">
+  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Roboto-BoldItalic.woff2' | url }}">
+  <link rel="preload" as="style" href="{{ '/css/style.css' | url }}?v={% version %}">
+  <style>
+    @font-face {
+      font-family: 'Fabrik';
+      src: url('{{ '/fonts/Fabrik-Regular.woff2' | url }}') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Fabrik';
+      src: url('{{ '/fonts/Fabrik-Bold.woff2' | url }}') format('woff2');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      src: url('{{ '/fonts/Roboto-Regular.woff2' | url }}') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      src: url('{{ '/fonts/Roboto-Bold.woff2' | url }}') format('woff2');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      src: url('{{ '/fonts/Roboto-Italic.woff2' | url }}') format('woff2');
+      font-weight: normal;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      src: url('{{ '/fonts/Roboto-BoldItalic.woff2' | url }}') format('woff2');
+      font-weight: bold;
+      font-style: italic;
+      font-display: swap;
+    }
+  </style>
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}?v={% version %}">
+  <link href="https://front-end.social/@fronteersconference" rel="me">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@FronteersConf">
+  <meta name="twitter:creator" content="@FronteersConf">
+  {% if title %}
+    <meta name="og:title" content="{{ title }}">
+    <meta name="twitter:title" content="{{ title }}">
+  {% endif %}
+  {% if description %}
+    <meta name="description" content="{{ description }}">
+    <meta name="og:description" content="{{ description }}">
+    <meta name="twitter:description" content="{{ description }}">
+  {% endif %}
+  <meta name="og:image" content="{{ '/img/social-media.png' | url }}?v={% version %}">
+  <meta name="twitter:image" content="{{ '/img/social-media.png' | url }}?v={% version %}">
+  <link rel="icon" href="{{ '/favicon.ico' | url }}">
+  <script src="/js/breakout.js?v={% version %}" defer></script>
+  {% block head %}{% endblock %}
+</head>
+<body class="limited-width">
+{% include '_partials/masks.svg' %}
+<header class="header full-width">
+  <h1 class="header__title limited-width">
+    <img src="{{ '/img/fronteers-yellow.svg' | url }}"
+         alt="Fronteers Conference, September 21st & 22nd 2023, Utrecht"
+         class="header__logo">
+  </h1>
+  <nav class="header__nav limited-width" aria-label="Main navigation">
+    {% for post in collections.pages %}
+      <a
+        href="{{ post.url }}" {% if page.url == post.url %} aria-current="page" {% endif %}>{{ post.data.navigation }}</a>
+    {% endfor %}
+  </nav>
+</header>
+<main role="main">
+  {% block content %}
+    {{ content | safe }}
+  {% endblock %}
+</main>
+<footer class="footer full-width">
+  <nav class="footer__social limited-width" aria-label="Social media">
+    <a href="https://twitter.com/fronteersconf" class="footer__social-item">
+      <img src="/img/twitter.svg" class="footer__social-logo" alt="">
+      <strong class="footer__social-headline headline">Twitter</strong>
+      You can follow us through @Fronteers on Twitter
+    </a>
+    <a href="https://front-end.social/@fronteersconference" rel="me" class="footer__social-item">
+      <img src="/img/mastodon.svg" class="footer__social-logo" alt="">
+      <strong class="footer__social-headline headline">Mastodon</strong>
+      You can also follow us through @fronteersconference@front-end.social on Mastodon
+    </a>
+  </nav>
+</footer>
+</body>
 </html>

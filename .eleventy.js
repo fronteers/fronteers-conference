@@ -2,9 +2,12 @@ const now = String(Date.now());
 const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
-    eleventyConfig.setUseGitIgnore(false);
+    eleventyConfig.setUseGitIgnore(true);
 
+    eleventyConfig.addWatchTarget("./_input/");
     eleventyConfig.addWatchTarget("./_includes/");
+    eleventyConfig.addWatchTarget("./_partials/");
+    eleventyConfig.addWatchTarget("./css/");
 
     eleventyConfig.addPassthroughCopy({
         "./node_modules/alpinejs/dist/alpine.js": "./js/alpine.js",

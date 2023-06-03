@@ -1,0 +1,12 @@
+{% if component is not defined %}
+  {% set component = 'card' %}
+{% endif %}
+<section class="slider full-width">
+  <ul class="slider__items">
+    {% for item in items %}
+      <li class="slider__item">
+        {% include '_partials/' ~ component ~ '.njk' %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
