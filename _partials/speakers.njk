@@ -1,6 +1,7 @@
 <ul class="speakers full-width">
   {% for item in items %}
     <li class="speakers__item">
+      {% set href = item.permalink %}
       {% set src = item.data.image %}
       {% set headline = item.data.title %}
       {% set alt = 'Picture of ' ~ item.data.title %}
