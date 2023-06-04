@@ -1,12 +1,12 @@
 <section class="cta">
   <h3 class="cta__headline headline">Tickets available for just
-    <strong>€&nbsp;500</strong>
+    <strong>€&nbsp;{{ tickets.regularPrice }}</strong>
   </h3>
   <p class="discount">Fronteers members get a
-    <strong>€&nbsp;80</strong>
+    <strong>€&nbsp;{{ (tickets.regularPrice - tickets.memberPrice) }}</strong>
     discount!</p>
   <p>
-    <a class="cta__button button" href="https://apps.ticketmatic.com/shop/fronteers/shop/addtickets/460185357012">Get
+    <a class="cta__button button" href="{{ tickets.shopUrl }}">Get
       your tickets now!</a>
   </p>
 

@@ -6,17 +6,17 @@ description:
 navigation: Tickets
 order: 4
 ---
-Get your ticket today, there are only a limited number of seats. Tickets are available in our [ticket shop](https://apps.ticketmatic.com/shop/fronteers/shop/addtickets/460185357012). Grab them today, because there are only a limited number of seats available.
+Get your ticket today, there are only a limited number of seats. Tickets are available in our [ticket shop]({{ tickets.shopUrl }}). Grab them today, because there are only a limited number of seats available.
 
 **Regular ticket**
 
-€ 250
+€ 500
 
 **Ticket with member discount**
 
-€ 210
+€ 420
 
-[Get your tickets now!](https://apps.ticketmatic.com/shop/fronteers/shop/addtickets/460185357012)
+[Get your tickets now!]({{ tickets.shopUrl }})
 
 Ticket prices are excluding VAT.
 
@@ -38,7 +38,7 @@ A ticket to Fronteers Conference grants entrance the conference and includes cat
 
 #### Transfer of tickets
 
-Conference tickets may be transferred. Please use the contact form to request a transfer by mentioning the old name and the new name you want on the ticket. Tickets with member discounts may only be transferred to other Fronteers members. Please be aware that after we send the badges to the printer we cannot make changes anymore.
+Conference tickets may be transferred. Please email us at [confere&#110;ce&#64;fro&#110;&#116;e&#101;rs&#46;nl](m&#97;&#105;lto&#58;&#99;on%66eren&#99;&#101;&#64;%6&#54;%72on%&#55;4%65e%&#55;2s%2&#69;n%&#54;&#67;) and request a transfer by mentioning the old name and the new name you want on the ticket. Tickets with member discounts may only be transferred to other Fronteers members. Please be aware that after we send the badges to the printer we cannot make changes anymore.
 
 #### Unofficial promotions
 
