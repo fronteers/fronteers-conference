@@ -295,6 +295,10 @@ small {
   margin-top: 6vw;
 }
 
+main > :first-child:not(.announcer) {
+  margin-top: 3vw;
+}
+
 .announcer + .hero:not(.artificial-specificity-increase) {
   margin-top: -6vh;
 }
@@ -302,4 +306,27 @@ small {
 .announcer + .hero:not(.artificial-specificity-increase) .hero__image {
   height: 40vh;
   object-position: 50% 33%;
+}
+
+.form-row {
+  display: flex;
+}
+
+.form-row {
+  display: flex;
+  gap: 2rem;
+}
+
+label {
+  flex: 1 1 25%;
+}
+
+input, textarea {
+  display: block;
+  flex: 1 1 75%;
+  border: 1px solid black;
+}
+
+.form-row button {
+  margin-left: calc(25% + 2rem);
 }
