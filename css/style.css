@@ -160,6 +160,12 @@ small {
   text-decoration: none;
 }
 
+.full-width .narrow-width,
+.full-width .limited-width,
+.limited-width .narrow-width {
+  margin-inline: auto;
+}
+
 .headline {
   font-family: "Fabrik", Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
