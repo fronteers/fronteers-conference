@@ -3,7 +3,7 @@ tags: speakers
 layout: speaker.njk
 title: Andy Bell
 image: /img/andy-bell.jpeg
-claim: Crafter
+claim: Craftsman
 ---
 Andy is a designer and front-end developer who founded [Set Studio](https://set.studio/): an agency who specialise in producing extremely creative websites and campaigns.
 

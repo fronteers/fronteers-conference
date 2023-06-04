@@ -3,7 +3,7 @@ tags: speakers
 layout: speaker.njk
 title: Henri Helvetica
 image: /img/henri-helvetica.png
-claim: High Performer
+claim: Top Geared
 ---
 Henri Helvetica is a freelance developer who has turned his interests to a passionate mix of site performance engineering and user experience. When not reading a deluge of daily research docs and case studies, or auditing sites in dev tools, Henri may be found contributing back to the community: Toronto Web Performance Group meetup, Jamstack Toronto organizer, curating conference content, or volunteering his time for lunch and learns at various bootcamps.
 
