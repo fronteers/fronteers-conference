@@ -4,6 +4,7 @@ layout: page.njk
 title: Tickets
 description: 
 navigation: Tickets
+order: 4
 ---
 Get your ticket today, there are only a limited number of seats. Tickets are available in our [ticket shop](https://apps.ticketmatic.com/shop/fronteers/shop/addtickets/460185357012). Grab them today, because there are only a limited number of seats available.
 
