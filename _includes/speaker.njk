@@ -1,13 +1,13 @@
 {% extends "_includes/default.njk" %}
 {% block content %}
   {% include '_partials/announcer.njk' %}
-  {% set src = image %}
-  {% include '_partials/hero.njk' %}
 
   <section class="narrow-width">
     <h3 class="headline">{{ title }}</h3>
     {{ content | safe }}
   </section>
 
-  {% include '_partials/cta.njk' %}
+  {% set src = image %}
+  {% set focusPoint = 'center 40%' %}
+  {% include '_partials/hero.njk' %}
 {% endblock %}

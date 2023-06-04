@@ -83,9 +83,11 @@
 {% include '_partials/masks.svg' %}
 <header class="header full-width">
   <h1 class="header__title limited-width">
-    <img src="{{ '/img/fronteers-yellow.svg' | url }}"
-         alt="Fronteers Conference, September 21st & 22nd 2023, Utrecht"
-         class="header__logo">
+    <a href="/">
+      <img src="{{ '/img/fronteers-yellow.svg' | url }}"
+           alt="Fronteers Conference, September 21st & 22nd 2023, Utrecht"
+           class="header__logo">
+    </a>
   </h1>
   <nav class="header__nav limited-width" aria-label="Main navigation">
     {% for post in collections.pages|sortByOrder %}
