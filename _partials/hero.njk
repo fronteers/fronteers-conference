@@ -1,6 +1,3 @@
 <picture class="hero limited-width">
-  <img src="{{ src | url }}" {% if srcset is defined %}srcset="{{ srcset }}"{% endif %}{% if sizes is defined %}size="{{ sizes }}"{% endif %}{% if focusPoint is defined %}style="object-position: {{ focusPoint }}"{% endif %}
-       alt=""
-       fetchpriority="high"
-       class="hero__image">
+  {% image src %}
 </picture>

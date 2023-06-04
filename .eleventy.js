@@ -1,5 +1,7 @@
 const now = String(Date.now());
 const { DateTime } = require("luxon");
+const Image = require("@11ty/eleventy-img");
+const htmlPrettify = require("html-prettify");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.setUseGitIgnore(true);
@@ -10,6 +12,31 @@ module.exports = function(eleventyConfig) {
     "./css/": "./css/",
     "./img/": "./img/",
     "./fonts/": "./fonts/",
+  });
+
+  // Image plugin
+  eleventyConfig.addShortcode("image", async function(src, alt = "", sizes = "100%", loading = "eager") {
+    let metadata;
+    try {
+      metadata = await Image(`.${src}`, {
+        widths: [100, 200, 300, 400, 500, 600, 800, 1000],
+        formats: ["avif", "jpeg"],
+      });
+    } catch (err) {
+      console.error(err.message);
+      return "";
+    }
+
+    let imageAttributes = {
+      alt,
+      sizes,
+      loading,
+      decoding: loading === "eager" ? "sync" : "async",
+    };
+
+    const html = Image.generateHTML(metadata, imageAttributes);
+
+    return `${html}`;
   });
 
   eleventyConfig.addShortcode("version", function() {
@@ -26,23 +53,26 @@ module.exports = function(eleventyConfig) {
     return JSON.stringify(data);
   });
 
-  eleventyConfig.addFilter("number_format", (data) => {
-    return new Intl.NumberFormat("en-US").format(data);
-  });
-
   eleventyConfig.addFilter("date_format", (dateIso) => {
     return DateTime.fromISO(dateIso)
       .setLocale("en-US")
       .toLocaleString(DateTime.DATE_FULL);
   });
 
-  eleventyConfig.addCollection("pages", (collection) => {
-    return collection
-      .getFilteredByGlob("./_input/*.md")
-      .sort((a, b) =>
-        parseInt(a.fileSlug, 10) > parseInt(b.fileSlug, 10) ? 1 : -1,
-      );
+  eleventyConfig.setNunjucksEnvironmentOptions({
+    throwOnUndefined: true,
   });
+
+  /*
+  eleventyConfig.addTransform("html_prettify", function(content) {
+    if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
+      return htmlPrettify(content);
+    }
+
+    return content;
+  });
+   */
+
 
   return {
     markdownTemplateEngine: "njk",

@@ -113,7 +113,7 @@ small {
   width: 60rem;
   max-width: 100vw;
   margin: 0 auto;
-  margin-inline: min(0, (min(100vw, 60rem) - 100%) / -2);
+  margin-inline: min(0, calc((min(100vw, 60rem) - 100%) / -2))));
 }
 
 .narrow-width {
@@ -216,11 +216,11 @@ small {
   clip-path: url(#parenthesis-down-small);
 }
 
-.hero__image {
+.hero img {
   display: block;
   width: 100%;
   height: 40vh;
-  object-position: center 70%;
+  object-position: center 33%;
   object-fit: cover;
 }
 
@@ -231,7 +231,7 @@ small {
   text-align: center;
 }
 
-.card__image {
+.card img {
   position: relative;
   z-index: 1;
   width: 9.375rem;

@@ -1,5 +1,5 @@
 <figure class="card">
-  <img src="{{ src | url }}" width="150" height="150" alt="{{ alt }}" loading="lazy" class="card__image">
+  {% image src, alt, '9.375rem', 'lazy' %}
   <figcaption class="card__caption">
     <a href="{{ href }}" class="card__link">
       <h3 class="card__headline headline">{{ headline }}</h3>

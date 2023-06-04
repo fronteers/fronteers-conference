@@ -1,5 +1,5 @@
 <ul class="speakers full-width">
-  {% for item in items|sort(attribute='permalink') %}
+  {% asyncEach item in items %}
     <li class="speakers__item">
       {% set href = item.url %}
       {% set src = item.data.image %}
@@ -8,5 +8,5 @@
       {% set text = item.data.claim %}
       {% include '_partials/card.njk' %}
     </li>
-  {% endfor %}
+  {% endeach %}
 </ul>
