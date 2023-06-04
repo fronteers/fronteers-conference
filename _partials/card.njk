@@ -1,7 +1,9 @@
 <figure class="card">
   <img src="{{ src | url }}" width="150" height="150" alt="{{ alt }}" loading="lazy" class="card__image">
   <figcaption class="card__caption">
-    <h3 class="card__headline headline"><a href="{{ href }}">{{ headline }}</a></h3>
-    {{ text | safe }}
+    <a href="{{ href }}" class="card__link">
+      <h3 class="card__headline headline">{{ headline }}</h3>
+      {{ text | safe }}
+    </a>
   </figcaption>
 </figure>
