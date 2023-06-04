@@ -1,20 +1,3 @@
-{% if item.data.image %}
-  {% set src = item.data.image %}
-{% else %}
-  {% set src = item.src %}
-{% endif %}
-{% if item.data.title %}
-  {% set headline = item.data.title %}
-  {% set alt = 'Picture of ' ~ item.data.title %}
-{% else %}
-  {% set headline = item.headline %}
-  {% set alt = item.alt %}
-{% endif %}
-{% if item.templateContent %}
-  {% set text = item.templateContent %}
-{% else %}
-  {% set text = item.text %}
-{% endif %}
 <figure class="card">
   <img src="{{ src | url }}" width="150" height="150" alt="{{ alt }}" class="card__image">
   <figcaption class="card__caption">

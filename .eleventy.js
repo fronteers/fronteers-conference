@@ -4,10 +4,7 @@ const { DateTime } = require("luxon");
 module.exports = function (eleventyConfig) {
     eleventyConfig.setUseGitIgnore(true);
 
-    eleventyConfig.addWatchTarget("./_input/");
-    eleventyConfig.addWatchTarget("./_includes/");
-    eleventyConfig.addWatchTarget("./_partials/");
-    eleventyConfig.addWatchTarget("./css/");
+    eleventyConfig.addWatchTarget("./(_partialscss)/");
 
     eleventyConfig.addPassthroughCopy({
         "./node_modules/alpinejs/dist/alpine.js": "./js/alpine.js",

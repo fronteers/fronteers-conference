@@ -1,0 +1,11 @@
+<ul class="speakers full-width">
+  {% for item in items %}
+    <li class="speakers__item">
+      {% set src = item.data.image %}
+      {% set headline = item.data.title %}
+      {% set alt = 'Picture of ' ~ item.data.title %}
+      {% set text = item.data.claim %}
+      {% include '_partials/card.njk' %}
+    </li>
+  {% endfor %}
+</ul>

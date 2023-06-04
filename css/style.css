@@ -46,7 +46,7 @@ html {
 }
 
 :is(li, a):nth-child(3n+3) {
-  --clip-mask: url(#curly-brace-down-tiny);
+  --clip-mask: url(#curly-brace-down-small);
 }
 
 :is(h1, h2, h3, h4, h5, h6, p) {
@@ -166,6 +166,7 @@ small {
 
 .card {
   display: inline-block;
+  width: 100%;
   text-align: center;
 }
 
@@ -181,19 +182,19 @@ small {
 
 .card__caption {
   margin-top: -4.6875rem;
-  padding: 0 1.25rem 30% 1.25rem;
+  padding: 0 1.25rem 3rem 1.25rem;
   text-align: left;
   background: #fff;
+  text-align: center;
   clip-path: url(#parenthesis-down-small);
 }
 
 .card__headline {
   width: calc(100% + 2.5rem);
-  margin: 0 -1.25rem;
-  padding: 4.6875rem 0 1em 0;
+  margin: 0 -1.25rem 0.5em -1.25rem;
+  padding: 4.6875rem 1.25rem 1em 1.25rem;
   background: var(--accent-color, var(--yellow));
-  text-align: center;
-  clip-path: url(#curly-brace-down-small);
+  clip-path: var(--clip-mask);
 }
 
 .cta {
@@ -207,35 +208,23 @@ small {
   margin-top: 2.5rem;
 }
 
-.slider {
-  overflow: hidden;
-  overflow: clip;
-  overscroll-behavior-x: contain;
+.speakers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: start;
+  justify-content: center;
+  padding-inline: 1.25rem;
 }
 
-.slider:not(:first-child) {
+.speakers:not(:first-child) {
   margin-top: 2vw;
 }
 
-.slider__items {
-  display: flex;
-  justify-content: center;
-  overflow-x: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  scroll-snap-type: x mandatory;
-  scroll-padding: 0 0.75rem;
-  scroll-behavior: smooth;
-  padding: 0.75rem;
-  contain: content;
-}
-
-.slider__items::-webkit-scrollbar {
-  display: none;
-}
-
-.slider__item {
-  width: min(15rem, 40vw);
+.speakers__item {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: min(15rem, 33vw);
 }
 
 .button {
@@ -302,7 +291,7 @@ small {
   margin: auto auto auto 0;
 }
 
-.footer, :is(section, .announcer, .hero, .cta, .slider) + :is(section, .announcer, .hero, .cta, .slider):not(.artificial-specificity-increase) {
+.footer, :is(section, .announcer, .hero, .cta, .speakers) + :is(section, .announcer, .hero, .cta, .speakers):not(.artificial-specificity-increase) {
   margin-top: 6vw;
 }
 
