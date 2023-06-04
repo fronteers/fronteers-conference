@@ -1,5 +1,6 @@
 ---
 tags: speakers
+layout: speaker.njk
 title: Erik Kroes
 image: /img/erik-kroes.png
 claim: Accessibility Advocate

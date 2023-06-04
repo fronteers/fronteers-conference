@@ -1,7 +1,7 @@
 <ul class="speakers full-width">
-  {% for item in items %}
+  {% for item in items|sort(attribute='permalink') %}
     <li class="speakers__item">
-      {% set href = item.permalink %}
+      {% set href = item.url %}
       {% set src = item.data.image %}
       {% set headline = item.data.title %}
       {% set alt = 'Picture of ' ~ item.data.title %}

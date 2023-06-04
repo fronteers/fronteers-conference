@@ -1,5 +1,6 @@
 ---
 tags: speakers
+layout: speaker.njk
 title: Zach Leatherman
 image: /img/zach-leatherman.png
 claim: Architect

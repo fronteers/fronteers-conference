@@ -1,5 +1,6 @@
 ---
 tags: speakers
+layout: speaker.njk
 title: Stephanie Nemeth
 image: /img/stephanie-nemeth.png
 claim: Maker & Tinkerer

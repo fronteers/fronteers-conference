@@ -1,5 +1,6 @@
 ---
 tags: speakers
+layout: speaker.njk
 title: Vasilis van Gemert
 image: /img/vasilis-van-gemert.png
 claim: Free Spirit

@@ -1,5 +1,6 @@
 ---
 tags: speakers
+layout: speaker.njk
 title: Laura Kalbag
 image: /img/laura-kalbag.png
 claim: UX, Accessibility & Privacy

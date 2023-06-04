@@ -1,0 +1,28 @@
+---
+tags: pages
+layout: page.njk
+title: Diversity
+description: 
+navigation: Diversity
+order: 8
+---
+Fronteers wants to be an inclusive community and to that end have made some arrangements that we would like to bring to your attention.
+
+### Diversity tickets
+
+We have a limited number of diversity tickets available which enables you to buy a ticket at a large discount. Diversity tickets are available for € 50. However, if you feel this discount still prevents you from attending Fronteers, please let us know and we'll try to accomodate you in another way.
+
+These tickets are available for anyone in an under-represented group in tech. This includes (but is not limited to): people of colour, LGBTQIA+ people, women and disabled people.
+
+If you want to [apply for a diversity ticket](/contact.html), please get in touch with us and we'll provide you with a special discount code.
+
+### Accessibility
+
+Pathé Leidsche Rijn is a modern cinema complex, so all areas are wheelchair accessible which includes the rooftop. We're located on the two top most floors in the cinema, which are accessible by elevator. If you [require reserved seating](/contact.html) or anything else, please get in touch with us.
+
+### Live captioning
+
+All talks will be live transcribed and transcriptions are shown on the main screen along with the slides. Additionally we will publish a website where you can follow the transcriptions on a device of your own.
+
+
+

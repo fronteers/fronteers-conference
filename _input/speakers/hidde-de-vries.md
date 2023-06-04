@@ -1,5 +1,6 @@
 ---
 tags: speakers
+layout: speaker.njk
 title: Hidde de Vries
 image: /img/hidde-de-vries.png
 claim: Accessibility Advocate

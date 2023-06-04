@@ -1,11 +1,14 @@
 *, *::before, *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  list-style: none;
   color: inherit;
   font-family: inherit;
   font-size: inherit;
+}
+
+*[class] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 html {
@@ -50,11 +53,28 @@ html {
 }
 
 :is(h1, h2, h3, h4, h5, h6, p) {
+  margin: 0;
   hyphens: auto;
 }
 
 :is(h1, h2, h3, h4, h5, h6, p) + :is(h1, h2, h3, h4, h5, h6, p) {
-  margin-top: 0.5em;
+  margin-top: 0.75em;
+}
+
+p + :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Fabrik", Arial, Helvetica, sans-serif;
+}
+
+li {
+  text-decoration-color: var(--accent-color);
+}
+
+li::marker {
+  color: var(--accent-color);
 }
 
 a {
@@ -95,6 +115,22 @@ small {
   width: 30rem;
   max-width: calc(100vw - 1.5rem);
   margin: 0 auto;
+  text-decoration-color: var(--purple);
+}
+
+.narrow-width:first-child p:nth-of-type(1):first-letter {
+  float: left;
+  margin-right: 0.1em;
+  margin-inline-end: 0.1em;
+  font-family: "Fabrik", Arial, Helvetica, sans-serif;
+  font-size: 300%;
+  font-size: 3lh;
+  line-height: 1;
+}
+
+.narrow-width a {
+  text-decoration: underline;
+  text-decoration-color: inherit;
 }
 
 .full-width {
@@ -130,6 +166,10 @@ small {
   gap: 0.25rem 2rem;
   justify-content: center;
   width: 100%;
+}
+
+.header__nav a {
+  color: var(--accent-color);
 }
 
 .announcer {
@@ -291,7 +331,7 @@ small {
   margin: auto auto auto 0;
 }
 
-.footer, :is(section, .announcer, .hero, .cta, .speakers) + :is(section, .announcer, .hero, .cta, .speakers):not(.artificial-specificity-increase) {
+.footer, .narrow-width:first-child, :is(section, .announcer, .hero, .cta, .speakers) + :is(section, .announcer, .hero, .cta, .speakers):not(.artificial-specificity-increase) {
   margin-top: 6vw;
 }
 

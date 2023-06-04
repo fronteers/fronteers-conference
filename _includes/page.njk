@@ -1,4 +1,9 @@
 {% extends "_includes/default.njk" %}
 {% block content %}
-  <!-- Content here -->
+  <section class="narrow-width">
+    <h2 class="headline">{{ title }}</h2>
+    {{ content | safe }}
+  </section>
+
+  {% include '_partials/cta.njk' %}
 {% endblock %}

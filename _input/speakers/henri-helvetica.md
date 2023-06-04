@@ -1,5 +1,6 @@
 ---
 tags: speakers
+layout: speaker.njk
 title: Henri Helvetica
 image: /img/henri-helvetica.png
 claim: High Performer

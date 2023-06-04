@@ -1,5 +1,6 @@
 ---
 tags: speakers
+layout: speaker.njk
 title: Lea Verou
 image: /img/lea-verou.png
 claim: Magician

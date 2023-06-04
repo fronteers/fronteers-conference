@@ -1,5 +1,6 @@
 ---
 tags: speakers
+layout: speaker.njk
 title: Sara Vieira
 image: /img/sara-vieira.png
 claim: Airport Expert

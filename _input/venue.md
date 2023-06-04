@@ -4,7 +4,6 @@ layout: venue.njk
 title: The Venue
 description: 
 navigation: Venue
-permalink: "venue.html"
 ---
 
 

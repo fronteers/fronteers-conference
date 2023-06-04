@@ -1,5 +1,6 @@
 ---
 tags: speakers
+layout: speaker.njk
 title: Andy Bell
 image: /img/andy-bell.png
 claim: Crafter

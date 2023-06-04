@@ -1,5 +1,6 @@
 ---
 tags: speakers
+layout: speaker.njk
 title: Chris Lilley
 image: /img/chris-lilley.png
 claim: Emmy Award Holder

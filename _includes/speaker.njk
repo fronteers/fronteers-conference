@@ -1,16 +1,13 @@
----
-permalink: "{{ page.fileSlug }}/index.html"
----
-
 {% extends "_includes/default.njk" %}
 {% block content %}
+  {% include '_partials/announcer.njk' %}
+  {% set src = image %}
+  {% include '_partials/hero.njk' %}
+
   <section class="narrow-width">
-    <h2 class="headline">{{ title }}</h2>
+    <h3 class="headline">{{ title }}</h3>
     {{ content | safe }}
   </section>
-
-  {% set items = collections.speakers %}
-  {% include '_partials/speakers.njk' %}
 
   {% include '_partials/cta.njk' %}
 {% endblock %}
