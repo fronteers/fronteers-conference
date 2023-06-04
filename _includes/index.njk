@@ -1,23 +1,142 @@
-{% extends "_includes/default.njk" %}
-{% block content %}
-  {% include '_partials/announcer.njk' %}
-  {% set src = '/img/cinema-room.jpg' %}
-  {% include '_partials/hero.njk' %}
-  {% include '_partials/cta.njk' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ title }} | Fronteers Conference 2023</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Fabrik-Regular.woff2' | url }}">
+  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Fabrik-Bold.woff2' | url }}">
+  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Roboto-Regular.woff2' | url }}">
+  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Roboto-Bold.woff2' | url }}">
+  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Roboto-Italic.woff2' | url }}">
+  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Roboto-BoldItalic.woff2' | url }}">
+  <link rel="preload" as="style" href="{{ '/css/style.css' | url }}?v={% version %}">
+  <style>
+    @font-face {
+      font-family: 'Fabrik';
+      src: url('{{ '/fonts/Fabrik-Regular.woff2' | url }}') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
 
+    @font-face {
+      font-family: 'Fabrik';
+      src: url('{{ '/fonts/Fabrik-Bold.woff2' | url }}') format('woff2');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      src: url('{{ '/fonts/Roboto-Regular.woff2' | url }}') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      src: url('{{ '/fonts/Roboto-Bold.woff2' | url }}') format('woff2');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      src: url('{{ '/fonts/Roboto-Italic.woff2' | url }}') format('woff2');
+      font-weight: normal;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      src: url('{{ '/fonts/Roboto-BoldItalic.woff2' | url }}') format('woff2');
+      font-weight: bold;
+      font-style: italic;
+      font-display: swap;
+    }
+  </style>
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}?v={% version %}">
+  <link href="https://front-end.social/@fronteersconference" rel="me">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@FronteersConf">
+  <meta name="twitter:creator" content="@FronteersConf">
+  {% if title %}
+    <meta name="og:title" content="{{ title }}">
+    <meta name="twitter:title" content="{{ title }}">
+  {% endif %}
+  {% if description %}
+    <meta name="description" content="{{ description }}">
+    <meta name="og:description" content="{{ description }}">
+    <meta name="twitter:description" content="{{ description }}">
+  {% endif %}
+  <meta name="og:image" content="{{ '/img/social-media.png' | url }}?v={% version %}">
+  <meta name="twitter:image" content="{{ '/img/social-media.png' | url }}?v={% version %}">
+  <link rel="icon" href="{{ '/favicon.ico' | url }}">
+  <script src="/js/breakout.js?v={% version %}" defer></script>
+  {% block head %}{% endblock %}
+</head>
+<body class="limited-width">
+{% include '_partials/masks.svg' %}
+
+<header class="header full-width">
+  <section class="announcer full-width">
+    <div class="announcer__content">
+      <h1 class="announcer__headline headline">
+        Fronteers Conference is back once again!
+      </h1>
+      <p class="announcer__text">
+        Join us September 21st & 22nd, 2023, <br>
+        at the Pathé Leidsche Rijn in Utrecht <br>
+        for 14 speakers on two days.
+      </p>
+    </div>
+  </section>
+</header>
+
+<main role="main">
   <section class="narrow-width">
     <h3 class="headline">About Fronteers Conference</h3>
     <p>
       Fronteers Conference is one of Europe’s premiere conferences on front-end web development, organised in Amsterdam and Utrecht yearly since 2008. This year our single-track community-driven conference returns to the beautiful Pathé Leidsche Rijn in Utrecht on the 21st & 22nd of September 2023.
     </p>
   </section>
-
   <section class="narrow-width">
     <h3 class="headline">Speakers</h3>
-     <p>
-      Our speakers come from all over the globe cover the full spectrum from independent developers to Github and Google team members.
+    <p>
+      Our speakers come from all over the globe cover the full spectrum from independent developers to GitHub and Google team members. We'll soon announce the first set of speakers. Keep an eye on our website or our social media!
     </p>
-    {% set items = collections.speakers %}
-    {% include '_partials/slider.njk' %}
   </section>
-{% endblock %}
+  <section class="cta">
+    <h3 class="cta__headline headline">Tickets available for just <strong>€&nbsp;500</strong></h3>
+    <p class="discount">Fronteers members get a <strong>€&nbsp;80</strong> discount!</p>
+    <p>
+      <a class="cta__button button" href="https://apps.ticketmatic.com/shop/fronteers/shop/addtickets/460185357012">Get your tickets now!</a>
+    </p>
+    <small class="cta__smallpint">
+      Ticket prices are excluding VAT.
+    </small>
+  </section>
+</main>
+
+<footer class="footer full-width">
+  <nav class="footer__social limited-width" aria-label="Social media">
+    <a href="https://twitter.com/fronteersconf" class="footer__social-item">
+      <img src="/img/twitter.svg" class="footer__social-logo" alt="">
+      <strong class="footer__social-headline headline">Twitter</strong>
+      You can follow us through @Fronteers on Twitter
+    </a>
+    <a href="https://front-end.social/@fronteersconference" rel="me" class="footer__social-item">
+      <img src="/img/mastodon.svg" class="footer__social-logo" alt="">
+      <strong class="footer__social-headline headline">Mastodon</strong>
+      You can also follow us through @fronteersconference@front-end.social on Mastodon
+    </a>
+  </nav>
+</footer>
+
+</body>
+</html>
