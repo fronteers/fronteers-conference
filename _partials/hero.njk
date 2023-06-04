@@ -1,7 +1,5 @@
-<picture class="hero">
-  <img src="{{ src | url }}"
-       {% if srcset is defined %}srcset="{{ srcset }}"{% endif %}
-       {% if sizes is defined %}size="{{ sizes }}"{% endif %}
+<picture class="hero limited-width">
+  <img src="{{ src | url }}" {% if srcset is defined %}srcset="{{ srcset }}"{% endif %}{% if sizes is defined %}size="{{ sizes }}"{% endif %}
        alt=""
        fetchpriority="high"
        class="hero__image">

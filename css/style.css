@@ -69,6 +69,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Fabrik", Arial, Helvetica, sans-serif;
 }
 
+p + .hero {
+  margin-block: 1.5em;
+}
+
 li {
   text-decoration-color: var(--accent-color);
 }
@@ -109,6 +113,7 @@ small {
   width: 60rem;
   max-width: calc(100vw - 1.5rem);
   margin: 0 auto;
+  margin-inline: calc((60rem - 100%) / -2);
 }
 
 .narrow-width {
@@ -118,14 +123,24 @@ small {
   text-decoration-color: var(--purple);
 }
 
+.narrow-width:first-child p:nth-of-type(1) {
+  overflow: hidden;
+}
+
 .narrow-width:first-child p:nth-of-type(1):first-letter {
-  float: left;
-  margin-right: 0.1em;
-  margin-inline-end: 0.1em;
+  -webkit-initial-letter: 3;
+  initial-letter: 3;
+  margin-right: 0.5em;
   font-family: "Fabrik", Arial, Helvetica, sans-serif;
-  font-size: 300%;
-  font-size: 3lh;
-  line-height: 1;
+}
+
+@supports not (initial-letter: 3) {
+  .narrow-width:first-child p:nth-of-type(1):first-letter {
+    margin-inline-end: 0.1em;
+    font-size: 300%;
+    font-size: 3lh;
+    line-height: 1;
+  }
 }
 
 .narrow-width a {
@@ -200,7 +215,7 @@ small {
 .hero__image {
   display: block;
   width: 100%;
-  height: 25vh;
+  height: 33vh;
   object-fit: cover;
 }
 
