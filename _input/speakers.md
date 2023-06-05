@@ -6,4 +6,4 @@ description:
 navigation: Speakers
 order: 2
 ---
-We have a spectacular line-up of {{ collections.speakers|length - 1 }} speakers for you. These are the people who'll be stimulating your mind with thought-provoking talks.
+We have a spectacular line-up of {{ collections.speakers|length - 1 }} speakers and one MC for you. These are the people who'll be stimulating your mind with thought-provoking talks.
