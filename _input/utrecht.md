@@ -8,7 +8,7 @@ order: 4
 ---
 ### A City of Endless Charm and Delight!
 
-Located in the heart of the Netherlands, one hour away from Amsterdam, Rotterdam and The Hague, the town of Utrecht is not only hosts the basis of the [Fronteers organization](https://fronteers.nl/about), it's also a hidden gem that boasts an array of positive attributes. From its picturesque canals to its vibrant cultural scene, Utrecht has something to offer every visitor.
+Located in the heart of the Netherlands, the town of Utrecht is not only hosts the basis of the [Fronteers organization](https://fronteers.nl/about), it's also a hidden gem that boasts an array of positive attributes. From its picturesque canals to its vibrant cultural scene, Utrecht has something to offer every visitor.
 
 {% set src = '/img/utrecht.jpg' %}
 {% include '_partials/hero.njk' %}
