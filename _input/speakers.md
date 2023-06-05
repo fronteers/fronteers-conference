@@ -2,7 +2,7 @@
 tags: pages
 layout: speakers.njk
 title: Our Speakers
-description:
+description: We have a spectacular line-up of 14 speakers and one MC for you.
 navigation: Speakers
 order: 2
 ---

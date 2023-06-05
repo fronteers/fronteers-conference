@@ -2,9 +2,9 @@
 tags: pages
 layout: tickets.njk
 title: Tickets
-description: 
+description: Tickets available for just 500 €!
 navigation: Tickets
-order: 4
+order: 5
 ---
 
 ### Member discount

@@ -2,7 +2,7 @@
 tags: pages
 layout: page.njk
 title: Diversity
-description: 
+description: Fronteers wants to be an inclusive community and to that end have made some arrangements
 navigation: Diversity
 order: 8
 ---

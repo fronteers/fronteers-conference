@@ -2,7 +2,7 @@
 tags: pages
 layout: page.njk
 title: Code of conduct
-description: 
+description: Fronteers Conference does not tolerate harassment of any sort at any of our locations.
 navigation: Code of conduct
 order: 9
 ---
