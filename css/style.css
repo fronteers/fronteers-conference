@@ -179,12 +179,13 @@ small {
 }
 
 .header__title {
-  margin-bottom: 0.25rem;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
 .header__logo {
   width: 100%;
+  max-width: 25rem;
   height: auto;
 }
 
@@ -194,6 +195,8 @@ small {
   gap: 0.25rem 2rem;
   justify-content: center;
   width: 100%;
+  font-family: "Fabrik", Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
 }
 
 .header__nav a {
@@ -206,18 +209,32 @@ small {
   overflow: hidden;
   background-image: url(/img/announcer.svg);
   background-repeat: repeat-x;
-  background-size: auto 100%;
+  background-size: auto 40%;
   background-position: top center;
 }
 
 .announcer__content {
   width: 45rem;
   max-width: calc(100vw - 1.5rem);
-  margin: -2px auto 5rem auto;
-  padding: 1.25rem 2.5vw 2.5rem 2.5vw;
-  background: var(--yellow);
+  margin: -2px auto -2rem auto;
+  padding: 1.25rem 2.5vw 9rem 2.5vw;
   text-align: center;
-  clip-path: url(#curly-brace-down-small);
+
+  background-image: url(/img/curly-brace-down-yellow.svg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100% auto;
+}
+
+.announcer__headline {
+  font-size: calc(2.5vw + 2rem);
+  line-height: 1;
+}
+
+.announcer__text {
+  font-family: "Fabrik", Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  margin: 1rem 2rem 0 2rem;
 }
 
 .hero {
@@ -282,6 +299,39 @@ small {
   background: var(--red);
   text-align: center;
   clip-path: url(#greater-than-down-small);
+  font-family: "Fabrik", Arial, Helvetica, sans-serif;
+}
+
+.cta__headline {
+  font-size: clamp(1.5rem, 4.5vw, 2.5rem);
+}
+.cta .discount {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+}
+.cta__button {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+
+
+.tickets {
+  padding: 1.25rem 1vw 3.5rem 1vw;
+  background: var(--red);
+  text-align: center;
+  clip-path: url(#greater-than-down-large);
+  font-family: "Fabrik", Arial, Helvetica, sans-serif;
+}
+
+.tickets__headline {
+  font-size: clamp(1.5rem, 4.5vw, 2.5rem);
+}
+.tickets .discount {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+}
+.tickets__widget {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .speakers {
@@ -367,11 +417,11 @@ small {
   margin: auto auto auto 0;
 }
 
-.footer, .narrow-width:first-child, :is(section, .announcer, .hero, .cta, .speakers) + :is(section, .announcer, .hero, .cta, .speakers):not(.artificial-specificity-increase) {
+.footer, .narrow-width:first-child, :is(section, .announcer, .hero, .cta, .speakers, .tickets) + :is(section, .announcer, .hero, .cta, .speakers, .tickets):not(.artificial-specificity-increase) {
   margin-top: 5vw;
 }
 
-main > :first-child:not(.announcer) {
+main > :first-child:not(.announcer):not(.tickets) {
   margin-top: 3vw;
 }
 

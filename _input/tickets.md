@@ -1,24 +1,11 @@
 ---
 tags: pages
-layout: page.njk
+layout: tickets.njk
 title: Tickets
 description: 
 navigation: Tickets
 order: 4
 ---
-Get your ticket today, there are only a limited number of seats. Tickets are available in our [ticket shop]({{ tickets.shopUrl }}). Grab them today, because there are only a limited number of seats available.
-
-**Regular ticket**
-
-€ 500
-
-**Ticket with member discount**
-
-€ 420
-
-[Get your tickets now!]({{ tickets.shopUrl }})
-
-Ticket prices are excluding VAT.
 
 ### Member discount
 
