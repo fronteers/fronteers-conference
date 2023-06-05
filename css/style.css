@@ -267,12 +267,23 @@ small {
   border-radius: 50%;
 }
 
+.narrow-width .card img {
+  width: 8rem;
+}
+
 .card__caption {
+  font-family: "Fabrik", Arial, Helvetica, sans-serif;
+
   margin-top: -4.6875rem;
-  padding: 0 1.25rem 3rem 1.25rem;
+  padding: 0 1.25rem 1.25rem 1.25rem;
   background: #fff;
   font-size: clamp(1em, 3vw, 1rem);
   text-align: center;
+}
+
+.narrow-width .card__caption {
+  padding: 0 1rem 1rem 1rem;
+  font-size: clamp(0.9em, 3vw, 0.9rem);
 }
 
 .card__headline {
@@ -283,6 +294,13 @@ small {
   font-size: clamp(1rem, 4.5vw, 1.5rem);
   clip-path: var(--clip-mask);
 }
+
+.narrow-width .card__headline {
+  width: calc(100% + 2rem);
+  margin: 0 -1rem 0.5em -1rem;
+  font-size: clamp(1rem, 3vw, 1.3em);
+}
+
 
 .card__link::before {
   content: '';
@@ -348,10 +366,15 @@ small {
 }
 
 .speakers__item {
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   min-width: 0;
   width: min(15rem, 33vw);
 }
+
+.narrow-width .speakers__item {
+  width: min(13rem, 26vw);
+}
+
 
 .button {
   display: inline-block;
