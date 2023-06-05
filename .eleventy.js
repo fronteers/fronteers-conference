@@ -43,6 +43,12 @@ module.exports = function(eleventyConfig) {
     return now;
   });
 
+  function sortByAlphabet(values) {
+    return values.filter(() => true).sort((a, b) => a.url.localeCompare(b.url, 'en', { numeric: true }));
+  }
+
+  eleventyConfig.addFilter("sortByAlphabet", sortByAlphabet);
+
   function sortByOrder(values) {
     return values.filter(() => true).sort((a, b) => a.data.order - b.data.order);
   }

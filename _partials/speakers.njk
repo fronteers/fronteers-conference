@@ -1,5 +1,5 @@
 <ul class="speakers full-width">
-  {% asyncEach item in items %}
+  {% asyncEach item in items|sortByAlphabet %}
     <li class="speakers__item">
       {% set href = item.url %}
       {% set src = item.data.image %}
