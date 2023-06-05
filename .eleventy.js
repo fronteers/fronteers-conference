@@ -9,6 +9,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget("./(_partials|css)/");
 
   eleventyConfig.addPassthroughCopy({
+    "./static/": "./static/",
+    "./static/favicon/favicon.ico": "./favicon.ico",
     "./css/": "./css/",
     "./img/": "./img/",
     "./fonts/": "./fonts/",
