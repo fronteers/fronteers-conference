@@ -14,11 +14,11 @@ We have a limited number of diversity tickets available which enables you to buy
 
 These tickets are available for anyone in an under-represented group in tech. This includes (but is not limited to): people of colour, LGBTQIA+ people, women and disabled people.
 
-If you want to [apply for a diversity ticket](/contact.html), please get in touch with us and we'll provide you with a special discount code.
+If you want to apply for a diversity ticket, please [get in touch with us](m&#97;&#105;lto&#58;&#99;on%66eren&#99;&#101;&#64;%6&#54;%72on%&#55;4%65e%&#55;2s%2&#69;n%&#54;&#67;) and we'll provide you with a special discount code.
 
 ### Accessibility
 
-Pathé Leidsche Rijn is a modern cinema complex, so all areas are wheelchair accessible which includes the rooftop. We're located on the two top most floors in the cinema, which are accessible by elevator. If you [require reserved seating](/contact.html) or anything else, please get in touch with us.
+Pathé Leidsche Rijn is a modern cinema complex, so all areas are wheelchair accessible via elevator which includes the rooftop. If you require reserved seating or anything else, please [get in touch with us](m&#97;&#105;lto&#58;&#99;on%66eren&#99;&#101;&#64;%6&#54;%72on%&#55;4%65e%&#55;2s%2&#69;n%&#54;&#67;).
 
 ### Live captioning
 
