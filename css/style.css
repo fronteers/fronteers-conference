@@ -209,18 +209,32 @@ small {
   overflow: hidden;
   background-image: url(/img/announcer.svg);
   background-repeat: repeat-x;
-  background-size: auto 100%;
+  background-size: auto 40%;
   background-position: top center;
 }
 
 .announcer__content {
   width: 45rem;
   max-width: calc(100vw - 1.5rem);
-  margin: -2px auto 5rem auto;
-  padding: 1.25rem 2.5vw 2.5rem 2.5vw;
-  background: var(--yellow);
+  margin: -2px auto -2rem auto;
+  padding: 1.25rem 2.5vw 9rem 2.5vw;
   text-align: center;
-  clip-path: url(#curly-brace-down-small);
+
+  background-image: url(/img/curly-brace-down-yellow.svg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100% auto;
+}
+
+.announcer__headline {
+  font-size: calc(2.5vw + 2rem);
+  line-height: 1;
+}
+
+.announcer__text {
+  font-family: "Fabrik", Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  margin: 1rem 2rem 0 2rem;
 }
 
 .hero {
