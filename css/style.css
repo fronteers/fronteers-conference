@@ -299,6 +299,18 @@ small {
   background: var(--red);
   text-align: center;
   clip-path: url(#greater-than-down-small);
+  font-family: "Fabrik", Arial, Helvetica, sans-serif;
+}
+
+.cta__headline {
+  font-size: clamp(1.5rem, 4.5vw, 2.5rem);
+}
+.cta .discount {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+}
+.cta__button {
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .speakers {
