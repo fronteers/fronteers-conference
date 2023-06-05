@@ -179,12 +179,13 @@ small {
 }
 
 .header__title {
-  margin-bottom: 0.25rem;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
 .header__logo {
   width: 100%;
+  max-width: 25rem;
   height: auto;
 }
 
