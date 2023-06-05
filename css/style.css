@@ -256,7 +256,6 @@ small {
   background: #fff;
   font-size: clamp(1em, 3vw, 1rem);
   text-align: center;
-  clip-path: url(#parenthesis-down-small);
 }
 
 .card__headline {
