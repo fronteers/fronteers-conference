@@ -195,6 +195,8 @@ small {
   gap: 0.25rem 2rem;
   justify-content: center;
   width: 100%;
+  font-family: "Fabrik", Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
 }
 
 .header__nav a {
