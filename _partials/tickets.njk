@@ -1,0 +1,12 @@
+<section class="tickets">
+    <h3 class="tickets__headline headline">Tickets available for just
+        <strong>€&nbsp;{{ tickets.regularPrice }}</strong>
+    </h3>
+    <p class="discount">Fronteers members get a
+        <strong>€&nbsp;{{ (tickets.regularPrice - tickets.memberPrice) }}</strong>
+        discount!
+    </p>
+    <small class="tickets__smallpint">
+        Ticket prices are excluding VAT.
+    </small>
+</section>

@@ -313,6 +313,27 @@ small {
   font-weight: bold;
 }
 
+
+
+.tickets {
+  padding: 1.25rem 1vw 3.5rem 1vw;
+  background: var(--red);
+  text-align: center;
+  clip-path: url(#greater-than-down-large);
+  font-family: "Fabrik", Arial, Helvetica, sans-serif;
+}
+
+.tickets__headline {
+  font-size: clamp(1.5rem, 4.5vw, 2.5rem);
+}
+.tickets .discount {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+}
+.tickets__widget {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .speakers {
   display: flex;
   flex-wrap: wrap;
@@ -396,11 +417,11 @@ small {
   margin: auto auto auto 0;
 }
 
-.footer, .narrow-width:first-child, :is(section, .announcer, .hero, .cta, .speakers) + :is(section, .announcer, .hero, .cta, .speakers):not(.artificial-specificity-increase) {
+.footer, .narrow-width:first-child, :is(section, .announcer, .hero, .cta, .speakers, .tickets) + :is(section, .announcer, .hero, .cta, .speakers, .tickets):not(.artificial-specificity-increase) {
   margin-top: 5vw;
 }
 
-main > :first-child:not(.announcer) {
+main > :first-child:not(.announcer):not(.tickets) {
   margin-top: 3vw;
 }
 
