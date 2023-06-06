@@ -4,13 +4,9 @@
   <title>{{ title }} | Fronteers Conference 2023</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Fabrik-Regular.woff2' | url }}">
   <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Fabrik-Bold.woff2' | url }}">
+  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Fabrik-Regular.woff2' | url }}">
   <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Roboto-Regular.woff2' | url }}">
-  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Roboto-Bold.woff2' | url }}">
-  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Roboto-Italic.woff2' | url }}">
-  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Roboto-BoldItalic.woff2' | url }}">
-  <link rel="preload" as="style" href="{{ '/css/style.css' | url }}?v={% version %}">
   <style>
     @font-face {
       font-family: 'Fabrik';
@@ -60,13 +56,16 @@
       font-display: swap;
     }
   </style>
+  <style>
+  {% include 'css/style.css' %}
+  </style>
 
+  <link rel="icon" href="{{ '/favicon.ico' | url }}">
   <link rel="manifest" href="/static/favicon/site.webmanifest" crossorigin="anonymous">
   <link rel="icon" href="/static/favicon/favicon.ico" sizes="any">
   <link rel="icon" href="/static/favicon/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/static/favicon/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="{{ '/css/style.css' | url }}?v={% version %}">
   <link href="https://front-end.social/@fronteersconference" rel="me">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@FronteersConf">
@@ -82,9 +81,7 @@
   {% endif %}
   <meta name="og:image" content="{{ '/img/social-media.jpeg' | url }}?v={% version %}">
   <meta name="twitter:image" content="{{ '/img/social-media.jpeg' | url }}?v={% version %}">
-  <link rel="icon" href="{{ '/favicon.ico' | url }}">
 
-  <script src="https://js.tito.io/v2/with/inline,development_mode,test_mode" async></script>
   {% block head %}{% endblock %}
 </head>
 <body class="limited-width">

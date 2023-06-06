@@ -1,14 +1,9 @@
-# Cache JS forever
-/js/*
-  Cache-Control: public
-  Cache-Control: max-age=365000000
-  Cache-Control: immutable
-
-# Cache CSS forever
-/style.css
-  Cache-Control: public
-  Cache-Control: max-age=365000000
-  Cache-Control: immutable
+# Preload headers
+# (path selector cannot be limited to *.html due to technical reasons)
+/*
+  Link: </fonts/Fabrik-Bold.woff2>; rel="preload"; as="font"; crossorigin="anonymous"
+  Link: </fonts/Fabrik-Regular.woff2>; rel="preload"; as="font"; crossorigin="anonymous"
+  Link: </fonts/Roboto-Regular.woff2>; rel="preload"; as="font"; crossorigin="anonymous"
 
 # Cache images forever
 /img/*

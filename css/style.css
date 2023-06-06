@@ -122,7 +122,7 @@ small {
 .narrow-width {
   width: 30rem;
   max-width: calc(100vw - 1.5rem);
-  margin: 0 auto;
+  margin-inline: auto;
   text-decoration-color: var(--purple);
 }
 
@@ -187,6 +187,7 @@ small {
   width: 100%;
   max-width: 25rem;
   height: auto;
+  aspect-ratio: 450/125;
 }
 
 .header__nav {
