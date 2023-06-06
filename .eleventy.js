@@ -11,6 +11,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./static/": "./static/",
     "./static/favicon/favicon.ico": "./favicon.ico",
+    "./static/*.html": "./",
     "./css/": "./css/",
     "./img/": "./img/",
     "./fonts/": "./fonts/",
