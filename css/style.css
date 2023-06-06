@@ -431,6 +431,7 @@ small {
 
 .footer__social-logo {
   width: 4rem;
+  height: auto;
   padding: 2rem 0;
   background: var(--accent-color);
   clip-path: var(--clip-mask);
