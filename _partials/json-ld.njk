@@ -1,0 +1,48 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Fronteers Conference 2023",
+    "startDate": "2023-09-21",
+    "endDate": "2023-09-22",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "Pathé Utrecht Leidsche Rijn",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Berlijnplein 100",
+        "addressLocality": "Utrecht",
+        "postalCode": "3541 CM",
+        "addressRegion": "Utrecht",
+        "addressCountry": "NL"
+      }
+    },
+    "image": [
+      "https://fronteersconf.org/img/social-media.jpeg",
+      "https://fronteersconf.org/img/cinema-room.jpg",
+      "https://fronteersconf.org/img/utrecht.jpg",
+      "https://fronteersconf.org/img/venue.jpg",
+      "https://fronteersconf.org/img/crowd.jpg"
+    ],
+    "description": "Fronteers Conference is one of Europe’s premiere conferences on front-end web development.",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://fronteersconf.org/tickets",
+      "price": "500",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    "performer": [{% for speaker in collections.speakers|sortByAlphabet %}{
+        "@type": "Person",
+        "name": "{{ speaker.data.title }}"
+      }{% if not loop.last %},
+      {% endif %}{% endfor %}],
+    "organizer": {
+      "@type": "Organization",
+      "name": "Fronteers",
+      "url": "https://fronteers.nl"
+    }
+  }
+</script>
