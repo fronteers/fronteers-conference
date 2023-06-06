@@ -1,3 +1,10 @@
+# Preload headers
+# (path selector cannot be limited to *.html due to technical reasons)
+/*
+  Link: </fonts/Fabrik-Bold.woff2>; rel="preload"; as="font"; crossorigin="anonymous"
+  Link: </fonts/Fabrik-Regular.woff2>; rel="preload"; as="font"; crossorigin="anonymous"
+  Link: </fonts/Roboto-Regular.woff2>; rel="preload"; as="font"; crossorigin="anonymous"
+
 # Cache fonts forever
 /fonts/*
   Cache-Control: public
