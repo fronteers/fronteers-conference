@@ -2,7 +2,7 @@
 tags: pages
 layout: page.njk
 title: The Venue
-description: 
+description: This year we will see each other again in the Pathé Utrecht Leidsche Rijn theatre.
 navigation: Venue
 order: 3
 ---
