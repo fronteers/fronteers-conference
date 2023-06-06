@@ -368,7 +368,7 @@ small {
 
 .speakers__item {
   flex: 0 1 auto;
-  min-width: 0;
+  min-width: 15rem;
   width: min(15rem, 33vw);
 }
 
