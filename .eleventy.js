@@ -37,7 +37,7 @@ module.exports = function (eleventyConfig) {
         sizes,
         loading,
         decoding: loading === "eager" ? "sync" : "async",
-      fetchpriority: loading === "eager" ? "high" : "auto",
+        fetchpriority: loading === "eager" ? "high" : "auto",
       };
 
       const html = Image.generateHTML(metadata, imageAttributes);
