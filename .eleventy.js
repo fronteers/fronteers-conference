@@ -3,7 +3,7 @@ const { DateTime } = require("luxon");
 const Image = require("@11ty/eleventy-img");
 const htmlPrettify = require("html-prettify");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(true);
 
   eleventyConfig.addWatchTarget("./(_partials|css)/");
@@ -18,43 +18,50 @@ module.exports = function(eleventyConfig) {
   });
 
   // Image plugin
-  eleventyConfig.addShortcode("image", async function(src, alt = "", sizes = "100%", loading = "eager") {
-    let metadata;
-    try {
-      metadata = await Image(`.${src}`, {
-        widths: [100, 200, 300, 400, 500, 600, 800, 1000],
-        formats: ["avif", "jpeg"],
-      });
-    } catch (err) {
-      console.error(err.message);
-      return "";
-    }
+  eleventyConfig.addShortcode(
+    "image",
+    async function (src, alt = "", sizes = "100vw", loading = "eager") {
+      let metadata;
+      try {
+        metadata = await Image(`.${src}`, {
+          widths: [100, 200, 300, 400, 500, 600, 800, 1000],
+          formats: ["avif", "jpeg"],
+        });
+      } catch (err) {
+        console.error(err.message);
+        return "";
+      }
 
-    let imageAttributes = {
-      alt,
-      sizes,
-      loading,
-      decoding: loading === "eager" ? "sync" : "async",
+      let imageAttributes = {
+        alt,
+        sizes,
+        loading,
+        decoding: loading === "eager" ? "sync" : "async",
       fetchpriority: loading === "eager" ? "high" : "auto",
-    };
+      };
 
-    const html = Image.generateHTML(metadata, imageAttributes);
+      const html = Image.generateHTML(metadata, imageAttributes);
 
-    return `${html}`;
-  });
+      return `${html}`;
+    }
+  );
 
-  eleventyConfig.addShortcode("version", function() {
+  eleventyConfig.addShortcode("version", function () {
     return now;
   });
 
   function sortByAlphabet(values) {
-    return values.filter(() => true).sort((a, b) => a.url.localeCompare(b.url, 'en', { numeric: true }));
+    return values
+      .filter(() => true)
+      .sort((a, b) => a.url.localeCompare(b.url, "en", { numeric: true }));
   }
 
   eleventyConfig.addFilter("sortByAlphabet", sortByAlphabet);
 
   function sortByOrder(values) {
-    return values.filter(() => true).sort((a, b) => a.data.order - b.data.order);
+    return values
+      .filter(() => true)
+      .sort((a, b) => a.data.order - b.data.order);
   }
 
   eleventyConfig.addFilter("sortByOrder", sortByOrder);
@@ -82,7 +89,6 @@ module.exports = function(eleventyConfig) {
     return content;
   });
    */
-
 
   return {
     markdownTemplateEngine: "njk",
