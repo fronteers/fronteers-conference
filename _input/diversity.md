@@ -34,6 +34,6 @@ All talks will be live transcribed and transcriptions are shown on the main scre
 
 ### Childcare
 
-Attending Fronteers with your little one(s)? We are currently exploring childcare options in the area to determine feasibility. If childcare being provided on-site would make it easier for you to attend, please get in touch to discuss your needs (number & age of children etc).
+Attending Fronteers with your little one(s)? We are currently exploring childcare options in the area to determine feasibility. If childcare being provided on-site would make it easier for you to attend, please g[get in touch with us](m&#97;&#105;lto&#58;&#99;on%66eren&#99;&#101;&#64;%6&#54;%72on%&#55;4%65e%&#55;2s%2&#69;n%&#54;&#67;) to discuss your needs (number & age of children etc).
 
 
