@@ -1,9 +1,9 @@
 ---
 tags: pages
 layout: page.njk
-title: Diversity
+title: Diversity & Inclusivity
 description: Fronteers wants to be an inclusive community and to that end have made some arrangements
-navigation: Diversity
+navigation: Diversity & Inclusivity
 order: 8
 ---
 Fronteers wants to be an inclusive community and to that end have made some arrangements that we would like to bring to your attention.
