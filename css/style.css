@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   color: inherit;
   font-family: inherit;
@@ -24,31 +26,31 @@ html {
   --red: #fe796a;
 }
 
-:is(li, a):not(:only-child):nth-child(4n+1) {
+:is(li, a):not(:only-child):nth-child(4n + 1) {
   --accent-color: var(--yellow);
 }
 
-:is(li, a):not(:only-child):nth-child(4n+2) {
+:is(li, a):not(:only-child):nth-child(4n + 2) {
   --accent-color: var(--purple);
 }
 
-:is(li, a):not(:only-child):nth-child(4n+3) {
+:is(li, a):not(:only-child):nth-child(4n + 3) {
   --accent-color: var(--red);
 }
 
-:is(li, a):not(:only-child):nth-child(4n+4) {
+:is(li, a):not(:only-child):nth-child(4n + 4) {
   --accent-color: var(--lilac);
 }
 
-:is(li, a):not(:only-child):nth-child(3n+1) {
+:is(li, a):not(:only-child):nth-child(3n + 1) {
   --clip-mask: url(#parenthesis-down-small);
 }
 
-:is(li, a):not(:only-child):nth-child(3n+2) {
+:is(li, a):not(:only-child):nth-child(3n + 2) {
   --clip-mask: url(#greater-than-down-small);
 }
 
-:is(li, a):not(:only-child):nth-child(3n+3) {
+:is(li, a):not(:only-child):nth-child(3n + 3) {
   --clip-mask: url(#curly-brace-down-small);
 }
 
@@ -65,7 +67,12 @@ p + :is(h1, h2, h3, h4, h5, h6) {
   margin-top: 1.5em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Fabrik", Arial, Helvetica, sans-serif;
 }
 
@@ -135,6 +142,8 @@ small {
   initial-letter: 3;
   margin-right: 0.5em;
   font-family: "Fabrik", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  text-decoration-color: transparent;
 }
 
 @supports not (initial-letter: 3) {
@@ -143,6 +152,8 @@ small {
     font-size: 300%;
     font-size: 3lh;
     line-height: 1;
+    text-decoration: none;
+    text-decoration-color: transparent;
   }
 }
 
@@ -302,9 +313,8 @@ small {
   font-size: clamp(1rem, 3vw, 1.3em);
 }
 
-
 .card__link::before {
-  content: '';
+  content: "";
   position: absolute;
   z-index: 2;
   top: 0;
@@ -331,8 +341,6 @@ small {
   font-size: 1.5em;
   font-weight: bold;
 }
-
-
 
 .tickets {
   padding: 1.25rem 1vw 3.5rem 1vw;
@@ -375,7 +383,6 @@ small {
 .narrow-width .speakers__item {
   width: min(13rem, 26vw);
 }
-
 
 .button {
   display: inline-block;
@@ -420,7 +427,7 @@ small {
 }
 
 .footer__social-item::before {
-  content: '';
+  content: "";
   order: -1;
   display: block;
   width: 100%;
@@ -444,7 +451,12 @@ small {
   margin: auto auto auto 0;
 }
 
-.footer, .narrow-width:first-child, :is(section, .announcer, .hero, .cta, .speakers, .tickets) + :is(section, .announcer, .hero, .cta, .speakers, .tickets):not(.artificial-specificity-increase) {
+.footer,
+.narrow-width:first-child,
+:is(section, .announcer, .hero, .cta, .speakers, .tickets)
+  + :is(section, .announcer, .hero, .cta, .speakers, .tickets):not(
+    .artificial-specificity-increase
+  ) {
   margin-top: 5vw;
 }
 
