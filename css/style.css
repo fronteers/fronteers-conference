@@ -14,6 +14,8 @@
 }
 
 html {
+  overflow-x: hidden;
+  overflow-x: clip;
   overflow-y: scroll;
   overflow-y: overlay;
   background: #f2f2f2;
