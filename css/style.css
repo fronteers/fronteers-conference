@@ -353,7 +353,7 @@ small {
 }
 
 .tickets__headline {
-  font-size: clamp(1.5rem, 4.5vw, 2.5rem);
+  font-size: clamp(1.4rem, 4.5vw, 2.5rem);
   white-space: nowrap;
 }
 .tickets__smallpint {
