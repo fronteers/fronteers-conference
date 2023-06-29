@@ -326,7 +326,7 @@ small {
 }
 
 .cta {
-  padding: 1.25rem 1vw 3.5rem 1vw;
+  padding: 1.25rem 0.25vw 3.5rem 0.25vw;
   background: var(--red);
   text-align: center;
   clip-path: url(#greater-than-down-small);
@@ -334,11 +334,14 @@ small {
 }
 
 .cta__headline {
-  font-size: clamp(1.5rem, 4.5vw, 2.5rem);
+  font-size: clamp(1.4rem, 4.5vw, 2.5rem);
+  white-space: nowrap;
 }
-.cta .discount {
+
+.cta__discount {
   font-size: clamp(1.1rem, 2vw, 1.3rem);
 }
+
 .cta__button {
   font-size: 1.5em;
   font-weight: bold;
