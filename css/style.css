@@ -356,11 +356,13 @@ small {
   font-size: clamp(1.4rem, 4.5vw, 2.5rem);
   white-space: nowrap;
 }
-.tickets__smallpint {
+
+.tickets__smallprint {
   max-width: 400px;
   display: inline-block;
 }
-.tickets .discount {
+
+.tickets__discount {
   font-size: clamp(1.1rem, 2vw, 1.3rem);
 }
 .tickets__widget {
