@@ -355,6 +355,10 @@ small {
 .tickets__headline {
   font-size: clamp(1.5rem, 4.5vw, 2.5rem);
 }
+.tickets__smallpint {
+  max-width: 400px;
+  display: inline-block;
+}
 .tickets .discount {
   font-size: clamp(1.1rem, 2vw, 1.3rem);
 }
