@@ -345,7 +345,7 @@ small {
 }
 
 .tickets {
-  padding: 1.25rem 1vw 3.5rem 1vw;
+  padding: 1.25rem 0.25vw 3.5rem 0.25vw;
   background: var(--red);
   text-align: center;
   clip-path: url(#greater-than-down-large);
