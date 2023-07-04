@@ -2,10 +2,16 @@
 tags: speakers
 layout: speaker.njk
 title: Kevin Powell
+talk: Stop Over-engineering your CSS
 image: /img/kevin-powell.jpg
 claim: Educationist
 ---
-[Kevin Powell](https://www.kevinpowell.co/) is a CSS Evangelist who is passionate about helping front-end developers learn and appreciate CSS. He creates content on various platforms, including YouTube and Twitch, where he shares tips, tricks, tutorials, and live streams related to front-end web development and design. 
+
+Writing CSS can quickly become a battle against the browser, as well as our own code. Maintenance can also be difficult as we layer things on. This talk explores how to work with the browser and use modern CSS solutions to create robust solutions with minimal CSS.
+
+---
+
+**[Kevin Powell](https://www.kevinpowell.co/)** is a CSS Evangelist who is passionate about helping front-end developers learn and appreciate CSS. He creates content on various platforms, including YouTube and Twitch, where he shares tips, tricks, tutorials, and live streams related to front-end web development and design. 
 
 [Kevin's YouTube channel](https://www.youtube.com/kevinpowell) is the foundation of his work, offering in-depth explanations of fundamental concepts, exploring lesser-known CSS properties, and providing practical guidance on building web pages. 
 

@@ -113,6 +113,14 @@ small {
   font-size: 0.75em;
 }
 
+hr {
+  display: block;
+  height: 2px;
+  margin: 2rem 0;
+  background-color: var(--yellow);
+  border: none;
+}
+
 .visually-hidden {
   position: absolute;
   left: -10000px;
