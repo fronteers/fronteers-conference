@@ -83,6 +83,7 @@ p + .hero {
 }
 
 li {
+  margin-bottom: 0.5em;
   text-decoration-color: var(--accent-color);
 }
 
@@ -147,7 +148,7 @@ hr {
   overflow: hidden;
 }
 
-.narrow-width:first-child p:nth-of-type(1):first-letter {
+.narrow-width:first-child:not(li) > p:nth-of-type(1):first-letter {
   -webkit-initial-letter: 3;
   initial-letter: 3;
   margin-right: 0.5em;
@@ -157,7 +158,7 @@ hr {
 }
 
 @supports not (initial-letter: 3) {
-  .narrow-width:first-child p:nth-of-type(1):first-letter {
+  .narrow-width:first-child:not(li) > p:nth-of-type(1):first-letter {
     margin-inline-end: 0.1em;
     font-size: 300%;
     font-size: 3lh;
