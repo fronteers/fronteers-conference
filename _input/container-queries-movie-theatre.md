@@ -1,5 +1,5 @@
 ---
-layout: page.njk
+layout: amit.njk
 title: Container Queries Movie Theater - by Amit Sheen
 description: Let’s build a ‘dynamic movie theater’, where the theater is the container, and the rows, seats and aisle are set by the size of the theater via CQ!
 ---

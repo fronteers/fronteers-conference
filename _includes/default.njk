@@ -80,9 +80,10 @@
     <meta name="og:description" content="{{ description }}">
     <meta name="twitter:description" content="{{ description }}">
   {% endif %}
+  {% block socialimage %}
   <meta name="og:image" content="https://fronteersconf.org{{ '/img/social-media.jpeg' | url }}?v={% version %}">
   <meta name="twitter:image" content="https://fronteersconf.org{{ '/img/social-media.jpeg' | url }}?v={% version %}">
-
+  {% endblock %}
   {% block head %}{% endblock %}
 </head>
 <body class="limited-width">
