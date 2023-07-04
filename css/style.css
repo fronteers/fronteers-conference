@@ -122,6 +122,10 @@ hr {
   border: none;
 }
 
+iframe[title="Codepen"] {
+  margin-block: 2rem;
+}
+
 .visually-hidden {
   position: absolute;
   left: -10000px;

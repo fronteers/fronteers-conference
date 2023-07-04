@@ -1,6 +1,7 @@
 const now = String(Date.now());
 const { DateTime } = require("luxon");
 const Image = require("@11ty/eleventy-img");
+const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlPrettify = require("html-prettify");
 
 module.exports = function (eleventyConfig) {
@@ -15,6 +16,10 @@ module.exports = function (eleventyConfig) {
     "./css/": "./css/",
     "./img/": "./img/",
     "./fonts/": "./fonts/",
+  });
+
+  eleventyConfig.addPlugin(pluginSyntaxHighlight, {
+    alwaysWrapLineHighlights: false,
   });
 
   // Image plugin
