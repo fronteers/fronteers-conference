@@ -27,13 +27,6 @@
       "https://fronteersconf.org/img/crowd.jpg"
     ],
     "description": "Fronteers Conference is one of Europe’s premiere conferences on front-end web development.",
-    "offers": {
-      "@type": "Offer",
-      "url": "https://fronteersconf.org/tickets",
-      "price": "500",
-      "priceCurrency": "EUR",
-      "availability": "https://schema.org/InStock"
-    },
     "performer": [{% for speaker in collections.speakers|sortByAlphabet %}{
         "@type": "Person",
         "name": "{{ speaker.data.title }}"

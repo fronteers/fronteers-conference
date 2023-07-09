@@ -6,9 +6,9 @@ description: We have a spectacular line-up of 14 speakers and one MC for you.
 navigation: Speakers
 order: 2
 ---
-This year we're back at **2 days**, tightly packed with super interesting talks! And as usual, we're not covering just one area of the web, but we want our speakers to provide us with the big picture. We can say that we are very pleased with **this year's line-up**, which reflects that very well.
+This year we wanted to be back with 2 days, tightly packed with super-interesting talks. And as usual, we would've not covered just one area of the web, but we wanted our speakers to provide us with the big picture. We can say that we were very pleased with **this year's line-up**, which reflects that very well.
 
-These are the topics our wonderful MC [Henri Helvetica](/speakers/henri-helvetica/) will lead you through over the course of those two days:
+These would have been the topics our wonderful MC [Henri Helvetica](/speakers/henri-helvetica/) would have lead you through over the course of those two days:
 
 *   W3C and CSS Working Group veteran **[Chris Lilley](/speakers/chris-lilley/)** will present us with a plethora of new CSS color gamuts, spaces and color functions, allowing us for the first time to tap into more vibrant, high dynamic colors  - and you'll learn about their intricacies and implementation shortcomings.
 *   We are more than stoked at the fact that YouTube "giant" **[Kevin Powell](/speakers/kevin-powell/)** chose us to be the first conference to ever present at! He will lay out his idea on a modern and more robust approach for authoring CSS.

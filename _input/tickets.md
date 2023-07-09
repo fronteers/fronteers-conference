@@ -2,10 +2,17 @@
 tags: pages
 layout: tickets.njk
 title: Tickets
-description: Tickets no longer available!
+description: Tickets no longer available
 navigation: Tickets
 order: 5
 ---
+
+## The conference is canceled
+
+If you already bought a ticket: thank you for your support. Sadly we weren't able to fulfill our part of the deal. We will
+refund you the price of your ticket as soon as possible.
+
+The information below is only there for archive reasons. 
 
 ### Member discount
 
