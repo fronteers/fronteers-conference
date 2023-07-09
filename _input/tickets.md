@@ -2,7 +2,7 @@
 tags: pages
 layout: tickets.njk
 title: Tickets
-description: Tickets available for just 500 €!
+description: Tickets no longer available!
 navigation: Tickets
 order: 5
 ---
