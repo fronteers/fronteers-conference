@@ -104,6 +104,11 @@
   </nav>
 </header>
 <main role="main">
+  {% if page.url != '/' %}
+  <div class="canceled">
+    {% include '_partials/canceled.njk' %}
+  </div>
+  {% endif %}
   {% block content %}
     {{ content | safe }}
   {% endblock %}

@@ -485,6 +485,18 @@ iframe[title="Codepen"] {
   margin-top: 5vw;
 }
 
+.canceled {
+  background-color: var(--red);
+  padding: 20px;
+  margin-bottom: 60px;
+  width: 50rem;
+  max-width: calc(100vw - 1.5rem);
+  margin-inline: auto;
+}
+.canceled li::marker{
+  color: black;
+}
+
 main > :first-child:not(.announcer):not(.tickets) {
   margin-top: 3vw;
 }
