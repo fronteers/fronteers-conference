@@ -24,7 +24,7 @@ module.exports = function (eleventyConfig) {
       let metadata;
       try {
         metadata = await Image(`.${src}`, {
-          widths: [100, 200, 300, 400, 500, 600, 800, 1000],
+          widths: [100, 200, 300, 400, 500, 600, 800, 1000, 1200, 1600, 2000],
           formats: ["avif", "jpeg"],
         });
       } catch (err) {

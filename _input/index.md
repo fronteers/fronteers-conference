@@ -1,8 +1,8 @@
 ---
 tags: pages
 layout: index.njk
-title: Fronteers Conference, September 21st & 22nd, Utrecht
-description: Join us at the Pathé Leidsche Rijn in Utrecht for 14 speakers on two days of excellence.
+title: Fronteers Dark Mode, Friday, October 3rd, Dordrecht
+description: Join us at Cinema de Witt in Dordrecht for our after work conference.
 navigation: Home
 order: 1
 ---

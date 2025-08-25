@@ -1,8 +1,0 @@
----
-tags: speakers
-layout: speaker.njk
-title: Lea Verou
-image: /img/lea-verou.jpeg
-claim: Creator of Things
----
-Lea has been working on improving the Web for over a decade, from many angles. She helps move Web technologies forwards, as an elected [W3C Technical Architecture Group (TAG)](https://www.w3.org/groups/other/tag) member, and as a longtime [CSS Working Group](https://www.w3.org/Style/CSS/members.en.php3#members:~:text=Lea%20Verou) Invited Expert and co-editor of [several CSS specs](https://lea.verou.me/publications/#specifications). She currently works at [MIT](http://mit.edu), doing [research](https://lea.verou.me/publications/#research) at the intersection of usability and programming languages and intermittently [teaching](https://designftw.mit.edu) these topics. She is a well known [speaker](https://lea.verou.me/speaking) and [author](https://lea.verou.me/publications/), having written several articles, book chapters, and the bestselling advanced CSS book [CSS Secrets](http://www.amazon.com/CSS-Secrets-Lea-Verou/dp/1449372635?tag=leaverou-20). Lea has also started [several open source projects and web applications](http://github.com/leaverou), such as [Prism](http://prismjs.com), [Mavo](https://mavo.io), and [Awesomplete](https://github.com/leaverou/awesomplete). Her open source work is used on millions of websites. She tweets [@leaverou](https://twitter.com/leaverou) and blogs at [lea.verou.me](http://lea.verou.me). She holds a MSc in Computer Science from [MIT](http://mit.edu). Despite her technical pursuits, Lea is one of the few misfits who love code and design equally.

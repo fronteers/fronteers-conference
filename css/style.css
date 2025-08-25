@@ -14,7 +14,8 @@
 html {
   overflow-y: scroll;
   overflow-y: overlay;
-  background: #f2f2f2;
+  background: #000;
+  color: #c5c5c5;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 1.125rem;
   line-height: 1.5;
@@ -212,12 +213,13 @@ small {
   background-repeat: repeat-x;
   background-size: auto 40%;
   background-position: top center;
+  color: #000;
 }
 
 .announcer__content {
   width: 45rem;
   max-width: calc(100vw - 1.5rem);
-  margin: -2px auto -2rem auto;
+  margin: -2px auto -3.5rem auto;
   padding: 1.25rem 2.5vw 9rem 2.5vw;
   text-align: center;
 
@@ -240,21 +242,24 @@ small {
 
 .hero {
   display: block;
-  clip-path: url(#parenthesis-down-small);
+  overflow: hidden;
+  border-radius: 0 0 5vh 5vh;
 }
 
 .hero img {
   display: block;
   width: 100%;
-  height: 40vh;
-  object-position: center 33%;
+  height: 66vh;
+  object-position: center center;
   object-fit: cover;
 }
 
 .card {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
   width: 100%;
+  color: #000;
   text-align: center;
 }
 
@@ -274,7 +279,7 @@ small {
 
 .card__caption {
   font-family: "Fabrik", Arial, Helvetica, sans-serif;
-
+  height: 100%;
   margin-top: -4.6875rem;
   padding: 0 1.25rem 1.25rem 1.25rem;
   background: #fff;
@@ -319,6 +324,7 @@ small {
   text-align: center;
   clip-path: url(#greater-than-down-small);
   font-family: "Fabrik", Arial, Helvetica, sans-serif;
+  color: #000;
 }
 
 .cta__headline {
@@ -339,6 +345,7 @@ small {
   background: var(--red);
   text-align: center;
   clip-path: url(#greater-than-down-large);
+  color: #000;
   font-family: "Fabrik", Arial, Helvetica, sans-serif;
 }
 
@@ -357,7 +364,7 @@ small {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
-  align-items: start;
+  align-items: stretch;
   justify-content: center;
   padding-inline: 1.25rem;
 }
@@ -367,6 +374,8 @@ small {
 }
 
 .speakers__item {
+  display: flex;
+  align-items: stretch;
   flex: 0 1 auto;
   min-width: 15rem;
   width: min(15rem, 33vw);
@@ -397,6 +406,7 @@ small {
 .footer {
   padding-bottom: 1.25rem;
   background: var(--lilac);
+  color: #000;
 }
 
 .footer__social {

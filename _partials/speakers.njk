@@ -5,7 +5,7 @@
       {% set src = item.data.image %}
       {% set headline = item.data.title %}
       {% set alt = 'Picture of ' ~ item.data.title %}
-      {% set text = item.data.claim %}
+      {% set text = item.data.talktitle %}
       {% include '_partials/card.njk' %}
     </li>
   {% endeach %}

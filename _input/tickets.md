@@ -13,23 +13,19 @@ Members of the Fronteers association are entitled to a discount. Members who wan
 
 ### Terms and conditions
 
-By purchasing a ticket for the Fronteers Conference, you accept these terms and conditions in full.
+By purchasing a ticket for the Fronteers Dark Mode, you accept these terms and conditions in full.
 
 #### Pricing and payment
 
-All ticket prices are in euro and exclude Dutch VAT, unless explicitly mentioned otherwise. Tickets must be paid in full before the conference starts. All ticket sales are final and non-refundable.
+All ticket prices are in euro and include Dutch VAT. Tickets must be paid in full before the conference starts. All ticket sales are final and non-refundable.
 
 #### Conference tickets
 
-A ticket to Fronteers Conference grants entrance the conference and includes catered lunch, drinks and snacks during breaks.
+A ticket to Fronteers Dark Mode grants entrance the conference, while dinner lunch, drinks and snacks during breaks are left to you and are offered by our venue.
 
 #### Transfer of tickets
 
 Conference tickets may be transferred. Please email us at [confere&#110;ce&#64;fro&#110;&#116;e&#101;rs&#46;nl](m&#97;&#105;lto&#58;&#99;on%66eren&#99;&#101;&#64;%6&#54;%72on%&#55;4%65e%&#55;2s%2&#69;n%&#54;&#67;) and request a transfer by mentioning the old name and the new name you want on the ticket. Tickets with member discounts may only be transferred to other Fronteers members. Please be aware that after we send the badges to the printer we cannot make changes anymore.
-
-#### Unofficial promotions
-
-It is expressly forbidden to use tickets as a prize in or a part of promotions, sweepstakes or other promotions, without explicit permission from the Fronteers organisation. Any tickets found to be traded or acquired in breach of these conditions will be made void without restitution.
 
 #### Speakers and schedule
 

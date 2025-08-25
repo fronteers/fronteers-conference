@@ -6,17 +6,19 @@ description: This year we will see each other again in the Pathé Utrecht Leidsc
 navigation: Venue
 order: 3
 ---
-This year we will see each other again in the Pathé Utrecht Leidsche Rijn theatre.
+This year, we’ll gather in the heart of Dordrecht at the charming Cinema De Witt – a cultural venue with a long history and an intimate, welcoming atmosphere.
 
 {% set src = '/img/venue.jpg' %}
 {% include '_partials/hero.njk' %}
 
-**Pathé Utrecht Leidsche Rijn  
-Berlijnplein 100  
-3541 CM Utrecht**
+**Cinema De Witt  
+Nieuwstraat 60  
+3311 XR Dordrecht**
 
-The theatre is close to the train station Utrecht Leidsche Rijn with direct connections to Utrecht Central Station, Den Haag and Rotterdam. If you are travelling from other locations, it is recommended to change trains in Utrecht Centraal which is just 1 stop away and only a 4 minute train ride.
+The venue is located just a short walk from Dordrecht Central Station, which offers direct train connections to Rotterdam, Breda, The Hague, and Utrecht. If you're coming from other parts of the country, a transfer in Rotterdam Centraal usually gets you there quickly and comfortably.
 
-If you want to travel by car, there are parking spaces around the theatre and several large parking garages close by.
+Arriving by car? There are multiple parking garages nearby, including Spuihaven and Drievriendenhof, both within walking distance of the cinema.
+
+Whether you arrive by train, bike, or car – getting to Cinema De Witt is easy. We look forward to welcoming you in this inspiring venue!
 
 

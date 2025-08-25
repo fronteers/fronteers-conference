@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>{{ title }}{% if page.url != '/' %} | Fronteers Conference 2023{% endif %}</title>
+  <title>{{ title }}{% if page.url != '/' %} | Fronteers Dark Mode{% endif %}</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
   <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Fabrik-Bold.woff2' | url }}">
@@ -79,8 +79,8 @@
     <meta name="og:description" content="{{ description }}">
     <meta name="twitter:description" content="{{ description }}">
   {% endif %}
-  <meta name="og:image" content="https://fronteersconf.org{{ '/img/social-media.jpeg' | url }}?v={% version %}">
-  <meta name="twitter:image" content="https://fronteersconf.org{{ '/img/social-media.jpeg' | url }}?v={% version %}">
+  <meta name="og:image" content="https://fronteersconf.org{{ '/img/social-media.jpg' | url }}?v={% version %}">
+  <meta name="twitter:image" content="https://fronteersconf.org{{ '/img/social-media.jpg' | url }}?v={% version %}">
 
   {% block head %}{% endblock %}
 </head>
@@ -91,7 +91,7 @@
     <a href="/">
       <img src="{{ '/img/fronteers-conference.svg' | url }}"
            width="450" height="125"
-           alt="Fronteers Conference, September 21st & 22nd 2023, Utrecht"
+           alt="Fronteers Dark Mode, Friday, October 3rd 2025, Dordrecht"
            class="header__logo">
     </a>
   </h1>
@@ -109,9 +109,9 @@
 <footer class="footer full-width">
   <nav class="footer__social limited-width" aria-label="Social media">
     <a href="https://twitter.com/fronteersconf" class="footer__social-item">
-      <img src="/img/twitter.svg" class="footer__social-logo" width="16" height="16" alt="">
-      <strong class="footer__social-headline headline">Twitter</strong>
-      You can follow us through @fronteersconf on Twitter
+      <img src="/img/bluesky.svg" class="footer__social-logo" width="16" height="16" alt="">
+      <strong class="footer__social-headline headline">Bluesky</strong>
+      You can follow us through @fronteers.bsky.social on Bluesky
     </a>
     <a href="https://front-end.social/@fronteersconference" rel="me" class="footer__social-item">
       <img src="/img/mastodon.svg" class="footer__social-logo" width="16" height="16" alt="">
@@ -125,5 +125,17 @@
     </a>
   </nav>
 </footer>
+<script type="speculationrules">
+  {
+    "prefetch": [{
+      "where": { "href_matches": "/*" },
+      "eagerness": "eager"
+    }],
+    "prerender": [{
+      "where": { "href_matches": "/*" },
+      "eagerness": "moderate"
+    }]
+  }
+</script>
 </body>
 </html>
