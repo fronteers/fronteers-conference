@@ -1,2 +1,2 @@
 # Redirects from what the browser requests to what we serve
-/tickets              https://fronteers.tito.page/dark-mode
+/tickets/              https://fronteers.tito.page/dark-mode
