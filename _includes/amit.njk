@@ -1,0 +1,13 @@
+{% extends "_includes/default.njk" %}
+
+{% block socialimage %}
+  <meta name="og:image" content="https://fronteersconf.org{{ '/img/css-movie-theater.png' | url }}?v={% version %}">
+  <meta name="twitter:image" content="https://fronteersconf.org{{ '/img/css-movie-theater.png' | url }}?v={% version %}">
+{% endblock %}
+
+{% block content %}
+  <section class="narrow-width">
+    <h2 class="headline">{{ title }}</h2>
+    {{ content | safe }}
+  </section>
+{% endblock %}
