@@ -99,6 +99,7 @@
     {% for post in collections.pages|sortByOrder %}
       <a href="{{ post.url }}" {% if page.url == post.url %} aria-current="page" {% endif %}>{{ post.data.navigation }}</a>
     {% endfor %}
+    <a href="/tickets/">Tickets</a>
   </nav>
 </header>
 <main role="main">
