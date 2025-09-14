@@ -6,7 +6,7 @@ description: This year we will see each other again in the Pathé Utrecht Leidsc
 navigation: Venue
 order: 3
 ---
-This year, we’ll gather in the heart of Dordrecht at the charming Cinema De Witt – a cultural venue with a long history and an intimate, welcoming atmosphere.
+This year, we’ll gather in the heart of Dordrecht at the charming [Cinema De Witt](https://www.dewittdordrecht.nl/) ([Google Maps](https://maps.app.goo.gl/MpZNBQPhSAJrSox46) / [Brochure](https://www.dewittdordrecht.nl/site/assets/files/1150/de_witt_brochure_aug_25.pdf) / [Look Book](https://www.dewittdordrecht.nl/site/assets/files/1150/de_witt_lookbook_augustus_2025.pdf)) – a cultural venue with a long history and an intimate, welcoming atmosphere.
 
 {% set src = '/img/venue.jpg' %}
 {% include '_partials/hero.njk' %}
