@@ -29,19 +29,19 @@ html {
   --red: #fe796a;
 }
 
-:is(li, a):not(:only-child):nth-child(4n + 1) {
+:is(tr, li, a):not(:only-child):nth-child(4n + 1) {
   --accent-color: var(--yellow);
 }
 
-:is(li, a):not(:only-child):nth-child(4n + 2) {
+:is(tr, li, a):not(:only-child):nth-child(4n + 2) {
   --accent-color: var(--purple);
 }
 
-:is(li, a):not(:only-child):nth-child(4n + 3) {
+:is(tr, li, a):not(:only-child):nth-child(4n + 3) {
   --accent-color: var(--red);
 }
 
-:is(li, a):not(:only-child):nth-child(4n + 4) {
+:is(tr, li, a):not(:only-child):nth-child(4n + 4) {
   --accent-color: var(--lilac);
 }
 
@@ -519,4 +519,56 @@ main > :first-child:not(.announcer):not(.tickets) {
 .announcer + .hero:not(.artificial-specificity-increase) .hero__image {
   height: 40vh;
   object-position: 50% 33%;
+}
+
+table {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 0.75rem + (100vw - 100%) / 2);
+  margin: 1.5rem 0;
+  margin: 1.5rem calc(((100vw - 100%) / -2) -0.75rem) 1.5rem 0;
+}
+
+thead, tbody, tr {
+  display: contents;
+}
+
+tr::after {
+  content: '';
+  display: block;
+  height: 1px;
+  margin: 1.5rem 0;
+  background-color: var(--accent-color);
+}
+
+tr:last-child::after {
+  display: none;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+}
+
+td:first-child {
+  margin-bottom: 0.25em;
+  white-space: nowrap;
+}
+
+td br::before {
+  content: '';
+  display: block;
+  margin-top: 0.25em;
 }

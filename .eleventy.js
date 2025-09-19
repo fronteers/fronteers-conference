@@ -6,7 +6,8 @@ const htmlPrettify = require("html-prettify");
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(true);
 
-  eleventyConfig.addWatchTarget("./(_partials|css)/");
+  eleventyConfig.addWatchTarget("./_partials/");
+  eleventyConfig.addWatchTarget("./css/");
 
   eleventyConfig.addPassthroughCopy({
     "./static/": "./static/",
