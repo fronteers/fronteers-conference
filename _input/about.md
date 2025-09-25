@@ -15,8 +15,9 @@ Besides organising Fronteers Dark Mode, the professional association also runs r
 
 ### Conference committee
 
-* Claudia Reynders
 * Anneke Sinnema
+* Claudia Reynders
 * Wim van Iersel
 * Jewwy Qadri
+* Niels Leenheer
 * Christian Schaefer
