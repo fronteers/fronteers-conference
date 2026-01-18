@@ -1,5 +1,6 @@
+{% if items|length %}
 <ul class="speakers full-width">
-  {% asyncEach item in items|sortByAlphabet %}
+  {% for item in items|sortByAlphabet %}
     <li class="speakers__item">
       {% set href = item.url %}
       {% set src = item.data.image %}
@@ -10,3 +11,4 @@
     </li>
   {% endeach %}
 </ul>
+{% endif %}

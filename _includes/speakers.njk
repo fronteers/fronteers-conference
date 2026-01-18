@@ -10,5 +10,7 @@ permalink: "{{ page.fileSlug }}/index.html"
   </section>
 
   {% set items = collections.speakers %}
-  {% include '_partials/speakers.njk' %}
+  {% if items | length %}
+    {% include '_partials/speakers.njk' %}
+  {% endif %}
 {% endblock %}

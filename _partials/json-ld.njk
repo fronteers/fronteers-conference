@@ -34,15 +34,15 @@
       "priceCurrency": "EUR",
       "availability": "https://schema.org/InStock"
     },
-    "performer": [{% for speaker in collections.speakers|sortByAlphabet %}{
+    "performer": [{% if collections.speakers|length %}{% for speaker in collections.speakers|sortByAlphabet %}{
         "@type": "Person",
         "name": "{{ speaker.data.title }}"
       }{% if not loop.last %},
-      {% endif %}{% endfor %}],
+      {% endif %}{% endfor %}{% endif %}],
     "organizer": {
       "@type": "Organization",
       "name": "Fronteers",
       "url": "https://fronteers.nl"
     }
-  }
+  %}
 </script>

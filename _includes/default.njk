@@ -4,7 +4,7 @@
   <title>{{ title }}{% if page.url != '/' %} | Fronteers Dark Mode{% endif %}</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-  <meta http-equiv="Refresh" content="0; URL=https://www.fronteers.nl/en/conference/">
+  <x-meta http-equiv="Refresh" content="0; URL=https://www.fronteers.nl/en/conference/">
   <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Fabrik-Bold.woff2' | url }}">
   <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Fabrik-Regular.woff2' | url }}">
   <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Roboto-Regular.woff2' | url }}">
@@ -86,13 +86,15 @@
   {% block head %}{% endblock %}
 </head>
 <body class="limited-width">
+{#
 {% include '_partials/masks.svg' %}
+#}
 <header class="header full-width">
   <h1 class="header__title limited-width">
     <a href="/">
       <img src="{{ '/img/fronteers-conference.svg' | url }}"
            width="450" height="125"
-           alt="Fronteers Dark Mode, Friday, October 3rd 2025, Dordrecht"
+           alt="Fronteers Dark Mode, Friday, October 2nd 2026, Dordrecht"
            class="header__logo">
     </a>
   </h1>

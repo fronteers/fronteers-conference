@@ -1,6 +1,2 @@
-# Redirect (temporarily) to the main Fronteers page
-https://fronteersconf.org/* https://www.fronteers.nl/en/conference/ 302!
-
 # Redirects from what the browser requests to what we serve
-/*                     https://www.fronteers.nl/en/conference/    302!
 /tickets/              https://fronteers.tito.page/dark-mode

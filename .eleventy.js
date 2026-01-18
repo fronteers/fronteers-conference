@@ -6,6 +6,7 @@ const htmlPrettify = require("html-prettify");
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(true);
 
+  eleventyConfig.addWatchTarget("./_includes/");
   eleventyConfig.addWatchTarget("./_partials/");
   eleventyConfig.addWatchTarget("./css/");
 

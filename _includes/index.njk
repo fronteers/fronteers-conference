@@ -2,18 +2,18 @@
 {% block content %}
   {% include '_partials/announcer.njk' %}
 
-  <section class="narrow-width">
-    {% set items = collections.speakers %}
-    {% include '_partials/speakers.njk' %}
-  </section>
+  {% set items = collections.speakers %}
+  {% if items | length %}
+    <section class="narrow-width">
+      {% include '_partials/speakers.njk' %}
+    </section>
+  {% endif %}
 
   {% include '_partials/cta.njk' %}
 
   <section class="narrow-width">
     <h3 class="headline">About Fronteers Dark Mode</h3>
-    <p>
-      Fronteers Dark Mode is a cozy, single-track afterwork front-end conference by and for the community. Taking place on Friday, October 3rd, 2025 at the atmospheric Cinema De Witt in Dordrecht, it offers an evening of inspiring talks on accessibility, sustainability, HTML, CSS – and a nerdy late-night finale.
-    </p>
+    <p>Fronteers Dark Mode is a cozy, single-track afterwork front-end conference by and for the community. Taking place on Friday, October 2nd, 2026 at the atmospheric Cinema De Witt in Dordrecht, it offers an evening of inspiring talks on accessibility, sustainability, HTML, CSS – and a nerdy late-night finale.</p>
   </section>
 
   {% set src = '/img/venue.jpg' %}
