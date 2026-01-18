@@ -3,4 +3,4 @@
 /tickets/              https://fronteers.tito.page/dark-mode
 
 # other URLS might proxy or redirect offsite
-https://fronteersconf.org//* https://www.fronteers.nl/en/conference/ 302!
+https://fronteersconf.org/* https://www.fronteers.nl/en/conference/ 302!
