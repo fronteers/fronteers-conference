@@ -21,4 +21,8 @@ Arriving by car? Check out the nearby garage [**Drievriendenhof**](https://share
 
 Whether you arrive by train, bike, or car – getting to Cinema De Witt is easy. We look forward to welcoming you in this inspiring venue!
 
+## Accessibility
+
+The cinema and brasserie are fully wheelchair accessible. The building has step-free access throughout, includes a lift, and offers an accessible toilet on the ground floor.
+
 
