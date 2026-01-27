@@ -4,10 +4,23 @@
   <title>{{ title }}{% if page.url != '/' %} | Fronteers Dark Mode{% endif %}</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-  <meta http-equiv="Refresh" content="0; URL=https://www.fronteers.nl/en/conference/">
   <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Fabrik-Bold.woff2' | url }}">
   <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Fabrik-Regular.woff2' | url }}">
   <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Roboto-Regular.woff2' | url }}">
+  <script>
+    (function() {
+      if (window.location.search.indexOf('deactivateredirect') > -1) {
+        localStorage.setItem('deactivateredirect', 'true');
+      }
+      else if (window.location.search.indexOf('activateredirect') > -1) {
+        localStorage.removeItem('deactivateredirect');
+      }
+      if (window.location.hostname.indexOf('localhost') === -1 && !localStorage.getItem('deactivateredirect')) {
+        window.location = 'https://www.fronteers.nl/en/conference/';
+        document.write('<!--');
+      }
+    })();
+  </script>
   <style>
     @font-face {
       font-family: 'Fabrik';
