@@ -86,9 +86,7 @@
   {% block head %}{% endblock %}
 </head>
 <body class="limited-width">
-{#
 {% include '_partials/masks.svg' %}
-#}
 <header class="header full-width">
   <h1 class="header__title limited-width">
     <a href="/">
@@ -102,7 +100,6 @@
     {% for post in collections.pages|sortByOrder %}
       <a href="{{ post.url }}" {% if page.url == post.url %} aria-current="page" {% endif %}>{{ post.data.navigation }}</a>
     {% endfor %}
-    <a href="/tickets/">Tickets</a>
   </nav>
 </header>
 <main role="main">

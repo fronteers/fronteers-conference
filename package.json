@@ -1,7 +1,7 @@
 {
   "engines": {
-    "npm": ">=6.5.1",
-    "node": ">=18.16.0"
+    "npm": ">=9.6.4",
+    "node": ">=20.0.0"
   },
   "scripts": {
     "start": "eleventy --serve --watch",
@@ -12,6 +12,8 @@
     "@11ty/eleventy-img": "^3.1.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "cross-env": "^7.0.3",
-    "html-prettify": "^1.0.7"
+    "dotenv": "^17.2.3",
+    "html-prettify": "^1.0.7",
+    "node-fetch": "^3.3.2"
   }
 }
