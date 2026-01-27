@@ -74,7 +74,7 @@
   {% include 'css/style.css' %}
   </style>
 
-  <link rel="icon" href="{{ '/favicon.ico' | url }}?v={% version %}">
+  <link rel="icon" href="{{ '/favicon.ico' | url }}">
   <link rel="manifest" href="/static/favicon/site.webmanifest" crossorigin="anonymous">
   <link rel="icon" href="/static/favicon/favicon.ico" sizes="any">
   <link rel="icon" href="/static/favicon/icon.svg" type="image/svg+xml">
@@ -103,7 +103,7 @@
 <header class="header full-width">
   <h1 class="header__title limited-width">
     <a href="/">
-      <img src="{{ '/img/fronteers-conference.svg' | url }}"
+      <img src="{{ '/img/fronteers-conference.svg' | url }}?v={% version %}"
            width="450" height="125"
            alt="Fronteers Dark Mode, Friday, October 2nd 2026, Dordrecht"
            class="header__logo">
