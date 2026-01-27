@@ -16,10 +16,9 @@ const result = async () => {
     headers,
   }).then((response) => response.json());
 
-  console.log(JSON.stringify(result, null, 2));
-
   return result.tickets
     .filter((ticket) => ticket.responses && ticket.responses[process.env.TITO_QUESTION_SLUG] === 'yes')
+    .filter((ticket) => !!ticket.name)
     .map((ticket) => ticket.name);
 }
 
