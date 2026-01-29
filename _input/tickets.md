@@ -11,6 +11,8 @@ order: 5
 
 Members of the Fronteers association are entitled to a discount. Members who want to purchase a discounted ticket must already be a member when ticket sales are first announced and will have to provide their membership number during ticket ordering. Ticket count is limited to one per person and the ticket is not transferable to a non-member.
 
+As a member you can find a link to the discounted ticket in the members' newsletter announcing the conference. In case you can't find the email, contact the Fronteers board under <a href='mailto&#58;b%65st%75ur&#64;%66r&#111;&#110;te&#101;r&#115;&#46;n%6&#67;'>b&#101;stu&#117;r&#64;fronteer&#115;&#46;nl</a> and they will provide you with it.
+
 ### Terms and conditions
 
 By purchasing a ticket for Fronteers Dark Mode, you accept these terms and conditions in full.
