@@ -572,3 +572,36 @@ td br::before {
   display: block;
   margin-top: 0.25em;
 }
+
+.socialmedia {
+  width: 100vw;
+  height: 100vh;
+  place-items: center;
+}
+
+.socialmedia_wrapper {
+  position: absolute;
+  width: min(100vw, 1200px);
+  height: min(100vh, 630px);
+  overflow: hidden;
+  margin: auto;
+}
+
+.socialmedia_wrapper img,
+.socialmedia_wrapper .announcer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.socialmedia_wrapper img {
+  bottom: 0;
+  object-position: bottom;
+  object-fit: cover;
+}
+

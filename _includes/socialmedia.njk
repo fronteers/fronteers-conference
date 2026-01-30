@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ title }}{% if page.url != '/' %} | Fronteers Dark Mode{% endif %}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <link rel="preload" as="image" fetchpriority="high" href="{{ '/img/fronteers-conference.svg' | url }}?v={% version %}">
+  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Fabrik-Bold.woff2' | url }}">
+  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Fabrik-Regular.woff2' | url }}">
+  <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Roboto-Regular.woff2' | url }}">
+  <style>
+    @font-face {
+      font-family: 'Fabrik';
+      src: url('{{ '/fonts/Fabrik-Regular.woff2' | url }}') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Fabrik';
+      src: url('{{ '/fonts/Fabrik-Bold.woff2' | url }}') format('woff2');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      src: url('{{ '/fonts/Roboto-Regular.woff2' | url }}') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      src: url('{{ '/fonts/Roboto-Bold.woff2' | url }}') format('woff2');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      src: url('{{ '/fonts/Roboto-Italic.woff2' | url }}') format('woff2');
+      font-weight: normal;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      src: url('{{ '/fonts/Roboto-BoldItalic.woff2' | url }}') format('woff2');
+      font-weight: bold;
+      font-style: italic;
+      font-display: swap;
+    }
+  </style>
+  <style>
+    {% include 'css/style.css' %}
+  </style>
+
+  <link rel="icon" href="{{ '/favicon.ico' | url }}">
+  <link rel="manifest" href="/static/favicon/site.webmanifest" crossorigin="anonymous">
+  <link rel="icon" href="/static/favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="/static/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/static/favicon/apple-touch-icon.png">
+
+  <link href="https://front-end.social/@fronteersconference" rel="me">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@FronteersConf">
+  <meta name="twitter:creator" content="@FronteersConf">
+  {% if title %}
+    <meta name="og:title" content="{{ title }}">
+    <meta name="twitter:title" content="{{ title }}">
+  {% endif %}
+  {% if description %}
+    <meta name="description" content="{{ description }}">
+    <meta name="og:description" content="{{ description }}">
+    <meta name="twitter:description" content="{{ description }}">
+  {% endif %}
+  <meta name="og:image" content="https://fronteersconf.org{{ '/img/social-media.jpg' | url }}?v={% version %}">
+  <meta name="twitter:image" content="https://fronteersconf.org{{ '/img/social-media.jpg' | url }}?v={% version %}">
+
+  {% block head %}{% endblock %}
+</head>
+<body class="socialmedia">
+{% include '_partials/masks.svg' %}
+<div class="socialmedia_wrapper">
+  {% image '/img/venue.jpg' %}
+  {% include '_partials/announcer.njk' %}
+</div>
+</body>
+</html>
