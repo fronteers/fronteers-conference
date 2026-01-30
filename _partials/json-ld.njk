@@ -2,47 +2,48 @@
   {
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": "Fronteers Dark Mode 2025",
-    "startDate": "2025-10-03",
-    "endDate": "2025-10-03",
-    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "@id": "https://fronteersconf.org/#event-dark-mode-2026",
+    "name": "Fronteers Dark Mode 2026",
+    "description": "Fronteers Dark Mode is a cozy, single-track afterwork front-end conference by and for the community—an evening of inspiring talks on accessibility, sustainability, HTML, CSS, and a nerdy late-night finale.",
+    "url": "https://fronteersconf.org/",
+    "startDate": "2026-10-02T15:00:00+02:00",
     "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "inLanguage": "en",
     "location": {
       "@type": "Place",
       "name": "Cinema De Witt",
+      "url": "https://www.dewittdordrecht.nl/",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Nieuwstraat 60",
-        "addressLocality": "Dordrecht",
+        "streetAddress": "Nieuwstraat 60-62",
         "postalCode": "3311 XR",
-        "addressRegion": "Zuid-Holland",
+        "addressLocality": "Dordrecht",
         "addressCountry": "NL"
       }
     },
-    "image": [
-      "https://fronteersconf.org/img/social-media.jpg",
-      "https://fronteersconf.org/img/cinema-room.jpg",
-      "https://fronteersconf.org/img/dordrecht.jpeg",
-      "https://fronteersconf.org/img/venue.jpg",
-      "https://fronteersconf.org/img/fronteers-workshop.jpeg"
-    ],
-    "description": "Fronteers Dark Mode is an after work conference about front-end web development.",
-    "offers": {
-      "@type": "Offer",
-      "url": "https://fronteersconf.org/tickets",
-      "price": "99",
-      "priceCurrency": "EUR",
-      "availability": "https://schema.org/InStock"
-    },
-    "performer": [{% if collections.speakers|length %}{% for speaker in collections.speakers|sortByAlphabet %}{
-        "@type": "Person",
-        "name": "{{ speaker.data.title }}"
-      }{% if not loop.last %},
-      {% endif %}{% endfor %}{% endif %}],
     "organizer": {
       "@type": "Organization",
       "name": "Fronteers",
-      "url": "https://fronteers.nl"
-    }
-  %}
+      "url": "https://www.fronteers.nl/"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Regular ticket",
+        "url": "https://fronteersconf.org/tickets/",
+        "price": "99",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Fronteers member ticket",
+        "url": "https://fronteersconf.org/tickets/",
+        "price": "49",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  }
 </script>
