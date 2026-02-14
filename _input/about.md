@@ -17,7 +17,10 @@ Besides organising Fronteers Dark Mode, the professional association also runs r
 
 * Anneke Sinnema
 * Claudia Reynders
+* Annemiek Nieboer
 * Wim van Iersel
 * Jewwy Qadri
 * Niels Leenheer
+* Michael Hastrich
+* Derk-Jan Karrenbeld
 * Christian Schaefer
