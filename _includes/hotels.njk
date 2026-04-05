@@ -1,0 +1,16 @@
+---
+permalink: "{{ page.fileSlug }}/index.html"
+---
+
+{% extends "_includes/default.njk" %}
+{% block content %}
+  <section class="narrow-width">
+    <h2 class="headline">{{ title }}</h2>
+    {{ content | safe }}
+  </section>
+
+  {% set items = collections.hotels %}
+  {% if items|length %}
+    {% include '_partials/hotels.njk' %}
+  {% endif %}
+{% endblock %}
