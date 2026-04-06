@@ -5,6 +5,7 @@ title: "Hotel Dordrecht"
 image: /img/hotel-dordrecht.jpg
 description: "Hotel Dordrecht is a relaxed, family-run hotel set in a historic building near the city centre, offering comfortable stays with a personal touch."
 address: "Achterhakkers 72, 3311 JA Dordrecht, The Netherlands"
+googlemaps: https://maps.app.goo.gl/wM96rs8PCwLaSAFi7
 website: https://hoteldordrecht.nl/
 email: info@hoteldordrecht.nl
 phone: "+31 (0) 78 613 60 11"

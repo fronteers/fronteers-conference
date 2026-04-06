@@ -5,6 +5,7 @@ title: "Stadshotel Steegoversloot"
 image: /img/stadshotel-steegoversloot.jpg
 description: "Stadshotel Steegoversloot is a charming boutique hotel in a historic Dordrecht townhouse, offering stylish rooms right in the heart of the old city."
 address: "Steegoversloot 56, 3311 PP Dordrecht, The Netherlands"
+googlemaps: https://maps.app.goo.gl/eXbTcprsSmCccLQ37
 website: https://www.stadshotelsteegoversloot.nl/
 email: info@stadshotelsteegoversloot.nl
 phone: "+31 (0) 78 36 90 152"
