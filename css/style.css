@@ -702,3 +702,7 @@ td br::before {
   object-fit: cover;
 }
 
+.tito-widget {
+  -webkit-text-stroke-width: 0;
+}
+
