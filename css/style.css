@@ -103,7 +103,7 @@ p + :is(h1, h2, h3, h4, h5, h6) {
   left: 0;
   width: 100%;
   height: 100%;
-  transform: scale(1.15);
+  transform: scale(1.2);
 }
 
 #nightsky {
