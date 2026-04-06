@@ -20,13 +20,13 @@ module.exports = function (eleventyConfig) {
   });
 
   // Image plugin
-  eleventyConfig.addShortcode(
+  eleventyConfig.addNunjucksAsyncShortcode(
     "image",
     async function (src, alt = "", sizes = "100vw", loading = "eager") {
       let metadata;
       try {
         metadata = await Image(`.${src}`, {
-          widths: [100, 200, 300, 400, 500, 600, 800, 1000, 1200, 1600, 2000],
+          widths: [100, 200, 300, 400, 500, 600, 800, 1000, 1200, 1600, 2000, 3000],
           formats: ["avif", "jpeg"],
         });
       } catch (err) {
@@ -42,7 +42,13 @@ module.exports = function (eleventyConfig) {
         fetchpriority: loading === "eager" ? "high" : "auto",
       };
 
-      const html = Image.generateHTML(metadata, imageAttributes);
+      let html = "";
+
+      try {
+        html = Image.generateHTML(metadata, imageAttributes);
+      } catch (err) {
+        console.error(err.message);
+      }
 
       return `${html}`;
     }

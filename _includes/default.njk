@@ -8,20 +8,6 @@
   <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Fabrik-Bold.woff2' | url }}">
   <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Fabrik-Regular.woff2' | url }}">
   <link rel="preload" as="font" crossorigin="anonymous" href="{{ '/fonts/Roboto-Regular.woff2' | url }}">
-  <script type="application/fronteers-script">
-    (function() {
-      if (window.location.search.indexOf('deactivateredirect') > -1) {
-        localStorage.setItem('deactivateredirect', 'true');
-      }
-      else if (window.location.search.indexOf('activateredirect') > -1) {
-        localStorage.removeItem('deactivateredirect');
-      }
-      if (window.location.hostname.indexOf('localhost') === -1 && !localStorage.getItem('deactivateredirect')) {
-        window.location = 'https://www.fronteers.nl/en/conference/';
-        document.write('<!--');
-      }
-    })();
-  </script>
   <style>
     @font-face {
       font-family: 'Fabrik';
@@ -101,6 +87,37 @@
 </head>
 <body class="limited-width">
 {% include '_partials/masks.svg' %}
+<div id="moon">
+  {% image '/img/moon.jpg', 'Full moon', '20vmax', 'eager' %}
+</div>
+<canvas id="nightsky"></canvas>
+<script>
+  function drawing() {
+    var c = document.getElementById('nightsky');
+    var ctx = c.getContext('2d');
+    var xMax = c.width = window.screen.availWidth;
+    var yMax = c.height = 20000;
+
+    var hmTimes = Math.round(xMax + yMax);
+
+    for(var i=0; i<=hmTimes; i++) {
+      var randomX = Math.floor((Math.random()*xMax)+1);
+      var randomY = Math.floor((Math.random()*yMax)+1);
+      var randomSize = Math.floor((Math.random()*2)+1);
+      var randomOpacityOne = Math.floor((Math.random()*9)+1);
+      var randomOpacityTwo = Math.floor((Math.random()*9)+1);
+      var randomHue = Math.floor((Math.random()*360)+1);
+      if(randomSize>1) {
+        ctx.shadowBlur = Math.floor((Math.random()*10)+5);
+        ctx.shadowColor = "white";
+      }
+      ctx.fillStyle = "hsla("+randomHue+", 30%, 80%, ."+randomOpacityOne+randomOpacityTwo+")";
+      ctx.fillRect(randomX, randomY, randomSize, randomSize);
+    }
+
+  }
+  drawing();
+</script>
 <header class="header full-width">
   <h1 class="header__title limited-width">
     <a href="/">

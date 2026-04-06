@@ -7,5 +7,17 @@
   <section class="narrow-width">
     <h3 class="headline">{{ title }}</h3>
     {{ content | safe }}
+
+    <hr>
+
+    <p>{{ title }}<br>
+    {{ address }}</p>
+
+    <p><a href="{{ website }}" target="_blank">{{ website }}</a><br>
+    <a href="mailto:{{ email }}" target="_blank">{{ email }}</a><br>
+    {{ phone }}</p>
+
+    <p><strong>{{ distance }}</strong> from venue<br>
+    Starting at <strong>€{{ price }}</strong></p>
   </section>
 {% endblock %}

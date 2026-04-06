@@ -11,6 +11,29 @@ permalink: "{{ page.fileSlug }}/index.html"
 
   {% set items = collections.hotels %}
   {% if items|length %}
-    {% include '_partials/hotels.njk' %}
+    <ul class="cards full-width">
+      {% asyncEach item in items %}
+      <li class="cards__item">
+        {% set href = item.url %}
+        {% set src = item.data.image %}
+        {% set alt = 'Picture of ' ~ item.data.title %}
+        {% set headline = item.data.title %}
+        {% set text %}
+          {{ item.data.description }}<br><br>
+          <strong>{{ item.data.distance }}</strong> from venue<br>
+          Starting at <strong>€{{ item.data.price }}</strong>
+        {% endset %}
+        <figure class="card card--hotel">
+          {% image src, alt, '9.375rem', 'lazy' %}
+          <figcaption class="card__caption">
+            <a href="{{ href }}" class="card__link">
+              <h3 class="card__headline headline">{{ headline }}</h3>
+              <p class="card__text">{{ text|safe }}</p>
+            </a>
+          </figcaption>
+        </figure>
+      </li>
+      {% endeach %}
+    </ul>
   {% endif %}
 {% endblock %}

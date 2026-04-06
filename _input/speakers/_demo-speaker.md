@@ -2,7 +2,7 @@
 tags: xspeakers
 layout: speaker.njk
 title: Thorsten Jonas
-image: /img/thorsten-jonas.jpeg
+image: /img/venue.jpg
 talktitle: "Beyond User-Centricity - Designing sustainable digital Products"
 ---
 

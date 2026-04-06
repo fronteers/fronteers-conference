@@ -14,19 +14,28 @@
 }
 
 html {
+  position: relative;
   overflow-x: hidden;
   overflow-x: clip;
   overflow-y: scroll;
   overflow-y: overlay;
-  background: #000;
-  color: #c5c5c5;
+  background-color: #000;
+  background-image: linear-gradient(to bottom, #000, #1c3242);
+  color: #d6d6d6;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 1.125rem;
-  line-height: 1.5;
-  --purple: #646ee0;
+  line-height: 1.4;
+  --purple: #7a83ff;
   --yellow: #ffce2e;
   --lilac: #b7b7fd;
   --red: #fe796a;
+  --color-celestial-body: #666;
+  --color-celestial-glow: rgba(255, 255, 255, 0.5);
+
+  @supports (paint-order: stroke fill) {
+    -webkit-text-stroke: 3px #000;
+    paint-order: stroke fill;
+  }
 }
 
 :is(tr, li, a):not(:only-child):nth-child(4n + 1) {
@@ -70,6 +79,43 @@ p + :is(h1, h2, h3, h4, h5, h6) {
   margin-top: 1.5em;
 }
 
+#moon {
+  position: absolute;
+  z-index: 1;
+  top: 2vw;
+  right: 2vw;
+  width: 20vmax;
+  height: 20vmax;
+  overflow: hidden;
+  background-color: var(--color-celestial-body);
+  border-radius: 50%;
+  box-shadow: 0 0 1vmax var(--color-celestial-glow), 0 0 50vmax var(--color-celestial-glow), 0 0 35vmax var(--color-celestial-glow);
+  font-size: 0;
+  transform-origin: 20vw 80vmax;
+  filter: brightness(0.7);
+}
+
+#moon img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.15);
+}
+
+#nightsky {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -84,7 +130,7 @@ p + .hero {
 }
 
 li {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.25em;
   text-decoration-color: var(--accent-color);
 }
 
@@ -115,6 +161,16 @@ small {
   font-size: 0.75em;
 }
 
+code {
+  display: inline-block;
+  padding: 0 0.25em;
+  background-color: var(--yellow);
+  color: #000;
+  border-radius: 3px;
+  -webkit-text-stroke-width: 0;
+  font-family: monospace;
+}
+
 hr {
   display: block;
   height: 2px;
@@ -138,22 +194,25 @@ iframe[title="Codepen"] {
 
 .limited-width {
   width: 60rem;
-  max-width: 100vw;
-  margin-inline: calc((min(60rem, 100vw) - 100%) / -2);
+  max-width: 90vw;
+  margin-inline: calc((min(60rem, 90vw) - 100%) / -2);
 }
 
 .narrow-width {
+  --text-decoration-color: var(--purple);
+
   width: 30rem;
   max-width: calc(100vw - 1.5rem);
   margin-inline: auto;
-  text-decoration-color: var(--purple);
+  text-decoration-color: var(--text-decoration-color);
 }
 
 .narrow-width:first-child p:nth-of-type(1) {
   overflow: hidden;
 }
 
-.narrow-width:first-child:not(li) > p:nth-of-type(1):first-letter {
+.narrow-width:first-child:not(li) > p:nth-of-type(1):first-letter,
+.hero:first-child + .narrow-width > p:nth-of-type(1):first-letter {
   -webkit-initial-letter: 3;
   initial-letter: 3;
   margin-right: 0.5em;
@@ -163,7 +222,8 @@ iframe[title="Codepen"] {
 }
 
 @supports not (initial-letter: 3) {
-  .narrow-width:first-child:not(li) > p:nth-of-type(1):first-letter {
+  .narrow-width:first-child:not(li) > p:nth-of-type(1):first-letter,
+  .hero:first-child + .narrow-width > p:nth-of-type(1):first-letter {
     margin-inline-end: 0.1em;
     font-size: 300%;
     font-size: 3lh;
@@ -175,7 +235,7 @@ iframe[title="Codepen"] {
 
 .narrow-width a {
   text-decoration: underline;
-  text-decoration-color: inherit;
+  text-decoration-color: var(--text-decoration-color);
 }
 
 .full-width {
@@ -199,22 +259,28 @@ iframe[title="Codepen"] {
   line-height: 1.25;
 }
 
+.header,
+.footer {
+  position: relative;
+  z-index: 1;
+}
+
 .header {
   padding-bottom: 0.75rem;
-  background: #000;
   color: #fff;
 }
 
 .header__title {
-  margin-bottom: 3rem;
+  margin-bottom: 5vmin;
   text-align: center;
 }
 
 .header__logo {
-  width: 100%;
+  width: calc(100% - 4rem);
   max-width: 25rem;
   height: auto;
   aspect-ratio: 450/160;
+  filter: drop-shadow(0 0 1vmin #000);
 }
 
 .header__nav {
@@ -225,10 +291,18 @@ iframe[title="Codepen"] {
   width: 100%;
   font-family: "Fabrik", Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
+  filter: drop-shadow(0 0 8px #000);
 }
 
 .header__nav a {
   color: var(--accent-color);
+}
+
+.header__nav a:hover,
+.header__nav a:focus {
+  filter: brightness(1.1);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-color);
 }
 
 .announcer {
@@ -240,6 +314,7 @@ iframe[title="Codepen"] {
   background-size: auto 40%;
   background-position: top center;
   color: #000;
+  -webkit-text-stroke-width: 0;
 }
 
 .announcer__content {
@@ -269,15 +344,18 @@ iframe[title="Codepen"] {
 .hero {
   display: block;
   overflow: hidden;
-  border-radius: 0 0 5vh 5vh;
+  border-radius: 0 0 5vmin 5vmin;
+  box-shadow: 0 0 16px #000;
 }
 
 .hero img {
   display: block;
   width: 100%;
-  height: 66vh;
+  height: 66vmin;
   object-position: center center;
   object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0 0 5vmin 5vmin;
 }
 
 .card {
@@ -286,7 +364,10 @@ iframe[title="Codepen"] {
   flex-direction: column;
   width: 100%;
   color: #000;
+  -webkit-text-stroke-width: 0;
   text-align: center;
+  line-height: 1.25;
+  filter: drop-shadow(0 0 4px #000);
 }
 
 .card img {
@@ -297,7 +378,12 @@ iframe[title="Codepen"] {
   height: auto;
   aspect-ratio: 1/1;
   border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   filter: saturate(0);
+}
+
+.card--hotel img {
+  filter: saturate(1);
 }
 
 .narrow-width .card img {
@@ -305,13 +391,20 @@ iframe[title="Codepen"] {
 }
 
 .card__caption {
-  font-family: "Fabrik", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   margin-top: -4.6875rem;
   padding: 0 1.25rem 1.25rem 1.25rem;
   background: #fff;
+  font-family: "Fabrik", Arial, Helvetica, sans-serif;
   font-size: clamp(1em, 3vw, 1rem);
+  line-height: 1.2;
   text-align: center;
+}
+
+.card--hotel .card__caption {
+  text-align: left;
 }
 
 .narrow-width .card__caption {
@@ -320,11 +413,15 @@ iframe[title="Codepen"] {
 }
 
 .card__headline {
-  width: calc(100% + 2.5rem);
+  box-sizing: content-box;
+  width: 100%;
+  min-height: 2.2em;
   margin: 0 -1.25rem 0.5em -1.25rem;
   padding: 4.6875rem 1.25rem 1.5rem 1.25rem;
   background: var(--accent-color, var(--yellow));
   font-size: clamp(1rem, 4.5vw, 1.5rem);
+  text-align: center;
+  line-height: 1.1;
   clip-path: var(--clip-mask);
 }
 
@@ -332,6 +429,13 @@ iframe[title="Codepen"] {
   width: calc(100% + 2rem);
   margin: 0 -1rem 0.5em -1rem;
   font-size: clamp(1rem, 3vw, 1.3em);
+}
+
+.card__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .card__link::before {
@@ -351,6 +455,7 @@ iframe[title="Codepen"] {
   clip-path: url(#greater-than-down-small);
   font-family: "Fabrik", Arial, Helvetica, sans-serif;
   color: #000;
+  -webkit-text-stroke-width: 0;
 }
 
 .cta__headline {
@@ -373,6 +478,7 @@ iframe[title="Codepen"] {
   text-align: center;
   clip-path: url(#greater-than-down-large);
   color: #000;
+  -webkit-text-stroke-width: 0;
   font-family: "Fabrik", Arial, Helvetica, sans-serif;
 }
 
@@ -394,7 +500,7 @@ iframe[title="Codepen"] {
   margin-bottom: 2rem;
 }
 
-.speakers {
+.cards {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
@@ -403,11 +509,11 @@ iframe[title="Codepen"] {
   padding-inline: 1.25rem;
 }
 
-.speakers:not(:first-child) {
+.cards:not(:first-child) {
   margin-top: 2vw;
 }
 
-.speakers__item {
+.cards__item {
   display: flex;
   align-items: stretch;
   flex: 0 1 auto;
@@ -415,7 +521,7 @@ iframe[title="Codepen"] {
   width: min(15rem, 33vw);
 }
 
-.narrow-width .speakers__item {
+.narrow-width .cards__item {
   width: min(13rem, 26vw);
 }
 
@@ -440,6 +546,8 @@ iframe[title="Codepen"] {
   padding-bottom: 1.25rem;
   background: var(--lilac);
   color: #000;
+  box-shadow: 0 0 8px #000;
+  -webkit-text-stroke-width: 0;
 }
 
 .footer__social {
@@ -452,34 +560,30 @@ iframe[title="Codepen"] {
 
 .footer__social-item {
   flex: 1 1 50%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.25rem;
-  align-items: start;
-  align-content: start;
+  display: grid;
+  grid-template-columns: 4rem auto;
+  grid-template-rows: auto auto;
+  gap: 0.5rem 1rem;
   min-width: 0;
   max-width: 20rem;
   font-size: 0.9rem;
 }
 
-.footer__social-item::before {
-  content: "";
-  order: -1;
-  display: block;
-  width: 100%;
-}
-
-.footer__social-logo,
 .footer__social-headline {
-  order: -2;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  align-self: end;
 }
 
 .footer__social-logo {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
   width: 4rem;
   height: auto;
   padding: 2rem 0;
   background: var(--accent-color);
   clip-path: var(--clip-mask);
+  aspect-ratio: 1/2;
 }
 
 .footer__social-headline {
@@ -489,23 +593,16 @@ iframe[title="Codepen"] {
 
 .footer,
 .narrow-width:first-child,
-:is(section, .announcer, .hero, .cta, .speakers, .tickets)
-  + :is(section, .announcer, .hero, .cta, .speakers, .tickets):not(
+:is(section, .announcer, .hero, .cta, .cards, .tickets)
+  + :is(section, .announcer, .hero, .cta, .cards, .tickets):not(
     .artificial-specificity-increase
   ) {
   margin-top: 5vw;
 }
 
-.canceled {
-  background-color: var(--red);
-  padding: 20px;
-  margin-bottom: 60px;
-  width: 50rem;
-  max-width: calc(100vw - 1.5rem);
-  margin-inline: auto;
-}
-.canceled li::marker{
-  color: black;
+main {
+  position: relative;
+  z-index: 2;
 }
 
 main > :first-child:not(.announcer):not(.tickets) {

@@ -4,7 +4,7 @@ layout: page.njk
 title: Our Schedule
 description: "Here’s your full schedule for October 2nd: talks, dinner, drinks & more at Cinema De Witt in Dordrecht."
 navigation: Schedule
-order: 2
+order: 3
 ---
 Below you'll soon find the full schedule of the evening – including speaker sessions, dinner break, and our late-night hangout. We can’t wait to welcome you and share this special night with you!
 

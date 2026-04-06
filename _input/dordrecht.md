@@ -4,7 +4,7 @@ layout: page.njk
 title: Welcome to Dordrecht
 description: A City of Historic Beauty and Riverside Charm!
 navigation: Dordrecht
-order: 4
+order: 6
 ---
 ### A City of Historic Beauty and Riverside Charm!
 

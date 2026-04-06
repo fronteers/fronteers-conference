@@ -4,7 +4,7 @@ layout: hotels.njk
 title: Hotels in Dordrecht – Where to stay for Fronteers Dark Mode
 description: Looking for a place to stay during Fronteers Dark Mode in Dordrecht? Here are our recommended hotels, all within easy reach of Cinema de Witt.
 navigation: Hotels
-order: 2
+order: 7
 ---
 Coming to Fronteers Dark Mode from out of town? We’ve got you covered.
 

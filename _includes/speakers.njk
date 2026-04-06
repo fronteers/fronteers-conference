@@ -11,6 +11,25 @@ permalink: "{{ page.fileSlug }}/index.html"
 
   {% set items = collections.speakers %}
   {% if items | length %}
-    {% include '_partials/speakers.njk' %}
+    <ul class="cards full-width">
+      {% asyncEach item in items|sortByAlphabet %}
+      <li class="cards__item">
+        {% set href = item.url %}
+        {% set src = item.data.image %}
+        {% set alt = 'Picture of ' ~ item.data.title %}
+        {% set headline = item.data.title %}
+        {% set text = item.data.talktitle %}
+        <figure class="card">
+          {% image src, alt, '9.375rem', 'lazy' %}
+          <figcaption class="card__caption">
+            <a href="{{ href }}" class="card__link">
+              <h3 class="card__headline headline">{{ headline }}</h3>
+              <p class="card__text">{{ text|safe }}</p>
+            </a>
+          </figcaption>
+        </figure>
+      </li>
+      {% endeach %}
+    </ul>
   {% endif %}
 {% endblock %}
