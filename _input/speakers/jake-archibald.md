@@ -1,0 +1,13 @@
+---
+tags: speakers
+layout: speaker.njk
+title: "Jake Archibald"
+image: /img/jake-archibald.png
+talktitle: "Developer Advocate"
+---
+
+As our MC, Jake will guide us through the day with the same curiosity, technical insight, and infectious enthusiasm that have made him one of the web community's most recognizable voices.
+
+---
+
+[Jake](https://jakearchibald.com/) is a developer of sorts working at Mozilla on web standards and developer relations.

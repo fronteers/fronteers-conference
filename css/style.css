@@ -24,6 +24,7 @@ html {
   color: #d6d6d6;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 1.125rem;
+  font-size: clamp(0.75rem, 4.5vw, 1.125rem);
   line-height: 1.4;
   --purple: #7a83ff;
   --yellow: #ffce2e;
@@ -256,6 +257,7 @@ iframe[title="Codepen"] {
 .headline {
   font-family: "Fabrik", Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
+  font-size: clamp(1rem, 6vw, 1.5rem);
   line-height: 1.25;
 }
 
@@ -276,7 +278,7 @@ iframe[title="Codepen"] {
 }
 
 .header__logo {
-  width: calc(100% - 4rem);
+  width: 90vw;
   max-width: 25rem;
   height: auto;
   aspect-ratio: 450/160;
@@ -284,18 +286,27 @@ iframe[title="Codepen"] {
 }
 
 .header__nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 2rem;
-  justify-content: center;
+  display: block;
   width: 100%;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0));
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-width: 1px 0;
   font-family: "Fabrik", Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
+  font-size: clamp(0.733rem, 4.4vw, 1.1rem);
+  text-align: center;
+  word-spacing: 2rem;
+  text-wrap: balance;
   filter: drop-shadow(0 0 8px #000);
 }
 
 .header__nav a {
+  display: inline-block;
+  margin: 0.125rem 0;
   color: var(--accent-color);
+  word-spacing: normal;
 }
 
 .header__nav a:hover,
@@ -338,6 +349,7 @@ iframe[title="Codepen"] {
 .announcer__text {
   font-family: "Fabrik", Arial, Helvetica, sans-serif;
   font-size: 1.2em;
+  font-size: clamp(0.8rem, 4.8vw, 1.2rem);
   margin: 1rem 2rem 0 2rem;
 }
 
@@ -362,6 +374,7 @@ iframe[title="Codepen"] {
   position: relative;
   display: inline-flex;
   flex-direction: column;
+  overflow: hidden;
   width: 100%;
   color: #000;
   -webkit-text-stroke-width: 0;
@@ -379,7 +392,7 @@ iframe[title="Codepen"] {
   aspect-ratio: 1/1;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  filter: saturate(0);
+  filter: saturate(1);
 }
 
 .card--hotel img {
@@ -416,8 +429,8 @@ iframe[title="Codepen"] {
   box-sizing: content-box;
   width: 100%;
   min-height: 2.2em;
-  margin: 0 -1.25rem 0.5em -1.25rem;
-  padding: 4.6875rem 1.25rem 1.5rem 1.25rem;
+  margin: 0 -1.5rem 0.5em -1.5rem;
+  padding: 4.6875rem 1.5rem 1.5rem 1.5rem;
   background: var(--accent-color, var(--yellow));
   font-size: clamp(1rem, 4.5vw, 1.5rem);
   text-align: center;
@@ -426,8 +439,6 @@ iframe[title="Codepen"] {
 }
 
 .narrow-width .card__headline {
-  width: calc(100% + 2rem);
-  margin: 0 -1rem 0.5em -1rem;
   font-size: clamp(1rem, 3vw, 1.3em);
 }
 
@@ -469,6 +480,7 @@ iframe[title="Codepen"] {
 
 .cta__button {
   font-size: 1.5em;
+  font-size: clamp(1rem, 6vw, 1.5rem);
   font-weight: bold;
 }
 
@@ -501,12 +513,12 @@ iframe[title="Codepen"] {
 }
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-  align-items: stretch;
-  justify-content: center;
+  display: block;
   padding-inline: 1.25rem;
+  font-size: 0;
+  word-spacing: 1.25rem;
+  text-align: center;
+  text-wrap: balance;
 }
 
 .cards:not(:first-child) {
@@ -514,14 +526,28 @@ iframe[title="Codepen"] {
 }
 
 .cards__item {
-  display: flex;
+  display: inline-block;
   align-items: stretch;
   flex: 0 1 auto;
   min-width: 15rem;
   width: min(15rem, 33vw);
+  margin: 0.625rem 0;
+  padding: 0;
+  font-size: 1.125rem;
+  font-size: clamp(0.75rem, 4.5vw, 1.125rem);
+  word-spacing: normal;
+  text-wrap: auto;
 }
 
-.narrow-width .cards__item {
+.card__text {
+  min-height: 3lh;
+}
+
+.card--hotel .card__text {
+  min-height: 10lh;
+}
+
+.narrow-width  .cards__item {
   width: min(13rem, 26vw);
 }
 
@@ -597,7 +623,7 @@ iframe[title="Codepen"] {
   + :is(section, .announcer, .hero, .cta, .cards, .tickets):not(
     .artificial-specificity-increase
   ) {
-  margin-top: 5vw;
+  margin-top: 7.5vw;
 }
 
 main {
