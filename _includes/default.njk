@@ -81,8 +81,13 @@
     <meta name="og:description" content="{{ description }}">
     <meta name="twitter:description" content="{{ description }}">
   {% endif %}
-  <meta name="og:image" content="https://fronteersconf.org{{ '/img/social-media.jpg' | url }}?v={% version %}">
-  <meta name="twitter:image" content="https://fronteersconf.org{{ '/img/social-media.jpg' | url }}?v={% version %}">
+  {% if image %}
+  <meta name="og:image" content="https://fronteersconf.org{{ image | url }}?v={% version %}">
+  <meta name="twitter:image" content="https://fronteersconf.org{{ image | url }}?v={% version %}">
+  {% else %}
+    <meta name="og:image" content="https://fronteersconf.org{{ '/img/social-media.jpg' | url }}?v={% version %}">
+    <meta name="twitter:image" content="https://fronteersconf.org{{ '/img/social-media.jpg' | url }}?v={% version %}">
+  {% endif %}
 
   {% block head %}{% endblock %}
 </head>
