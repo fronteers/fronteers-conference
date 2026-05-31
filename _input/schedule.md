@@ -1,5 +1,5 @@
 ---
-tags: xpages
+tags: pages
 layout: page.njk
 title: Our Schedule
 description: "Here’s your full schedule for October 2nd: talks, dinner, drinks & more at Cinema De Witt in Dordrecht."
