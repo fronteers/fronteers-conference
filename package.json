@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "engines": {
     "npm": ">=9.6.4",
     "node": ">=22.0.0"
@@ -8,8 +9,8 @@
     "build": "cross-env ELEVENTY_PRODUCTION=true eleventy && cross-env NODE_ENV=production"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-img": "^3.1.0",
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "cross-env": "^10.1.0",
     "dotenv": "^17.2.3",

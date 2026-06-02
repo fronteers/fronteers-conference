@@ -1,9 +1,10 @@
-const now = String(Date.now());
-const { DateTime } = require("luxon");
-const Image = require("@11ty/eleventy-img");
-const htmlPrettify = require("html-prettify");
+import { DateTime } from "luxon";
+import Image from "@11ty/eleventy-img"
+import htmlPrettify from "html-prettify"
 
-module.exports = function (eleventyConfig) {
+const now = String(Date.now());
+
+export default function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(true);
 
   eleventyConfig.addWatchTarget("./_includes/");
