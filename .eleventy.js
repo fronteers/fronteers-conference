@@ -28,6 +28,7 @@ module.exports = function (eleventyConfig) {
         metadata = await Image(`.${src}`, {
           widths: [100, 200, 300, 400, 500, 600, 800, 1000, 1200, 1600, 2000, 3000],
           formats: ["avif", "jpeg"],
+          outputDir: "img/generated/"
         });
       } catch (err) {
         console.error(err.message);
