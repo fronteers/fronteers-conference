@@ -2,7 +2,7 @@
   "type": "module",
   "engines": {
     "npm": ">=9.6.4",
-    "node": ">=22.0.0"
+    "node": ">=24.0.0"
   },
   "scripts": {
     "start": "eleventy --serve --watch",
