@@ -1,21 +1,22 @@
-# eleventy-tailwindcss-alpinejs-starter by [Greg Wolanski](https://gregwolanski.com)
+# Fronteers Conference
 
-A starter repository showing how to build a website with the [Eleventy](https://www.11ty.dev), [Tailwind CSS](https://tailwindcss.com), and [Alpine.js](https://github.com/alpinejs/alpine).
+This is the repository for the [Fronteers Conference](https://fronteersconf.org/).
 
-Learn more on CSS-Tricks: [An Eleventy Starter with Tailwind CSS and Alpine.js](https://css-tricks.com/eleventy-starter-with-tailwind-css-alpine-js/)
+It is based on the `eleventy-tailwindcss-alpinejs-starter` by [Greg Wolanski](https://gregwolanski.com):
+A starter repository showing how to build a website with the [Eleventy](https://www.11ty.dev), [Tailwind CSS](https://tailwindcss.com), and [Alpine.js](https://github.com/alpinejs/alpine).Learn more on CSS-Tricks: [An Eleventy Starter with Tailwind CSS and Alpine.js](https://css-tricks.com/eleventy-starter-with-tailwind-css-alpine-js/)
 
 ## Getting Started
 
 ### 1. Clone this repository
 
 ```
-git clone https://github.com/gregwolanski/eleventy-tailwindcss-alpinejs-starter.git my-website-name
+git clone git@github.com:fronteers/fronteers-conference.git
 ```
 
 ### 2. Navigate to the directory
 
 ```
-cd my-website-name
+cd fronteers-conference
 ```
 
 ### 3. Install the dependencies
@@ -24,13 +25,7 @@ cd my-website-name
 npm install
 ```
 
-### 4. Update the dependencies
-
-```
-npm update
-```
-
-### 5. Build the project to generate the first CSS
+### 4. Build the project to generate the first CSS
 
 This step is only required the very first time.
 
@@ -41,19 +36,5 @@ npm run build
 ### 6. Run Eleventy
 
 ```
-npm run start
+npm start
 ```
-
-## Author
-
-[Greg Wolanski](https://gregwolanski.com)
-
-## Troubleshooting
-
-[Windows](https://github.com/gregwolanski/eleventy-tailwindcss-alpinejs-starter/issues/3)
-
-## License
-
-MIT
-
-See `LICENSE` for more information.
