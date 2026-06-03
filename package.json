@@ -1,4 +1,6 @@
 {
+  "name": "@fronteers/conference",
+  "private": true,
   "type": "module",
   "engines": {
     "npm": ">=9.6.4",
@@ -13,7 +15,7 @@
     "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "cross-env": "^10.1.0",
-    "dotenv": "^17.2.3",
+    "dotenv": "^17.4.2",
     "html-prettify": "^1.0.7",
     "node-fetch": "^3.3.2"
   }
