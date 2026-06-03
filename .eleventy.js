@@ -1,6 +1,6 @@
 import { DateTime } from "luxon";
-import Image from "@11ty/eleventy-img"
-import htmlPrettify from "html-prettify"
+import Image from "@11ty/eleventy-img";
+import htmlPrettify from "html-prettify";
 
 const now = String(Date.now());
 
@@ -27,9 +27,12 @@ export default function (eleventyConfig) {
       let metadata;
       try {
         metadata = await Image(`.${src}`, {
-          widths: [100, 200, 300, 400, 500, 600, 800, 1000, 1200, 1600, 2000, 3000],
+          widths: [
+            100, 200, 300, 400, 500, 600, 800, 1000, 1200, 1600, 2000, 3000,
+          ],
           formats: ["avif", "jpeg"],
-          outputDir: "img/generated/"
+          outputDir: "./img/generated/",
+          urlPath: "./img/generated/",
         });
       } catch (err) {
         console.error(err.message);
@@ -90,7 +93,7 @@ export default function (eleventyConfig) {
     throwOnUndefined: true,
   });
 
-  eleventyConfig.addTransform("html_prettify", function(content) {
+  eleventyConfig.addTransform("html_prettify", function (content) {
     if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
       return htmlPrettify(content);
     }
@@ -107,4 +110,4 @@ export default function (eleventyConfig) {
       output: "./_site",
     },
   };
-};
+}
