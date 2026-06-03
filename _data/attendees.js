@@ -1,4 +1,6 @@
-require('dotenv').config();
+import { config } from 'dotenv'
+
+config();
 
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const headers = {
@@ -9,7 +11,7 @@ const getAllTicketsUrl = `https://api.tito.io/v3/${process.env.TITO_ACCOUNT_SLUG
 
 const result = async () => {
   if (!process.env.TITO_API_KEY) {
-    return [];
+    return ["TITO environment variables not set-up"];
   }
 
   const result = await fetch(getAllTicketsUrl, {
@@ -22,4 +24,4 @@ const result = async () => {
     .map((ticket) => ticket.name);
 }
 
-module.exports = result;
+export default result;
