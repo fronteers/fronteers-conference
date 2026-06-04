@@ -85,7 +85,10 @@ p + :is(h1, h2, h3, h4, h5, h6) {
   overflow: hidden;
   background-color: var(--color-celestial-body);
   border-radius: 50%;
-  box-shadow: 0 0 1vmax var(--color-celestial-glow), 0 0 50vmax var(--color-celestial-glow), 0 0 35vmax var(--color-celestial-glow);
+  box-shadow:
+    0 0 1vmax var(--color-celestial-glow),
+    0 0 50vmax var(--color-celestial-glow),
+    0 0 35vmax var(--color-celestial-glow);
   font-size: 0;
   transform-origin: 20vw 80vmax;
   filter: brightness(0.7);
@@ -144,9 +147,23 @@ a[href^="mailto:"] {
   hyphens: none;
 }
 
+a:link,
+a:visited,
+a:active {
+  text-decoration: underline;
+}
+
+a:visited {
+  --text-decoration-color: var(--lilac);
+}
+
 a:focus,
 a:hover {
-  text-decoration: underline;
+  --text-decoration-color: var(--yellow);
+}
+
+a:active {
+  --text-decoration-color: var(--red);
 }
 
 img {
@@ -230,8 +247,16 @@ iframe[title="Codepen"] {
 }
 
 .narrow-width a {
-  text-decoration: underline;
   text-decoration-color: var(--text-decoration-color);
+}
+
+.narrow-width address {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+.narrow-width address a:link {
+  display: inline-block;
 }
 
 .full-width {
@@ -281,27 +306,58 @@ iframe[title="Codepen"] {
 }
 
 .header__nav {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: safe center;
+  column-gap: 1.5rem;
+  row-gap: 0.25rem;
+
   width: 100%;
   margin-bottom: 1rem;
   padding: 1rem 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0)
+  );
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-width: 1px 0;
   font-family: "Fabrik", Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   font-size: clamp(0.733rem, 4.4vw, 1.1rem);
   text-align: center;
-  word-spacing: 2rem;
   text-wrap: balance;
   filter: drop-shadow(0 0 8px #000);
 }
 
+@media (min-width: 768px) {
+  .header__nav {
+    background:
+      linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0)
+      ),
+      linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.34) 89%,
+        rgba(0, 0, 0, 0) 100%
+      );
+  }
+}
+
 .header__nav a {
   display: inline-block;
-  margin: 0.125rem 0;
+  margin: 0 0;
   color: var(--accent-color);
   word-spacing: normal;
+
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .header__nav a:hover,
@@ -309,6 +365,8 @@ iframe[title="Codepen"] {
   filter: brightness(1.1);
   text-decoration: underline;
   text-decoration-color: var(--accent-color);
+
+  background-color: rgba(0, 0, 0, 0.54);
 }
 
 .announcer {
@@ -374,6 +432,47 @@ iframe[title="Codepen"] {
   text-align: center;
   line-height: 1.25;
   filter: drop-shadow(0 0 4px #000);
+}
+
+.card.--speaker {
+  overflow: visible;
+  transition: filter 250ms ease;
+
+  & .card__caption {
+    overflow: clip;
+    contain: paint;
+
+    transition: background-color 250ms ease;
+  }
+
+  & .card__caption:has(a:hover) {
+    background-color: var(--accent-color, transparent);
+  }
+
+  & a:focus {
+    outline: none;
+  }
+
+  & picture {
+    pointer-events: none;
+  }
+
+  & picture > img,
+  & picture > source {
+    transition: outline 250ms ease;
+
+    outline: 2px solid transparent;
+    outline-offset: -1px;
+  }
+
+  &:focus-within picture > img,
+  &:focus-within picture > source {
+    outline-color: white;
+  }
+
+  &:active {
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.34));
+  }
 }
 
 .card img {
@@ -538,7 +637,7 @@ iframe[title="Codepen"] {
   min-height: 10lh;
 }
 
-.narrow-width  .cards__item {
+.narrow-width .cards__item {
   width: min(13rem, 26vw);
 }
 
@@ -557,6 +656,7 @@ iframe[title="Codepen"] {
 .button:focus,
 .button:hover {
   text-decoration: underline;
+  text-decoration-color: var(--text-decoration-color, currentColor);
 }
 
 .footer {
@@ -583,6 +683,20 @@ iframe[title="Codepen"] {
   min-width: 0;
   max-width: 20rem;
   font-size: 0.9rem;
+
+  contain: paint;
+  padding: 0 0 0.5rem 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background: transparent;
+  transition: background-color 150ms ease;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.12);
+
+    & .footer__social-logo {
+      transform: translateY(-0.5rem);
+    }
+  }
 }
 
 .footer__social-headline {
@@ -600,6 +714,9 @@ iframe[title="Codepen"] {
   background: var(--accent-color);
   clip-path: var(--clip-mask);
   aspect-ratio: 1/2;
+
+  transform: translateY(0px);
+  transition: transform 150ms ease;
 }
 
 .footer__social-headline {
@@ -642,12 +759,14 @@ table {
   margin: 1.5rem calc(((100vw - 100%) / -2) -0.75rem) 1.5rem 0;
 }
 
-thead, tbody, tr {
+thead,
+tbody,
+tr {
   display: contents;
 }
 
 tr::after {
-  content: '';
+  content: "";
   display: block;
   height: 1px;
   margin: 1.5rem 0;
@@ -658,7 +777,8 @@ tr:last-child::after {
   display: none;
 }
 
-th, td {
+th,
+td {
   text-align: left;
   vertical-align: top;
 }
@@ -681,7 +801,7 @@ td:first-child {
 }
 
 td br::before {
-  content: '';
+  content: "";
   display: block;
   margin-top: 0.25em;
 }
@@ -717,4 +837,3 @@ td br::before {
   object-position: bottom;
   object-fit: cover;
 }
-

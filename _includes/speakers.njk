@@ -19,7 +19,7 @@ permalink: "{{ page.fileSlug }}/index.html"
         {% set alt = '' %}
         {% set headline = item.data.title %}
         {% set text = item.data.talktitle %}
-        <figure class="card">
+        <figure class="card --speaker">
           {% image src, alt, '9.375rem', 'lazy' %}
           <figcaption class="card__caption">
             <a href="{{ href }}" class="card__link">
