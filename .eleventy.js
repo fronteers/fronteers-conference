@@ -32,7 +32,7 @@ export default function (eleventyConfig) {
           ],
           formats: ["avif", "jpeg"],
           outputDir: "./img/generated/",
-          urlPath: "./img/generated/",
+          urlPath: "/img/generated/",
         });
       } catch (err) {
         console.error(err.message);
