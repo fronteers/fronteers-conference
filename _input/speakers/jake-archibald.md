@@ -3,6 +3,7 @@ tags: speakers
 layout: speaker.njk
 title: "Jake Archibald"
 image: /img/jake-archibald.png
+alt: "Portrait of a person in a black shirt holding an orange fox plush toy, looking directly at the camera against a dark background."
 talktitle: "Developer Advocate"
 ---
 

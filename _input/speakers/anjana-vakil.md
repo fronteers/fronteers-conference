@@ -3,6 +3,7 @@ tags: speakers
 layout: speaker.njk
 title: "Anjana Vakil"
 image: /img/anjana-vakil.png
+alt: "Portrait of a person with long dark hair wearing a white shirt and a small nose ring, looking at the camera against a dark background."
 talktitle: "Developer Educator & Software Engineer"
 ---
 

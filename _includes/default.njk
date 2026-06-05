@@ -94,9 +94,11 @@
 <body class="limited-width">
 {% include '_partials/masks.svg' %}
 <div id="moon">
-  {% image '/img/moon.jpg', 'Full moon', '20vmax', 'eager' %}
+  {% image '/img/moon.jpg', 'Detailed photograph of the full moon against a black background. Craters, dark lunar maria, and bright impact rays are clearly visible across the moon’s surface.', '20vmax', 'eager' %}
 </div>
-<canvas id="nightsky"></canvas>
+<canvas id="nightsky"
+        role="img"
+        aria-label="Night sky fading from deep black at the top to a subtle blue glow near the horizon, scattered with countless small white stars."></canvas>
 <script>
   function drawing() {
     var c = document.getElementById('nightsky');

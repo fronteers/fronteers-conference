@@ -1,3 +1,6 @@
-<picture class="hero limited-width">
-  {% image src %}
-</picture>
+<div class="hero limited-width">
+  {% if alt is not defined %}
+    {% set alt = '' %}
+  {% endif %}
+  {% image src, alt %}
+</div>

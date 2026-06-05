@@ -3,6 +3,7 @@ tags: speakers
 layout: speaker.njk
 title: "Harry Roberts"
 image: /img/harry-roberts.png
+alt: "Side-profile portrait of a person wearing a headset microphone and a light button-down shirt, speaking against a dark background."
 talktitle: "Consultant Web Performance Engineer"
 ---
 

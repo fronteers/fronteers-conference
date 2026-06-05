@@ -3,6 +3,7 @@ tags: hotels
 layout: hotel.njk
 title: "Villa Augustus"
 image: /img/villa-augustus.jpg
+alt: "A former water tower rises above landscaped gardens and greenhouses. Vegetable beds, pathways, and historic brick buildings fill the foreground under a bright sky with scattered clouds."
 description: "Villa Augustus is a unique hotel set in a former water tower, surrounded by lush gardens, offering a tranquil and design-focused stay in Dordrecht."
 address: "Oranjelaan 7, 3311 DH Dordrecht, The Netherlands"
 googlemaps: https://maps.app.goo.gl/kNv1oj8t1sPHPJaD6
