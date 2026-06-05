@@ -17,6 +17,9 @@ permalink: "{{ page.fileSlug }}/index.html"
         {% set href = item.url %}
         {% set src = item.data.image %}
         {% set alt = '' %}
+        {% if item.data.alt %}
+          {% set alt = item.data.alt %}
+        {% endif %}
         {% set headline = item.data.title %}
         {% set text %}
           {{ item.data.description }}<br><br>

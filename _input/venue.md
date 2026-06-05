@@ -2,14 +2,16 @@
 tags: pages
 layout: page.njk
 title: The Venue
-description: This year we will see each other again in the Pathé Utrecht Leidsche Rijn theatre.
+image: "/img/venue.jpg"
+alt: "Evening view of a lively courtyard outside a modern glass-fronted venue. String lights hang between large trees while groups of people sit and socialize at outdoor tables surrounded by colourful plants and flower beds."
+description: This year we will see each other Cinema de Witt in beautiful Dordrecht.
 navigation: Venue
 order: 3
 ---
 
 This year, we’ll gather in the heart of Dordrecht at the charming [Cinema De Witt](https://www.dewittdordrecht.nl/) ([Google Maps](https://maps.app.goo.gl/MpZNBQPhSAJrSox46) / [Brochure](https://www.dewittdordrecht.nl/site/assets/files/1150/de_witt_brochure_aug_25.pdf) / [Look Book](https://www.dewittdordrecht.nl/site/assets/files/1150/de_witt_lookbook_augustus_2025.pdf)) – a cultural venue with a long history and an intimate, welcoming atmosphere.
 
-{% set src = '/img/venue.jpg' %}
+{% set src = image %}
 {% include '_partials/hero.njk' %}
 
 <address>

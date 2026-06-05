@@ -3,6 +3,7 @@ tags: speakers
 layout: speaker.njk
 title: "Barry Pollard"
 image: /img/barry-pollard.png
+alt: "Portrait of a person wearing a blue-and-white checkered shirt, looking directly at the camera against a dark background."
 talktitle: "Web Performance Developer Advocate"
 ---
 

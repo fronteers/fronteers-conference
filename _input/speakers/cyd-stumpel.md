@@ -3,6 +3,7 @@ tags: speakers
 layout: speaker.njk
 title: "Cyd Stumpel"
 image: /img/cyd-stumpel.png
+alt: "Portrait of a smiling person with shoulder-length brown hair wearing a light grey top, looking at the camera against a dark background."
 talktitle: "Creative Developer"
 ---
 

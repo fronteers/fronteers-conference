@@ -2,6 +2,8 @@
 tags: pages
 layout: page.njk
 title: Welcome to Dordrecht
+image: "/img/dordrecht.jpeg"
+alt: "Panoramic aerial view of Dordrecht on a sunny day. The river curves through the city, with boats on the water, historic buildings along the waterfront, and the prominent tower of the Grote Kerk rising above the skyline beneath scattered clouds."
 description: A City of Historic Beauty and Riverside Charm!
 navigation: Dordrecht
 order: 6
@@ -10,7 +12,7 @@ order: 6
 
 Nestled in the province of South Holland, Dordrecht is not only one of the oldest cities in the Netherlands, it's also a hidden gem brimming with history, art, and character – and the perfect backdrop for our Fronteers event!
 
-{% set src = '/img/dordrecht.jpeg' %}
+{% set src = image %}
 {% include '_partials/hero.njk' %}
 
 Surrounded by rivers and lush greenery, Dordrecht enchants with its historic harbors, beautifully preserved merchant houses, and the iconic Grote Kerk. Its scenic waterfront and winding streets create a relaxed yet inspiring atmosphere.

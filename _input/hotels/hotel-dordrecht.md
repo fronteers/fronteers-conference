@@ -3,6 +3,7 @@ tags: hotels
 layout: hotel.njk
 title: "Hotel Dordrecht"
 image: /img/hotel-dordrecht.jpg
+alt: "Front view of a historic brick hotel building with decorative architecture, large windows, and burgundy awnings. The hotel stands between neighbouring buildings along a city street."
 description: "Hotel Dordrecht is a relaxed, family-run hotel set in a historic building near the city centre, offering comfortable stays with a personal touch."
 address: "Achterhakkers 72, 3311 JA Dordrecht, The Netherlands"
 googlemaps: https://maps.app.goo.gl/wM96rs8PCwLaSAFi7

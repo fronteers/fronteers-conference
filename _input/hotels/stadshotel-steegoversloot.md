@@ -3,6 +3,7 @@ tags: hotels
 layout: hotel.njk
 title: "Stadshotel Steegoversloot"
 image: /img/stadshotel-steegoversloot.jpg
+alt: "A white historic hotel building stands at the end of a narrow street lined with brick houses and greenery. Trees partially frame the façade, and outdoor seating is visible at street level."
 description: "Stadshotel Steegoversloot is a charming boutique hotel in a historic Dordrecht townhouse, offering stylish rooms right in the heart of the old city."
 address: "Steegoversloot 56, 3311 PP Dordrecht, The Netherlands"
 googlemaps: https://maps.app.goo.gl/eXbTcprsSmCccLQ37

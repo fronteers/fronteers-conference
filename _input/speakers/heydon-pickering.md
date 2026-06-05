@@ -3,6 +3,7 @@ tags: speakers
 layout: speaker.njk
 title: "Heydon Pickering"
 image: /img/heydon-pickering.png
+alt: "Close-up portrait of a person wearing a dark flat cap and black hoodie, smiling slightly and looking toward the camera against a dark background."
 talktitle: "Technical writing and front-end design consultant"
 ---
 
