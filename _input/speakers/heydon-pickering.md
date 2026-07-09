@@ -4,10 +4,12 @@ layout: speaker.njk
 title: "Heydon Pickering"
 image: /img/heydon-pickering.png
 alt: "Close-up portrait of a person wearing a dark flat cap and black hoodie, smiling slightly and looking toward the camera against a dark background."
-talktitle: "Technical writing and front-end design consultant"
+talktitle: "Making HTML Make Music"
 ---
 
-Expect an unconventional journey into sound on the web, where custom elements, creativity, and a healthy obsession with the platform open up entirely new possibilities.
+The <img/> element was available in 1995. We had to wait another 15 years for <audio/>. There’s still little we can do with sound in HTML, except play, or stop, something already recorded. Actually sampling, signal processing, and sequencing sound means either raw-dogging the Web Audio API or using a monolithic library like Tone.js.
+
+In any case, you find yourself writing a lot of JavaScript and not much music. Heydon wants to be able to design sound like they write prose: hypertextually. Pursuing this has become a multi-year obsession, and it’s revived their 20-year-long passion for the web. Along the way, they've discovered that a 2KB custom element can do as much as £200 of hardware. This way to the rabbit hole!
 
 ---
 

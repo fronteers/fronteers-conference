@@ -4,10 +4,14 @@ layout: speaker.njk
 title: "Harry Roberts"
 image: /img/harry-roberts.png
 alt: "Side-profile portrait of a person wearing a headset microphone and a light button-down shirt, speaking against a dark background."
-talktitle: "Consultant Web Performance Engineer"
+talktitle: "Build for the web, build on the web, build with the web"
 ---
 
-Expect practical insights into getting the most out of the web platform itself, and why simpler solutions often outperform more complex ones.
+Every layer of abstraction made in the browser moves you further from the platform, ties you further into framework lock-in, and moves you further away from fast.
+
+By using progressive enhancement, you can opt into browser-native features that are usually faster, more accessible, more secure, and—perhaps most importantly to the business—maintained by someone else.
+
+The beauty of opting into web platform features as they become available is that your site becomes contextual. The same codebase adapts into its environment, playing to its strengths, rather than trying to build and ship your own environment from the ground up. Meet your users where they are.
 
 ---
 

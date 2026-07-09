@@ -4,10 +4,10 @@ layout: speaker.njk
 title: "Cyd Stumpel"
 image: /img/cyd-stumpel.jpg
 alt: "Portrait of a smiling person with shoulder-length brown hair wearing a light grey top, looking at the camera against a dark background."
-talktitle: "Creative Developer"
+talktitle: "You might not need JS"
 ---
 
-Expect a fresh look at modern CSS capabilities and how they are reshaping the way we build rich experiences on the web.
+Motion on the web has come full circle: from simple CSS animations and transitions, to JavaScript libraries, and now back to CSS again. With the View Transitions API and Scroll-Driven Animations we’ll explore how modern CSS is reshaping creative development today and where you can replace JS with CSS solutions.
 
 ---
 

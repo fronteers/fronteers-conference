@@ -4,10 +4,16 @@ layout: speaker.njk
 title: "Barry Pollard"
 image: /img/barry-pollard.png
 alt: "Portrait of a person wearing a blue-and-white checkered shirt, looking directly at the camera against a dark background."
-talktitle: "Web Performance Developer Advocate"
+talktitle: "Declarative Partial Updates: Rethinking How the Web Streams HTML"
 ---
 
-Expect a glimpse into a future where the web becomes more dynamic while staying firmly rooted in HTML, HTTP, and browser-native capabilities.
+For decades, HTML has been delivered in a strictly top-to-bottom order—even though modern web applications rarely work that way. We want fast page loads, progressively revealed content, and component-based architectures, yet we often rely on increasingly complex JavaScript frameworks to bridge the gap.
+
+In this session, Barry Pollard explores Declarative Partial Updates, an exciting new proposal for the web platform that rethinks how HTML is delivered and updated. Instead of waiting for an entire page to be ready or manually manipulating the DOM with JavaScript, developers can stream content into predefined locations as soon as it's available, using new declarative HTML primitives and streamlined browser APIs.
+
+We'll look at the motivations behind the proposal, how out-of-order HTML streaming works, the new APIs for safely inserting and streaming HTML, and why these ideas could make server-rendered applications feel as responsive as client-rendered ones—without sacrificing the web's core strengths. Along the way, Barry will discuss performance, accessibility, interoperability, and how these features fit into the broader evolution of the web platform.
+
+Whether you're building traditional multi-page applications, server-rendered sites, or modern SPAs, this talk offers a glimpse into a future where the browser does more of the heavy lifting—and JavaScript can focus on what it does best.
 
 ---
 
