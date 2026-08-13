@@ -603,7 +603,11 @@ iframe[title="Codepen"] {
 }
 
 .cards {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
   padding-inline: 1.25rem;
   font-size: 0;
   word-spacing: 1.25rem;
@@ -616,7 +620,7 @@ iframe[title="Codepen"] {
 }
 
 .cards__item {
-  display: inline-block;
+  display: inline-flex;
   align-items: stretch;
   flex: 0 1 auto;
   min-width: 15rem;
