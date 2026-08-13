@@ -432,63 +432,77 @@ iframe[title="Codepen"] {
   text-align: center;
   line-height: 1.25;
   filter: drop-shadow(0 0 4px #000);
-}
 
-.card.--speaker {
-  overflow: visible;
-  transition: filter 250ms ease;
-
-  & .card__caption {
-    overflow: clip;
-    contain: paint;
-
-    transition: background-color 250ms ease;
+  &.--speaker {
+    overflow: visible;
   }
 
-  & .card__caption:has(a:hover) {
-    background-color: var(--accent-color, transparent);
+  &.--hotel {
+    & img {
+      filter: saturate(1);
+    }
+
+    & .card__text {
+      min-height: 10lh;
+    }
+
+    & .card__caption {
+      text-align: left;
+    }
   }
 
-  & a:focus {
-    outline: none;
+  &.--speaker,
+  &.--hotel {
+    transition: filter 250ms ease;
+
+    & .card__caption {
+      overflow: clip;
+      contain: paint;
+
+      transition: background-color 250ms ease;
+    }
+
+    & .card__caption:has(a:hover) {
+      background-color: var(--accent-color, transparent);
+    }
+
+    & a:focus {
+      outline: none;
+    }
+
+    & picture {
+      pointer-events: none;
+    }
+
+    & picture > img,
+    & picture > source {
+      transition: outline 250ms ease;
+
+      outline: 2px solid transparent;
+      outline-offset: -1px;
+    }
+
+    &:focus-within picture > img,
+    &:focus-within picture > source {
+      outline-color: white;
+    }
+
+    &:active {
+      filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.34));
+    }
   }
 
-  & picture {
-    pointer-events: none;
+  & img {
+    position: relative;
+    z-index: 1;
+    width: 9.375rem;
+    max-width: 80%;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    filter: saturate(1);
   }
-
-  & picture > img,
-  & picture > source {
-    transition: outline 250ms ease;
-
-    outline: 2px solid transparent;
-    outline-offset: -1px;
-  }
-
-  &:focus-within picture > img,
-  &:focus-within picture > source {
-    outline-color: white;
-  }
-
-  &:active {
-    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.34));
-  }
-}
-
-.card img {
-  position: relative;
-  z-index: 1;
-  width: 9.375rem;
-  max-width: 80%;
-  height: auto;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  filter: saturate(1);
-}
-
-.card--hotel img {
-  filter: saturate(1);
 }
 
 .narrow-width .card img {
@@ -506,10 +520,6 @@ iframe[title="Codepen"] {
   font-size: clamp(1em, 3vw, 1rem);
   line-height: 1.2;
   text-align: center;
-}
-
-.card--hotel .card__caption {
-  text-align: left;
 }
 
 .narrow-width .card__caption {
@@ -631,10 +641,6 @@ iframe[title="Codepen"] {
 
 .card__text {
   min-height: 3lh;
-}
-
-.card--hotel .card__text {
-  min-height: 10lh;
 }
 
 .narrow-width .cards__item {
