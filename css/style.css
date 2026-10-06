@@ -939,26 +939,38 @@ svg.external-indicator {
   grid-gap: 0.25rem;
   counter-reset: photo-grid;
 
-  li {
+  .photo {
     counter-increment: photo-grid;
     position: relative;
+    display: flex;
 
     &::before {
       content: counter(photo-grid);
       position: absolute;
       top: 0;
       right: 0;
-      background: black;
+      background: #000;
       padding-inline: 3px;
       border-bottom-left-radius: 10px;
       min-width: 3ch;
       text-align: center;
     }
+
+    a {
+      border: 2px solid transparent;
+      transition: border 250ms ease;
+    }
   }
 
-  li:has(a:hover) {
+  .photo:has(a:hover) a,
+  .photo:focus-within a {
+      border: 2px solid white;
+  }
+
+  .photo:has(a:hover) {
     &::before {
       background: var(--accent-color, var(--yellow));
+      color: #000;
     }
   }
 
