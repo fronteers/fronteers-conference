@@ -1,0 +1,18 @@
+<section class="testimonials">
+  <h3 class="testimonials__headline headline">
+    This is what our attendees said about the conference in 2026
+  </h3>
+  <p>We hope to see you at the next edition!</p>
+
+  <ul class="testimonials__list">
+    {% for quote in quotes | shuffle | limit(3) %}
+      <li class="testimonials__item">
+        <blockquote class="testimonials__quote">{{ quote.quote }}</blockquote>
+        <p class="testimonials__author">
+          {{ quote.author }}
+        </p>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+

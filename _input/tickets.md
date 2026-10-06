@@ -2,7 +2,7 @@
 tags: pages
 layout: tickets.njk
 title: Tickets
-description: Tickets available for just €99!
+description: Tickets available for just {{ tickets.regularPrice }}!
 navigation: Tickets
 order: 5
 ---
