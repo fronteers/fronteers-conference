@@ -21,6 +21,9 @@ description:
   {% if album.description %}
     <p class="album-description">{{ album.description }}</p>
   {% endif %}
+  {% if album.objections %}
+    <p class="album-objections">{{ album.objections }}</p>
+  {% endif %}
 
   {% if album.credits %}
     {% include "_partials/credits/" + album.credits %}
