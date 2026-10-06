@@ -15,10 +15,7 @@
 
 html {
   position: relative;
-  overflow-x: hidden;
-  overflow-x: clip;
-  overflow-y: scroll;
-  overflow-y: overlay;
+
   background-color: #000;
   background-image: linear-gradient(to bottom, #000, #1c3242);
   color: #d6d6d6;
@@ -32,6 +29,15 @@ html {
   --red: #fe796a;
   --color-celestial-body: #666;
   --color-celestial-glow: rgba(255, 255, 255, 0.5);
+}
+
+body {
+  overflow-x: hidden;
+  overflow-x: clip;
+  overflow-y: scroll;
+  overflow-y: overlay;
+
+  scrollbar-gutter: stable;
 }
 
 :is(tr, li, a):not(:only-child):nth-child(4n + 1) {
@@ -906,5 +912,96 @@ svg.external-indicator {
     gap: 0.325em;
 
     justify-content: center;
+  }
+}
+
+.album-list {
+  margin: 1rem 0;
+
+  & > li + li {
+    margin-top: 0.5rem;
+  }
+
+  & img {
+    border-radius: 0.25rem;
+  }
+}
+
+.album-meta {
+  margin-bottom: 2rem;
+}
+
+[data-component="photo-grid"] {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-gap: 0.25rem;
+
+  & > li.--portrait {
+    grid-row: span 2;
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+}
+
+@media (min-width: 1110px) {
+  [data-component="photo-grid"] {
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  }
+}
+
+body.--has-dialog {
+  overflow: clip !important;
+}
+
+.lightbox {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: rgba(0, 0, 0, 0.52);
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+
+  & .lightbox-content {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+
+    & img {
+      width: 100%;
+      height: calc(100vh - 6rem);
+      object-fit: contain;
+    }
+  }
+
+  & .lightbox-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    & button,
+    & [data-action] {
+      padding: 0.5rem 1rem;
+      background-color: transparent;
+      color: #fff;
+      fill: #fff;
+      border: none;
+      cursor: pointer;
+
+      & svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        stroke-width: 2px;
+      }
+    }
   }
 }

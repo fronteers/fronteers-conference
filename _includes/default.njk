@@ -137,7 +137,7 @@
     </a>
   </h1>
   <nav class="header__nav limited-width" aria-label="Main navigation">
-    {% for post in collections.pages|sortByOrder %}
+    {% for post in collections.pages | sortByOrder %}
       <a href="{{ post.url }}" {% if page.url == post.url %} aria-current="page" {% endif %}>{{ post.data.navigation }}</a>
     {% endfor %}
   </nav>

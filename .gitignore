@@ -7,3 +7,5 @@ _tmp/
 .idea
 node_modules/
 .env
+/.cache
+/img/generated

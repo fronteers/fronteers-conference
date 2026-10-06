@@ -1,0 +1,28 @@
+---
+tags: pages
+layout: page.njk
+permalink: "{{ page.fileSlug }}/index.html"
+title: Impressions
+description:
+navigation: Impressions
+order: 9
+---
+
+<ul class="album-list">
+{% for album in albums %}
+  <li>
+    <a href="/albums/{{ album.folderName | slug }}/index.html">
+        {% thumbnail album.images[album.coverImage].url %}
+        <div class="album-description">
+            <h2 class="album-name">{{ album.displayName or album.folderName }}</h2>
+            <p class="album-meta">
+                {% if album.date %}
+                    <span class="album-date">{{ album.date }}</span> &middot;
+                {% endif %}
+                {{ album.images.length }} photos
+            </p>
+        </div>
+    </a>
+  </li>
+{% endfor %}
+</ul>

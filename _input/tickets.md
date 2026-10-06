@@ -27,7 +27,7 @@ A ticket to Fronteers Dark Mode grants entrance the conference and includes a tw
 
 #### Transfer of tickets
 
-Regular tickets may be transferred. Tickets with member discounts may only be transferred to other Fronteers members. To do that the person that ordered the ticket has to 
+Regular tickets may be transferred. Tickets with member discounts may only be transferred to other Fronteers members. To do that the person that ordered the ticket has to
 
 1. open the "Confirmation & Receipt" email
 2. click on "View Order"

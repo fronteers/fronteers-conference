@@ -1,0 +1,64 @@
+---
+layout: default.njk
+pagination:
+  data: albums
+  size: 1
+  alias: album
+permalink: "albums/{{ album.folderName | slug }}/index.html"
+eleventyComputed:
+  title: "Impressions of {{album.displayName or album.folderName or 'Fronteers'}}"
+description:
+---
+
+<header class="album-header">
+  <h2 class="headline">{{ album.displayName or album.folderName or title }}</h2>
+</header>
+
+<div class="album-meta">
+  {% if album.date %}
+    <p class="album-date">{{ album.date }}</p>
+  {% endif %}
+  {% if album.description %}
+    <p class="album-description">{{ album.description }}</p>
+  {% endif %}
+
+  {% if album.credits %}
+    {% include "_partials/credits/" + album.credits %}
+  {% endif %}
+</div>
+
+{% photoGrid album.images %}
+
+<dialog id="lightbox" data-target="lightbox" class="lightbox" role="dialog" hidden>
+  <div class="lightbox-content" role="document">
+    <nav class="lightbox-nav" aria-label="Lightbox navigation">
+      <button class="lightbox-prev" data-action="prev" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" role="graphics-symbol">
+          <title>Previous photo</title>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+        </svg>
+      </button>
+      <button class="lightbox-next" data-action="next" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" role="graphics-symbol">
+          <title>Next photo</title>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+        </svg>
+      </button>
+      <a class="lightbox-download" data-action="download" download>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"  stroke="currentColor" class="size-6" role="graphics-symbol">
+          <title>Download photo</title>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+        </svg>
+      </a>
+      <button class="lightbox-close" data-action="close" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" role="graphics-symbol">
+          <title>Close lightbox</title>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </nav>
+    <img data-target="image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+  </div>
+</dialog >
+
+<script src="/scripts/photo-grid.js"></script>

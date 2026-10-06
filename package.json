@@ -3,20 +3,23 @@
   "private": true,
   "type": "module",
   "engines": {
-    "npm": ">=9.6.4",
+    "npm": ">=11.0.0",
     "node": ">=24.0.0"
   },
   "scripts": {
     "start": "eleventy --serve --watch",
-    "build": "cross-env ELEVENTY_PRODUCTION=true eleventy && cross-env NODE_ENV=production"
+    "build": "cross-env ELEVENTY_PRODUCTION=true eleventy && cross-env NODE_ENV=production",
+    "clean": "npx rimraf img/generated"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
-    "@11ty/eleventy-img": "^6.0.4",
+    "@11ty/eleventy-img": "^7.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "@aws-sdk/client-s3": "^3.1146.0",
     "cross-env": "^10.1.0",
-    "dotenv": "^17.4.2",
+    "dotenv": "^18.0.5",
     "html-prettify": "^1.0.7",
+    "netlify-plugin-11ty": "^1.5.0",
     "node-fetch": "^3.3.2"
   },
   "allowScripts": {
