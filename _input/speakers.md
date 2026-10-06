@@ -2,10 +2,11 @@
 tags: pages
 layout: speakers.njk
 title: Our Speakers
-description: We have a spectacular line-up of five speakers and one MC for you.
+description: We'll have a spectacular line-up of five speakers and one MC for you.
 navigation: Speakers
 order: 2
+published: false
 ---
-We have a spectacular line-up of five speakers and one MC for you. These are the people who'll be stimulating your mind with thought-provoking talks.
+We'll have a spectacular line-up of five speakers and one MC for you. These are the people who'll be stimulating your mind with thought-provoking talks.
 
 Expect a bunch of inspiring technical talks on HTML, CSS, JavaScript – and a nerdy late-night finale!

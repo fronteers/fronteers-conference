@@ -66,6 +66,8 @@ The connectivity over the water gives a unique opportunity not seen often: there
 
 [![Waterbus Service Map 2026](/img/waterbus.jpg)](/img/waterbus.jpg)
 
+Please note: The above picture is of 2026 - we will update this as 2027 rolls around.
+
 Whilst you can buy tickets online, because this is part of our public transportation network, you can also use the regular OVPay system to pay for your fare. And the best thing: you can bring a bike for free! This should greatly increase the range you are able to and willing to explore. Noe that the Waterbus is not the only provider operating on the waters between the drechtsteden, for example [riveer][riveer] connects Papendrecht to Dordrecht, perfect for substitute travel across the bridge.
 
 With all that said, your possibilities are endless, with many suggestions listed on the [indordrecht.nl][indordrecht.nl] website. If you cannot pick what to do, [VVV Dordrecht at Spuiboulevard 99][maps-vvv] is a great choice as they can tailor the response of your inquiry.

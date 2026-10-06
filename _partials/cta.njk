@@ -1,11 +1,11 @@
 <section class="cta">
   <h3 class="cta__headline headline">
     Tickets available for just
-    <strong>€&nbsp;{{ tickets.regularPrice }}</strong>
+     <strong>€{{ tickets.regularPrice }}</strong>
   </h3>
   <p class="discount">
     Fronteers members get a
-    <strong>€&nbsp;{{ tickets.regularPrice - tickets.memberPrice }}</strong>
+    <strong>€{{ tickets.regularPrice - tickets.memberPrice }}</strong>
     discount!
   </p>
   <p>
@@ -13,6 +13,7 @@
       >Get your tickets now!</a
     >
   </p>
-
-  <small class="cta__smallpint"> Ticket prices are including VAT. </small>
+  <p>
+    <small class="cta__smallpint"> Ticket prices are including VAT. </small>
+  </p>
 </section>

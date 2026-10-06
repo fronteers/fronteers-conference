@@ -23,7 +23,7 @@ html {
   font-size: 1.125rem;
   font-size: clamp(0.75rem, 4.5vw, 1.125rem);
   line-height: 1.4;
-  --purple: #7a83ff;
+  --purple: #aaaffa;
   --yellow: #ffce2e;
   --lilac: #b7b7fd;
   --red: #fe796a;
@@ -182,7 +182,8 @@ img {
 }
 
 small {
-  font-size: 0.75em;
+  margin-block-start: 1rem;
+  font-size: 0.9em;
 }
 
 code {
@@ -573,7 +574,7 @@ iframe[title="Codepen"] {
 
 .cta {
   padding: 1.25rem 0.25vw 3.5rem 0.25vw;
-  background: var(--red);
+  background: var(--lilac);
   text-align: center;
   clip-path: url(#greater-than-down-small);
   font-family: "Fabrik", Arial, Helvetica, sans-serif;
@@ -593,6 +594,59 @@ iframe[title="Codepen"] {
   font-size: 1.5em;
   font-size: clamp(1rem, 6vw, 1.5rem);
   font-weight: bold;
+}
+
+.testimonials {
+  max-width: 60rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  text-align: center;
+  margin-block-end: 4rem;
+}
+
+.testimonials__headline {
+  font-size: clamp(1.4rem, 2.5vw, 1.5rem);
+}
+
+.testimonials__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.testimonials__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-top: 0.375rem solid var(--accent-color, var(--yellow));
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Without JS, limit to the first three */
+.testimonials__item:nth-child(n + 4) {
+  display: none;
+}
+
+.testimonials__quote {
+  font-family: "Fabrik", Arial, Helvetica, sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+}
+
+.testimonials__quote::before {
+  content: "“";
+}
+
+.testimonials__quote::after {
+  content: "”";
+}
+
+.testimonials__author {
+  color: var(--accent-color, var(--yellow));
+  font-size: 0.875rem;
 }
 
 .tickets {
@@ -671,6 +725,7 @@ iframe[title="Codepen"] {
 
   &:not([hidden]) {
     display: inline-block;
+    text-decoration: none;
   }
 }
 
