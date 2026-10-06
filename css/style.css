@@ -928,7 +928,17 @@ svg.external-indicator {
 }
 
 .album-meta {
-  margin-bottom: 2rem;
+  margin-block-end: 2rem;
+}
+
+.album-date {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-block-end: 2rem;
+}
+
+.album-objections {
+  margin-block: 2rem;
 }
 
 [data-component="photo-grid"] {
