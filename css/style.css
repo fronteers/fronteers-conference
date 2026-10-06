@@ -937,6 +937,30 @@ svg.external-indicator {
   grid-auto-flow: dense;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   grid-gap: 0.25rem;
+  counter-reset: photo-grid;
+
+  li {
+    counter-increment: photo-grid;
+    position: relative;
+
+    &::before {
+      content: counter(photo-grid);
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: black;
+      padding-inline: 3px;
+      border-bottom-left-radius: 10px;
+      min-width: 3ch;
+      text-align: center;
+    }
+  }
+
+  li:has(a:hover) {
+    &::before {
+      background: var(--accent-color, var(--yellow));
+    }
+  }
 
   & > li.--portrait {
     grid-row: span 2;

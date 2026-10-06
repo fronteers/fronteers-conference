@@ -101,7 +101,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addShortcode("thumbnail", makeThumbnail);
   eleventyConfig.addShortcode("photoGrid", async function (photos) {
-    let html = "<ul data-component='photo-grid' class='photo-grid'>";
+    let html = "<ol data-component='photo-grid' class='photo-grid'>";
 
     for (let i = 0; i < photos.length; i++) {
       const photo = photos[i];
@@ -124,7 +124,7 @@ export default function (eleventyConfig) {
       html += `<li class="photo ${orientation}"><a href="${photo.url}">${imageHtml}</a></li>`;
     }
 
-    html += "</ul>";
+    html += "</ol>";
 
     return html;
   });
