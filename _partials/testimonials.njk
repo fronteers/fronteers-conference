@@ -5,7 +5,7 @@
   <p>We hope to see you at the next edition!</p>
 
   <ul class="testimonials__list">
-    {% for quote in quotes %}
+    {% for quote in quotes | shuffle | limit(3) %}
       <li class="testimonials__item">
         <blockquote class="testimonials__quote">{{ quote.quote }}</blockquote>
         <p class="testimonials__author">
@@ -16,18 +16,3 @@
   </ul>
 </section>
 
-<script>
-  // Show three random testimonials; without JS, CSS shows the first three.
-  (() => {
-    const list = document.querySelector(".testimonials__list");
-    if (!list) return;
-
-    const items = [...list.children];
-    for (let i = items.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [items[i], items[j]] = [items[j], items[i]];
-    }
-
-    list.replaceChildren(...items.slice(0, 3));
-  })();
-</script>

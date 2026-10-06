@@ -149,6 +149,21 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("sortByOrder", sortByOrder);
 
+  function shuffle(values) {
+    const shuffled = [...values];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  eleventyConfig.addFilter("shuffle", shuffle);
+
+  eleventyConfig.addFilter("limit", (values, count) => {
+    return values.slice(0, count);
+  });
+
   eleventyConfig.addFilter("json_encode", (data) => {
     return JSON.stringify(data);
   });
