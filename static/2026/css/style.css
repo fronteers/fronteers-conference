@@ -383,7 +383,7 @@ iframe[title="Codepen"] {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  background-image: url(/img/announcer.svg);
+  background-image: url(/static/2026/img/announcer.svg);
   background-repeat: repeat-x;
   background-size: auto 40%;
   background-position: top center;
@@ -397,7 +397,7 @@ iframe[title="Codepen"] {
   padding: 1.25rem 2.5vw 9rem 2.5vw;
   text-align: center;
 
-  background-image: url(/img/curly-brace-down-yellow.svg);
+  background-image: url(/static/2026/img/curly-brace-down-yellow.svg);
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: 100% auto;
